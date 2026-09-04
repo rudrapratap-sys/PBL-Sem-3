@@ -1,0 +1,301 @@
+Applicant_ID,Name,Gender,CGPA,Major,Internship_Domain,Skills,Years_of_Experience,Portfolio_Link,Application_Status
+1,Michael Hernandez,Male,2.09,EE,Cybersecurity,"Pandas, MongoDB, Docker, Node.js",0.7,https://portfolio.fake/jamesrobinson,Accepted
+2,Jared Yang,Female,3.84,IT,Cybersecurity,"CSS, JavaScript, SQL",1.0,https://portfolio.fake/wilsonmichele,Pending
+3,Lisa Bennett,Female,2.36,IT,DevOps,"CSS, TensorFlow, MongoDB, JavaScript, Kubernetes, C++",1.9,https://portfolio.fake/pettyphillip,Rejected
+4,Edward Curtis,Other,2.6,IT,Web Dev,"JavaScript, SQL, Java",2.4,https://portfolio.fake/heather92,Rejected
+5,Brittany Orr,Male,3.69,IT,Cybersecurity,"Docker, Python, Kubernetes, Pandas, Node.js, MongoDB",1.4,https://portfolio.fake/sanchezjessica,Rejected
+6,Robert Lopez,Other,2.34,EE,Data Science,"MongoDB, SQL, Docker, HTML, Pandas",1.1,https://portfolio.fake/cyoung,Accepted
+7,Wayne Lozano,Other,3.82,ECE,Web Dev,"Docker, SQL, Pandas, Python, MongoDB, TensorFlow",0.3,https://portfolio.fake/palvarez,Pending
+8,Michael Fisher,Female,3.58,EE,Web Dev,"JavaScript, React, Node.js, SQL",0.7,https://portfolio.fake/brittany05,Rejected
+9,William Guerra,Female,2.55,ME,Cybersecurity,"SQL, Pandas, Node.js, MongoDB, HTML, CSS",0.2,https://portfolio.fake/jason93,Pending
+10,Annette Carson,Other,3.15,ECE,Cybersecurity,"Node.js, React, TensorFlow, Pandas, Docker",0.8,https://portfolio.fake/schroederjustin,Rejected
+11,Jim Reyes,Other,3.53,ECE,AI/ML,"Kubernetes, Python, C++, MongoDB",1.4,https://portfolio.fake/richard19,Rejected
+12,Julie Ross,Male,3.6,EE,Data Science,"SQL, Node.js, CSS, Docker, C++",2.2,https://portfolio.fake/evelynnicholson,Rejected
+13,Amber Johnson,Female,2.06,EE,Data Science,"React, HTML, Pandas, CSS, Python",1.8,https://portfolio.fake/brandon88,Accepted
+14,Christopher Stephens,Male,3.84,ECE,AI/ML,"HTML, Kubernetes, JavaScript, C++",2.8,https://portfolio.fake/karen51,Rejected
+15,Michele Dominguez,Male,2.02,EE,AI/ML,"JavaScript, CSS, MongoDB",1.7,https://portfolio.fake/chenscott,Rejected
+16,Laura Evans,Male,3.04,CS,Data Science,"C++, React, MongoDB",0.5,https://portfolio.fake/rachelcook,Pending
+17,Jason Nelson,Other,2.56,EE,AI/ML,"Node.js, Docker, Pandas, Java, Python, React",1.1,https://portfolio.fake/rhall,Pending
+18,Nicolas Johnson,Female,3.57,ME,Cybersecurity,"MongoDB, Docker, Java, Python",3.0,https://portfolio.fake/jeanmurray,Rejected
+19,Mary Williams,Male,2.54,EE,AI/ML,"Docker, C++, JavaScript, Pandas",1.7,https://portfolio.fake/dhoffman,Rejected
+20,William Wang,Other,2.22,CS,Data Science,"MongoDB, TensorFlow, Kubernetes, React, Node.js",2.2,https://portfolio.fake/bradley52,Rejected
+21,Tara Barton,Other,2.8,CS,Data Science,"Java, TensorFlow, JavaScript",1.2,https://portfolio.fake/dharvey,Pending
+22,Joshua Allen,Male,3.86,IT,Cybersecurity,"Kubernetes, MongoDB, C++, Pandas",0.9,https://portfolio.fake/lhenderson,Accepted
+23,Justin Anderson,Other,2.05,CS,Web Dev,"C++, CSS, SQL",0.2,https://portfolio.fake/oolson,Pending
+24,Christine Conrad,Female,2.02,EE,Cybersecurity,"Node.js, Java, Python",2.9,https://portfolio.fake/emilyprice,Accepted
+25,Scott Gutierrez,Female,2.11,ME,Web Dev,"Java, React, SQL, Pandas, Docker",2.0,https://portfolio.fake/ianderson,Pending
+26,Christopher Cruz,Male,2.78,ME,AI/ML,"Node.js, SQL, HTML, Kubernetes, Java",2.5,https://portfolio.fake/mark20,Rejected
+27,Joshua Peterson,Female,3.83,CS,Web Dev,"HTML, Pandas, Kubernetes, SQL",0.5,https://portfolio.fake/bradshawchristine,Accepted
+28,Tracey Williams,Male,2.24,ME,Data Science,"JavaScript, Node.js, Python, MongoDB",1.6,https://portfolio.fake/usalazar,Accepted
+29,Ryan Garcia,Male,3.82,ECE,Web Dev,"HTML, Python, Pandas, React, CSS",0.8,https://portfolio.fake/rushheather,Rejected
+30,Andrew Stewart,Other,2.62,ECE,Web Dev,"SQL, Pandas, MongoDB, React, Java, Kubernetes",0.5,https://portfolio.fake/alicory,Pending
+31,Charles Johnson,Male,3.45,ECE,Cybersecurity,"CSS, Docker, Node.js, C++, Pandas",0.8,https://portfolio.fake/jimmymaxwell,Pending
+32,Micheal Walker,Female,3.6,EE,Web Dev,"CSS, Node.js, Docker",2.9,https://portfolio.fake/michaelperry,Rejected
+33,Katherine Taylor,Other,3.41,IT,Cybersecurity,"Pandas, MongoDB, Java, C++, JavaScript, Node.js",1.5,https://portfolio.fake/anthony64,Rejected
+34,Erica Roberts,Other,3.01,ME,DevOps,"Node.js, Java, TensorFlow, Python",0.8,https://portfolio.fake/coopertina,Rejected
+35,David Contreras,Other,3.7,ECE,Web Dev,"SQL, JavaScript, Node.js, TensorFlow",0.2,https://portfolio.fake/mduncan,Pending
+36,Rachel Thompson,Male,3.46,EE,AI/ML,"Node.js, MongoDB, React, CSS, Pandas",1.2,https://portfolio.fake/alejandro09,Rejected
+37,Elizabeth Romero,Male,2.11,ECE,DevOps,"Kubernetes, Node.js, React, Pandas",2.9,https://portfolio.fake/evanskaren,Rejected
+38,Amy Anderson,Female,3.92,ECE,DevOps,"Node.js, Docker, JavaScript, CSS",1.4,https://portfolio.fake/boonenicholas,Rejected
+39,Kathleen Campbell,Female,3.34,ECE,Data Science,"Python, JavaScript, Docker, TensorFlow",2.4,https://portfolio.fake/nelsonbailey,Accepted
+40,John Jarvis,Other,2.83,ME,Web Dev,"C++, CSS, Pandas, Java",1.3,https://portfolio.fake/carpenterpatrick,Rejected
+41,Sabrina Anderson,Other,2.44,ME,DevOps,"SQL, Java, MongoDB",0.5,https://portfolio.fake/stewartjake,Rejected
+42,Tricia Chambers,Other,3.8,ME,Web Dev,"Kubernetes, HTML, Pandas, JavaScript, CSS, MongoDB",1.2,https://portfolio.fake/christopherstark,Pending
+43,Adriana Russo,Female,3.87,ECE,Data Science,"MongoDB, Docker, CSS, SQL, Java",2.5,https://portfolio.fake/jessica04,Accepted
+44,Joseph Wilkerson,Female,3.51,IT,DevOps,"C++, SQL, React",3.0,https://portfolio.fake/john92,Rejected
+45,Deborah Hawkins,Male,3.88,EE,AI/ML,"HTML, Python, C++, CSS, React, Kubernetes",1.0,https://portfolio.fake/holly01,Pending
+46,Gary Freeman,Female,3.75,EE,Cybersecurity,"React, Node.js, C++, JavaScript, TensorFlow, Docker",2.6,https://portfolio.fake/sawyerjesse,Rejected
+47,Patricia Stevens,Female,2.04,IT,Data Science,"HTML, Python, MongoDB",1.3,https://portfolio.fake/pollardjerry,Pending
+48,Evan Davies,Male,3.52,CS,Data Science,"CSS, MongoDB, TensorFlow, Kubernetes, SQL",0.0,https://portfolio.fake/mark64,Pending
+49,Suzanne Fuentes,Female,3.43,CS,Web Dev,"TensorFlow, JavaScript, MongoDB, Kubernetes",2.3,https://portfolio.fake/scottvincent,Accepted
+50,Maria Macias,Male,3.32,IT,Web Dev,"Docker, React, MongoDB, C++, Java",2.3,https://portfolio.fake/coopermichael,Rejected
+51,Larry Ramos,Other,2.65,ECE,AI/ML,"CSS, Python, JavaScript, HTML, Pandas, Kubernetes",0.3,https://portfolio.fake/williamsbailey,Rejected
+52,Timothy Rice,Female,3.91,IT,AI/ML,"Pandas, Kubernetes, CSS",2.8,https://portfolio.fake/ygill,Pending
+53,Susan Hill,Female,2.77,IT,Web Dev,"Java, JavaScript, HTML",1.0,https://portfolio.fake/fleblanc,Rejected
+54,Vincent Pierce,Female,2.93,ECE,Web Dev,"Java, C++, CSS, JavaScript",0.4,https://portfolio.fake/monroedakota,Rejected
+55,Anna Holt,Male,3.11,ME,Cybersecurity,"Node.js, Java, C++",0.3,https://portfolio.fake/stephen35,Pending
+56,Sarah Smith,Male,3.58,ME,AI/ML,"SQL, Java, TensorFlow, Node.js",1.4,https://portfolio.fake/wferguson,Accepted
+57,Adam Warren,Female,2.34,EE,AI/ML,"Kubernetes, CSS, HTML, React, TensorFlow, C++",1.2,https://portfolio.fake/marissajohnson,Accepted
+58,Pamela Brown,Other,2.34,ECE,DevOps,"SQL, C++, CSS, TensorFlow, Docker",2.8,https://portfolio.fake/olane,Pending
+59,Gregory Parks,Other,3.36,CS,Cybersecurity,"Python, Pandas, Java, C++",0.3,https://portfolio.fake/carteradam,Accepted
+60,James Thompson,Male,3.87,ME,Web Dev,"Java, C++, SQL, Pandas, Node.js, React",0.8,https://portfolio.fake/luisgonzalez,Pending
+61,Theresa Chen,Other,2.33,CS,AI/ML,"MongoDB, Java, Pandas, Kubernetes, CSS, TensorFlow",2.6,https://portfolio.fake/brownveronica,Accepted
+62,Brian Wright,Other,2.81,EE,Web Dev,"React, Pandas, HTML, CSS, JavaScript, Docker",2.7,https://portfolio.fake/christopheredwards,Pending
+63,Tonya George,Male,3.11,CS,Cybersecurity,"MongoDB, SQL, JavaScript, Java, Docker",2.7,https://portfolio.fake/jeffersonamanda,Accepted
+64,Amber Woodward,Female,3.0,IT,Cybersecurity,"JavaScript, SQL, TensorFlow, Python, Kubernetes",1.8,https://portfolio.fake/brenda82,Pending
+65,Margaret Ford,Female,2.62,ME,Cybersecurity,"Node.js, React, JavaScript, TensorFlow",2.2,https://portfolio.fake/sullivanmegan,Pending
+66,Donald Ortiz,Male,2.01,IT,Cybersecurity,"Java, Docker, Python",2.3,https://portfolio.fake/robert08,Pending
+67,Justin Collins,Other,2.01,ECE,Cybersecurity,"Pandas, Docker, TensorFlow, React, Python, Node.js",0.7,https://portfolio.fake/jessica32,Accepted
+68,Joe Stevens,Female,2.71,ECE,Cybersecurity,"SQL, MongoDB, Pandas, JavaScript",2.6,https://portfolio.fake/smithcindy,Pending
+69,Mark Baxter,Other,3.62,IT,Web Dev,"SQL, C++, Docker, Pandas",2.4,https://portfolio.fake/sproctor,Rejected
+70,Raymond Perez,Female,2.34,IT,Cybersecurity,"JavaScript, React, Pandas, Java, MongoDB",1.4,https://portfolio.fake/robertwilson,Rejected
+71,Teresa Walker,Other,3.5,ECE,Cybersecurity,"HTML, C++, TensorFlow, Kubernetes",0.4,https://portfolio.fake/ghunter,Accepted
+72,Jon Gonzalez,Male,2.37,IT,Web Dev,"Java, Kubernetes, Pandas",0.5,https://portfolio.fake/kellydawn,Pending
+73,Keith Boyd,Male,2.45,EE,Data Science,"MongoDB, React, TensorFlow, Kubernetes, Node.js",1.3,https://portfolio.fake/cgardner,Accepted
+74,Julie Gardner,Male,2.4,IT,DevOps,"JavaScript, React, TensorFlow, Java",2.9,https://portfolio.fake/kristy69,Rejected
+75,Andrea Anderson,Other,2.54,CS,Web Dev,"React, Docker, Kubernetes, SQL, Pandas",1.6,https://portfolio.fake/keyheidi,Accepted
+76,Yesenia Jackson,Female,3.51,IT,AI/ML,"CSS, JavaScript, Java, Python, C++, SQL",2.2,https://portfolio.fake/bradleylewis,Pending
+77,Daniel Holmes,Female,2.86,IT,DevOps,"SQL, Node.js, Docker, Pandas",1.3,https://portfolio.fake/jeffery63,Accepted
+78,Eric Ortiz,Female,2.04,ME,AI/ML,"JavaScript, SQL, Node.js",0.6,https://portfolio.fake/elizabethdaniels,Pending
+79,Jay Stewart,Other,3.09,ME,Cybersecurity,"React, SQL, C++, Node.js, Pandas, HTML",0.9,https://portfolio.fake/jeffrey24,Pending
+80,Mark Kennedy,Male,3.74,CS,DevOps,"C++, JavaScript, Kubernetes, SQL, HTML, MongoDB",0.9,https://portfolio.fake/johnroberts,Rejected
+81,Annette White,Male,2.29,IT,AI/ML,"Pandas, Python, SQL, CSS",1.5,https://portfolio.fake/lisacoleman,Accepted
+82,Patricia Cortez,Male,3.85,EE,Data Science,"Docker, Python, Java, C++",0.9,https://portfolio.fake/markswanson,Accepted
+83,Angela Nunez,Male,2.92,EE,AI/ML,"Python, Docker, JavaScript, TensorFlow",1.5,https://portfolio.fake/nancy42,Accepted
+84,Tina Rhodes,Female,2.89,ME,DevOps,"SQL, TensorFlow, HTML",2.4,https://portfolio.fake/greenedward,Rejected
+85,Rodney Hamilton,Other,3.11,EE,Data Science,"Java, Python, CSS, React, TensorFlow",0.2,https://portfolio.fake/victoria43,Rejected
+86,Mary Thomas,Female,3.07,ECE,AI/ML,"C++, TensorFlow, React",0.8,https://portfolio.fake/davidsawyer,Rejected
+87,Miranda Gibson,Male,3.58,ECE,AI/ML,"Pandas, MongoDB, SQL, Node.js, React, Java",0.7,https://portfolio.fake/stoneeddie,Pending
+88,Susan Luna,Female,3.47,CS,Cybersecurity,"Node.js, C++, Python, Docker",2.0,https://portfolio.fake/andrea35,Pending
+89,Crystal Mullins,Other,2.29,ECE,Web Dev,"MongoDB, Kubernetes, C++, Python",1.9,https://portfolio.fake/harrisrebecca,Pending
+90,Mr. Andrew Barrera,Male,2.41,IT,Cybersecurity,"React, Node.js, HTML, Docker, TensorFlow",0.8,https://portfolio.fake/ajames,Accepted
+91,Kevin Pace,Female,2.98,ECE,Web Dev,"TensorFlow, C++, MongoDB, Node.js, SQL",0.6,https://portfolio.fake/mromero,Pending
+92,John Schmidt,Male,2.05,IT,Web Dev,"CSS, Node.js, MongoDB, Kubernetes, JavaScript, Java",0.0,https://portfolio.fake/ianhicks,Rejected
+93,Joshua Bailey,Female,2.34,CS,Cybersecurity,"HTML, Docker, Java, JavaScript, CSS",1.1,https://portfolio.fake/tsullivan,Accepted
+94,Michael Collier,Male,3.14,EE,DevOps,"Kubernetes, MongoDB, C++, Docker, JavaScript",1.1,https://portfolio.fake/christina14,Pending
+95,Tracy Reyes,Male,3.97,ME,Web Dev,"C++, JavaScript, Docker, TensorFlow",1.8,https://portfolio.fake/krystalwatkins,Rejected
+96,Candice Davis,Male,2.74,EE,Web Dev,"CSS, Java, JavaScript, Node.js, Pandas",1.1,https://portfolio.fake/kristiatkins,Rejected
+97,Michael Christian,Female,3.85,CS,Data Science,"Python, React, Docker, HTML, C++, TensorFlow",1.3,https://portfolio.fake/uadams,Accepted
+98,Lisa Lopez,Other,3.79,ME,Web Dev,"Pandas, SQL, CSS, Java",2.5,https://portfolio.fake/fletcherlaura,Rejected
+99,Catherine Black,Male,2.9,ME,Cybersecurity,"HTML, TensorFlow, Kubernetes, JavaScript, SQL, Pandas",0.8,https://portfolio.fake/iarnold,Pending
+100,Kimberly Hardin,Male,2.85,ECE,Web Dev,"MongoDB, Python, Kubernetes, CSS, React, Node.js",2.6,https://portfolio.fake/davidrodriguez,Rejected
+101,Kaitlyn Schmitt,Other,2.26,EE,AI/ML,"SQL, MongoDB, TensorFlow, Pandas",2.4,https://portfolio.fake/jhumphrey,Rejected
+102,Nicholas Parker,Other,3.69,CS,Web Dev,"React, Node.js, Pandas, Java, C++",0.4,https://portfolio.fake/tyler42,Rejected
+103,Sharon Bailey,Other,3.39,CS,AI/ML,"MongoDB, TensorFlow, Pandas",2.0,https://portfolio.fake/stevenhood,Accepted
+104,Tony Smith,Male,2.01,CS,DevOps,"Python, Java, HTML, Node.js, TensorFlow, Docker",3.0,https://portfolio.fake/sabrina32,Rejected
+105,Frank Smith,Other,2.45,ME,AI/ML,"HTML, MongoDB, Kubernetes, React, CSS",0.7,https://portfolio.fake/dianemoore,Pending
+106,Jacob Reed,Male,3.07,ME,AI/ML,"Kubernetes, React, Docker, TensorFlow",0.2,https://portfolio.fake/nathannorman,Accepted
+107,Brandon Reed,Other,2.66,ECE,Data Science,"React, CSS, Kubernetes",2.9,https://portfolio.fake/mclaughlintravis,Accepted
+108,Jonathan Jones,Other,3.79,ECE,Data Science,"Java, Python, Docker, Pandas",2.0,https://portfolio.fake/morenomichael,Rejected
+109,Nicole Elliott,Male,3.93,ECE,Data Science,"Docker, MongoDB, React, SQL",0.6,https://portfolio.fake/terri11,Rejected
+110,Stephen Richardson,Other,3.5,ECE,Web Dev,"HTML, Docker, MongoDB, CSS, React",1.1,https://portfolio.fake/ian48,Rejected
+111,Rebekah Arnold,Other,2.18,ECE,Data Science,"Kubernetes, Python, Node.js, Java, MongoDB, SQL",0.9,https://portfolio.fake/parkermichelle,Pending
+112,Alicia Miller,Male,3.11,EE,Web Dev,"React, C++, JavaScript, TensorFlow, Python, Docker",1.8,https://portfolio.fake/kevinroth,Pending
+113,Dawn Gonzalez,Other,2.25,EE,Data Science,"JavaScript, Docker, Java, Pandas",2.7,https://portfolio.fake/choijohnathan,Pending
+114,David Miller,Male,2.83,CS,DevOps,"Node.js, JavaScript, MongoDB",2.3,https://portfolio.fake/ngibson,Pending
+115,Christina Wilson,Male,2.55,IT,AI/ML,"Pandas, Python, CSS, TensorFlow",3.0,https://portfolio.fake/jessehughes,Accepted
+116,Tammy Johnson,Male,3.71,ECE,Cybersecurity,"Kubernetes, JavaScript, React, TensorFlow",2.4,https://portfolio.fake/brandonjackson,Rejected
+117,David Snyder,Other,2.24,IT,Cybersecurity,"Docker, JavaScript, React",0.5,https://portfolio.fake/charlene41,Pending
+118,Lisa Lewis,Male,2.56,CS,DevOps,"Java, React, Kubernetes, MongoDB, JavaScript, Python",2.7,https://portfolio.fake/kristen03,Rejected
+119,Hannah Smith,Other,3.64,CS,Data Science,"TensorFlow, Docker, Pandas",1.7,https://portfolio.fake/aedwards,Rejected
+120,William Parrish,Other,3.11,CS,Cybersecurity,"MongoDB, Pandas, TensorFlow, Python, JavaScript, React",2.4,https://portfolio.fake/scott59,Rejected
+121,Samuel Terry,Male,2.92,CS,Web Dev,"HTML, CSS, C++, SQL, MongoDB, Docker",2.1,https://portfolio.fake/hernandezcourtney,Rejected
+122,Tracy Rojas,Male,3.83,EE,Data Science,"React, Kubernetes, JavaScript",2.9,https://portfolio.fake/woodscharles,Pending
+123,William Lee,Female,3.26,ECE,AI/ML,"Java, Kubernetes, Node.js, CSS, React, MongoDB",2.4,https://portfolio.fake/simmonssamantha,Accepted
+124,Sandra Pierce,Female,3.55,EE,DevOps,"SQL, Pandas, React, MongoDB, Java",2.8,https://portfolio.fake/thompsonholly,Accepted
+125,Eric Ball,Female,2.15,EE,Data Science,"SQL, CSS, Java, Python, JavaScript, Kubernetes",1.2,https://portfolio.fake/ncabrera,Rejected
+126,Amanda Ford,Male,3.52,IT,AI/ML,"Python, Pandas, C++",2.9,https://portfolio.fake/ccruz,Accepted
+127,Douglas Robinson,Female,3.57,CS,AI/ML,"React, CSS, Kubernetes, SQL",1.9,https://portfolio.fake/lunaamanda,Accepted
+128,Christy Floyd,Female,2.56,ME,AI/ML,"Docker, Pandas, HTML, React, SQL, MongoDB",2.6,https://portfolio.fake/twade,Pending
+129,Sandra Irwin,Male,2.14,IT,Web Dev,"MongoDB, C++, TensorFlow, React",0.2,https://portfolio.fake/xbell,Pending
+130,Devon Barker,Male,2.74,ECE,AI/ML,"TensorFlow, HTML, SQL, JavaScript, Pandas",2.3,https://portfolio.fake/elainerichardson,Pending
+131,Jennifer Smith,Female,2.42,ME,Data Science,"CSS, TensorFlow, Pandas, HTML, Docker, Python",1.4,https://portfolio.fake/dennisflores,Accepted
+132,Maria Dougherty DVM,Other,2.45,CS,Cybersecurity,"JavaScript, SQL, React, Python, Kubernetes, Docker",0.5,https://portfolio.fake/bware,Pending
+133,Michelle Scott,Female,2.93,ME,AI/ML,"Pandas, CSS, React, SQL, Node.js",1.3,https://portfolio.fake/william06,Pending
+134,Kathleen Aguirre,Other,3.73,CS,Cybersecurity,"CSS, Docker, SQL, C++, Node.js",1.2,https://portfolio.fake/wolfsarah,Rejected
+135,Andrew Morrison,Other,3.01,CS,AI/ML,"Java, CSS, Python",2.6,https://portfolio.fake/emartin,Pending
+136,Nicholas Bass,Male,2.6,IT,Data Science,"React, Java, MongoDB",2.5,https://portfolio.fake/morankaren,Accepted
+137,Mr. Dylan Cooper,Other,3.72,CS,Data Science,"CSS, Node.js, C++",0.9,https://portfolio.fake/dawn95,Accepted
+138,Brandon Johnson,Other,3.91,CS,Web Dev,"Docker, React, Kubernetes, HTML, JavaScript",3.0,https://portfolio.fake/clove,Rejected
+139,Brian Alvarez,Female,2.56,ME,DevOps,"Pandas, Kubernetes, React, C++",2.5,https://portfolio.fake/thompsonlaura,Rejected
+140,Brandon Burton,Other,3.24,EE,AI/ML,"Node.js, Java, MongoDB",0.4,https://portfolio.fake/devin31,Pending
+141,Emily Shea,Male,2.57,EE,Cybersecurity,"Pandas, HTML, Kubernetes, React, TensorFlow",1.0,https://portfolio.fake/stricklandlaurie,Pending
+142,Michael Crawford,Female,3.09,IT,Web Dev,"Node.js, C++, Docker, HTML, Java, SQL",1.7,https://portfolio.fake/lisajohnston,Accepted
+143,Margaret Bolton,Other,2.58,ME,AI/ML,"Python, Docker, Node.js, C++, Kubernetes, HTML",0.2,https://portfolio.fake/lwilson,Accepted
+144,Emily Chandler,Male,2.07,IT,Web Dev,"React, C++, Kubernetes, Pandas, Java",1.9,https://portfolio.fake/deborahmartinez,Pending
+145,Carmen Parsons,Female,2.8,IT,Cybersecurity,"Pandas, CSS, TensorFlow, SQL, Kubernetes",2.5,https://portfolio.fake/kalvarado,Accepted
+146,Jamie Hill,Other,3.09,ECE,Data Science,"C++, SQL, Java, TensorFlow, CSS, Python",1.4,https://portfolio.fake/zgarcia,Accepted
+147,Arthur Hicks,Other,3.33,ME,Data Science,"SQL, Pandas, C++, CSS",0.2,https://portfolio.fake/hortoncurtis,Pending
+148,Thomas Taylor,Other,3.29,EE,Cybersecurity,"Pandas, React, MongoDB, Kubernetes",1.3,https://portfolio.fake/dsmith,Pending
+149,Ruth Smith,Other,2.01,EE,Cybersecurity,"MongoDB, Java, JavaScript",2.4,https://portfolio.fake/mherrera,Accepted
+150,Donald Flowers,Female,2.19,ECE,AI/ML,"HTML, React, Pandas, JavaScript, Docker",2.2,https://portfolio.fake/joseph36,Pending
+151,Pamela Long,Other,3.97,IT,DevOps,"CSS, React, MongoDB, JavaScript, Docker, HTML",1.5,https://portfolio.fake/gabrielmyers,Accepted
+152,Joshua Ingram,Other,3.67,IT,Data Science,"Node.js, Pandas, React, C++",1.1,https://portfolio.fake/ebrewer,Accepted
+153,Sophia Wilson,Female,2.0,EE,Web Dev,"React, Node.js, Kubernetes",1.3,https://portfolio.fake/hernandezjackson,Rejected
+154,Stephanie Fry,Other,3.67,ME,Data Science,"HTML, Docker, JavaScript, CSS, Python, Java",2.1,https://portfolio.fake/jturner,Pending
+155,Richard White,Female,3.37,EE,AI/ML,"MongoDB, C++, TensorFlow, Python, CSS",0.5,https://portfolio.fake/stanleyclark,Accepted
+156,Mr. Thomas Mills,Male,3.86,ME,AI/ML,"MongoDB, Docker, Node.js, TensorFlow",1.9,https://portfolio.fake/david77,Pending
+157,George Rowe,Other,3.38,EE,AI/ML,"SQL, C++, Kubernetes, Java, MongoDB",1.8,https://portfolio.fake/ethan12,Accepted
+158,Susan Matthews,Male,3.98,EE,AI/ML,"TensorFlow, Python, HTML, SQL, CSS, JavaScript",0.0,https://portfolio.fake/michellestark,Pending
+159,Robert Mckinney,Male,2.44,ME,Web Dev,"C++, HTML, MongoDB, SQL",2.5,https://portfolio.fake/spencermyers,Accepted
+160,Elizabeth Logan,Other,3.63,CS,AI/ML,"Kubernetes, CSS, Docker",1.3,https://portfolio.fake/johnsondeborah,Rejected
+161,Steven Delacruz,Male,2.42,ME,Web Dev,"JavaScript, C++, CSS, Pandas, Kubernetes, Java",0.4,https://portfolio.fake/fcameron,Accepted
+162,Megan Alvarez,Other,3.1,EE,DevOps,"SQL, TensorFlow, Python, Kubernetes, Java",1.3,https://portfolio.fake/crystalrandall,Accepted
+163,Henry Morgan,Female,3.82,IT,Data Science,"HTML, SQL, C++",1.0,https://portfolio.fake/petersrodney,Accepted
+164,Judy Boyd,Female,3.09,ME,DevOps,"Node.js, Pandas, MongoDB",2.4,https://portfolio.fake/dguerra,Accepted
+165,Mary Sharp,Other,3.53,ECE,AI/ML,"CSS, Node.js, MongoDB",1.5,https://portfolio.fake/stephanie54,Rejected
+166,Kristy Bright,Male,2.76,IT,Web Dev,"HTML, JavaScript, Docker",2.1,https://portfolio.fake/meyerdenise,Pending
+167,Brian Mason,Male,2.58,ECE,Data Science,"Node.js, Kubernetes, JavaScript",2.0,https://portfolio.fake/lindapayne,Rejected
+168,Brittany Mills,Female,3.12,EE,Web Dev,"Pandas, Kubernetes, React, JavaScript",2.0,https://portfolio.fake/wendy66,Pending
+169,Stephanie Allison,Female,3.4,CS,Web Dev,"Kubernetes, Docker, CSS, Node.js",2.5,https://portfolio.fake/nbradshaw,Pending
+170,Tonya Brown,Other,3.46,EE,AI/ML,"Java, TensorFlow, Node.js, HTML, JavaScript, C++",1.9,https://portfolio.fake/jeffreymaldonado,Pending
+171,Laura Leonard,Male,3.45,ECE,AI/ML,"C++, MongoDB, CSS, HTML",1.5,https://portfolio.fake/iwhite,Pending
+172,Darrell Davis,Female,2.36,ECE,Data Science,"React, Python, C++, Java, Kubernetes, Node.js",1.0,https://portfolio.fake/smithjohn,Accepted
+173,David Meyers,Other,2.46,IT,Web Dev,"Python, Java, CSS, MongoDB, Pandas",2.9,https://portfolio.fake/daniel39,Accepted
+174,Brent Cruz,Female,3.89,IT,DevOps,"Java, HTML, React",1.5,https://portfolio.fake/zhampton,Pending
+175,Wesley Edwards,Female,2.59,EE,Web Dev,"React, TensorFlow, JavaScript, Node.js",1.5,https://portfolio.fake/jeffreygrimes,Pending
+176,Jamie Chandler DDS,Male,2.62,ME,DevOps,"CSS, Node.js, SQL, Pandas, JavaScript, MongoDB",0.4,https://portfolio.fake/murrayandre,Rejected
+177,Phillip Robinson,Male,2.42,ME,AI/ML,"C++, Docker, TensorFlow",1.6,https://portfolio.fake/fcross,Rejected
+178,Richard Kennedy,Female,2.26,IT,DevOps,"Docker, HTML, React, Node.js, TensorFlow",2.2,https://portfolio.fake/nataliegriffith,Accepted
+179,Nina Jackson,Other,3.08,IT,Data Science,"C++, Node.js, HTML, CSS, Python, JavaScript",1.3,https://portfolio.fake/hansenmark,Rejected
+180,Elizabeth Lyons,Female,3.41,ECE,AI/ML,"CSS, SQL, React, HTML, C++, Pandas",0.8,https://portfolio.fake/hernandezstephanie,Accepted
+181,Suzanne Wilson,Female,2.05,EE,Data Science,"Docker, Node.js, Java, Kubernetes, HTML, Pandas",1.8,https://portfolio.fake/qbaker,Accepted
+182,Rose Blair,Male,3.9,ECE,DevOps,"Java, Node.js, HTML, Python, TensorFlow, JavaScript",2.0,https://portfolio.fake/alicia57,Pending
+183,Sara May,Other,3.95,EE,AI/ML,"HTML, Python, C++, TensorFlow",1.8,https://portfolio.fake/kerristephens,Accepted
+184,Jonathan Dawson,Male,3.54,CS,AI/ML,"Kubernetes, MongoDB, Python",1.4,https://portfolio.fake/benjamin20,Rejected
+185,Abigail Dillon,Female,3.96,EE,AI/ML,"React, CSS, Python",2.0,https://portfolio.fake/jeremykhan,Pending
+186,Matthew Nielsen,Female,2.84,CS,DevOps,"Node.js, Docker, Python, CSS, HTML",2.7,https://portfolio.fake/tlewis,Accepted
+187,Connie Johnson,Female,2.9,EE,DevOps,"SQL, CSS, TensorFlow, Docker, Node.js, Python",2.5,https://portfolio.fake/amy07,Pending
+188,Cassandra Ellis,Female,3.47,IT,Data Science,"Pandas, MongoDB, CSS, React, Docker",0.7,https://portfolio.fake/vmcdonald,Accepted
+189,Keith Thomas,Male,2.95,ME,Cybersecurity,"React, Pandas, JavaScript",0.5,https://portfolio.fake/grace54,Rejected
+190,Tiffany Torres,Female,2.57,ECE,DevOps,"React, HTML, TensorFlow, MongoDB, JavaScript",2.9,https://portfolio.fake/ryanroberts,Rejected
+191,Stanley Fowler,Female,3.29,IT,Web Dev,"TensorFlow, C++, Python",1.4,https://portfolio.fake/philipingram,Pending
+192,Michael Smith,Female,3.05,ME,DevOps,"HTML, MongoDB, C++",0.7,https://portfolio.fake/huntercarlos,Rejected
+193,Eileen Smith,Other,3.33,ECE,DevOps,"Pandas, SQL, JavaScript, MongoDB, Kubernetes, Python",1.7,https://portfolio.fake/martinezbrenda,Rejected
+194,Zachary Wheeler,Female,3.75,EE,Web Dev,"TensorFlow, Java, CSS, Node.js, Pandas, HTML",2.6,https://portfolio.fake/gmooney,Pending
+195,Jose Watkins,Female,3.95,ME,Cybersecurity,"HTML, React, Java, TensorFlow, SQL",2.5,https://portfolio.fake/amytaylor,Pending
+196,Kimberly Mullins,Male,3.41,ECE,DevOps,"C++, Node.js, HTML, Docker",1.3,https://portfolio.fake/heather83,Pending
+197,Seth Riggs,Female,4.0,ECE,AI/ML,"React, Python, MongoDB, CSS, Kubernetes, Node.js",0.7,https://portfolio.fake/james50,Accepted
+198,Jessica Ellis,Other,2.11,EE,DevOps,"Java, MongoDB, CSS, Node.js",2.7,https://portfolio.fake/zwhite,Rejected
+199,Helen Sanford,Female,3.34,CS,Data Science,"CSS, C++, Python, JavaScript, Kubernetes, MongoDB",1.0,https://portfolio.fake/opage,Accepted
+200,Andrew Fisher,Other,2.36,ME,AI/ML,"Docker, TensorFlow, Pandas",2.3,https://portfolio.fake/qcruz,Accepted
+201,Anthony Sullivan,Male,3.48,EE,DevOps,"React, Node.js, Pandas, MongoDB, Python, CSS",2.0,https://portfolio.fake/gentrycrystal,Pending
+202,Michelle Hines,Other,2.21,CS,Data Science,"Kubernetes, HTML, CSS, React, Java",2.7,https://portfolio.fake/robbinspatricia,Pending
+203,Jennifer Davis,Male,3.47,IT,Web Dev,"TensorFlow, Python, C++",2.4,https://portfolio.fake/pamelajohnson,Accepted
+204,Isaiah Duncan,Female,3.02,IT,Cybersecurity,"Docker, MongoDB, JavaScript, CSS, TensorFlow, SQL",3.0,https://portfolio.fake/cgonzales,Accepted
+205,Nicole Mann,Male,2.82,IT,AI/ML,"C++, TensorFlow, Kubernetes, Node.js, Pandas",1.2,https://portfolio.fake/michael41,Rejected
+206,Benjamin Lee,Other,3.74,CS,Cybersecurity,"JavaScript, HTML, TensorFlow, Node.js, Python",2.9,https://portfolio.fake/ecruz,Rejected
+207,Erica Perry,Male,2.71,EE,DevOps,"React, HTML, CSS, Java",2.8,https://portfolio.fake/browndanny,Accepted
+208,Christopher Rodriguez,Male,2.37,ME,DevOps,"Node.js, Java, JavaScript, TensorFlow",1.8,https://portfolio.fake/lcooper,Accepted
+209,Cody Rogers,Female,3.3,CS,AI/ML,"Kubernetes, Python, Docker",2.3,https://portfolio.fake/scott08,Accepted
+210,Victoria Rivera,Other,2.4,IT,Web Dev,"Kubernetes, HTML, JavaScript, Pandas",1.4,https://portfolio.fake/johnsondanielle,Rejected
+211,John Thomas,Other,3.36,ME,Data Science,"CSS, JavaScript, TensorFlow",1.6,https://portfolio.fake/johnsonnoah,Pending
+212,Jennifer Jones,Female,2.41,CS,Cybersecurity,"HTML, SQL, Python, Pandas, Java, TensorFlow",0.9,https://portfolio.fake/davisapril,Rejected
+213,Kelly James,Female,3.55,IT,Web Dev,"CSS, Pandas, Kubernetes",1.6,https://portfolio.fake/yrussell,Accepted
+214,Dr. Aaron Price,Female,2.63,CS,Web Dev,"Kubernetes, SQL, JavaScript, HTML, Node.js",1.6,https://portfolio.fake/pearsonkathleen,Rejected
+215,Peter Wilson,Female,2.23,IT,Data Science,"HTML, CSS, Pandas, MongoDB, SQL, Node.js",1.4,https://portfolio.fake/fosterdaniel,Pending
+216,Kirk George,Other,3.19,CS,Data Science,"Docker, Python, MongoDB, Node.js",0.5,https://portfolio.fake/dgutierrez,Rejected
+217,Jonathan Casey,Male,2.69,ECE,Data Science,"TensorFlow, MongoDB, Kubernetes, Python",1.9,https://portfolio.fake/eboyd,Rejected
+218,Kristina Novak,Male,2.3,CS,Web Dev,"Node.js, CSS, Python, HTML, Pandas",2.7,https://portfolio.fake/gilesphilip,Accepted
+219,Jared Collins,Other,3.96,EE,Data Science,"C++, Python, Java, React, TensorFlow",0.0,https://portfolio.fake/vhouse,Rejected
+220,Rhonda Lee,Female,3.15,EE,Data Science,"JavaScript, TensorFlow, Kubernetes, React",0.3,https://portfolio.fake/carrierodriguez,Accepted
+221,Debra Figueroa,Other,3.51,ECE,AI/ML,"SQL, Docker, C++, MongoDB, Kubernetes, React",0.3,https://portfolio.fake/zwood,Pending
+222,Kim Mcdonald,Female,3.71,ME,DevOps,"Docker, C++, Pandas",2.3,https://portfolio.fake/hammondmargaret,Pending
+223,Casey Pearson,Male,2.48,ECE,Data Science,"JavaScript, TensorFlow, C++, HTML",1.3,https://portfolio.fake/michael73,Rejected
+224,Billy Gardner,Male,3.3,EE,Cybersecurity,"C++, HTML, TensorFlow, Docker",2.3,https://portfolio.fake/jasonsmith,Pending
+225,Kevin Buchanan,Male,3.84,EE,DevOps,"MongoDB, JavaScript, HTML, SQL, Java",1.5,https://portfolio.fake/imcbride,Pending
+226,Frederick Giles,Other,3.39,ECE,Cybersecurity,"Pandas, Java, HTML",0.7,https://portfolio.fake/xanderson,Accepted
+227,Natalie Gamble,Other,2.1,ECE,AI/ML,"JavaScript, Java, SQL, Kubernetes, React, Node.js",0.7,https://portfolio.fake/crystal27,Accepted
+228,Tyrone Mercado,Female,3.7,ECE,Web Dev,"Node.js, HTML, SQL, React, MongoDB, Java",0.2,https://portfolio.fake/bradleycline,Accepted
+229,Stephen Obrien,Male,2.69,EE,Web Dev,"SQL, TensorFlow, Node.js, JavaScript, CSS, Docker",2.1,https://portfolio.fake/khicks,Rejected
+230,Christopher Gonzalez,Other,3.03,IT,Data Science,"Python, MongoDB, TensorFlow",1.0,https://portfolio.fake/pollardsarah,Accepted
+231,Sarah Henderson,Female,3.59,CS,Web Dev,"CSS, Node.js, Java",1.3,https://portfolio.fake/nsmith,Rejected
+232,Jason Thompson,Other,3.43,CS,Web Dev,"React, TensorFlow, Pandas, CSS",1.4,https://portfolio.fake/gdorsey,Accepted
+233,Ashley Graham,Other,3.49,ME,Web Dev,"MongoDB, Python, Kubernetes, Node.js, Java",2.2,https://portfolio.fake/susanhernandez,Accepted
+234,Erik Green,Male,3.91,EE,Web Dev,"Kubernetes, SQL, Node.js, MongoDB",2.8,https://portfolio.fake/tonylee,Accepted
+235,Gregory Pacheco,Male,3.19,ME,AI/ML,"HTML, Python, Node.js",2.2,https://portfolio.fake/kellyfrazier,Pending
+236,Ashley Dickerson,Other,2.14,CS,Cybersecurity,"Docker, HTML, Node.js",0.5,https://portfolio.fake/thomashudson,Rejected
+237,Robert Brewer,Male,2.04,IT,DevOps,"MongoDB, Pandas, CSS, JavaScript",1.0,https://portfolio.fake/foxerika,Rejected
+238,Lance Ross,Other,2.53,IT,Data Science,"HTML, React, C++, SQL",0.9,https://portfolio.fake/grantrhodes,Accepted
+239,Cindy Sanchez,Female,2.96,CS,Data Science,"Node.js, Kubernetes, Java, HTML, JavaScript",2.6,https://portfolio.fake/wilsonbrad,Rejected
+240,Jennifer Hamilton,Other,2.78,ECE,DevOps,"Java, CSS, Kubernetes, SQL, JavaScript, Pandas",2.6,https://portfolio.fake/emilyschwartz,Accepted
+241,Erica Sullivan,Other,3.56,EE,Web Dev,"Docker, JavaScript, Python",0.6,https://portfolio.fake/silvaherbert,Rejected
+242,Samantha Dennis,Male,2.45,IT,AI/ML,"CSS, Pandas, HTML, JavaScript, TensorFlow, Java",1.5,https://portfolio.fake/villanuevadanielle,Rejected
+243,Melissa Harris,Male,3.77,EE,Data Science,"Kubernetes, Node.js, Python",0.1,https://portfolio.fake/william32,Pending
+244,Megan Pennington,Other,2.71,ME,Cybersecurity,"HTML, JavaScript, Pandas, Docker, C++, TensorFlow",2.7,https://portfolio.fake/stevenwilliams,Accepted
+245,Dawn Holmes,Female,2.18,ME,Web Dev,"Docker, HTML, SQL, TensorFlow, CSS, JavaScript",2.1,https://portfolio.fake/humphreychristopher,Rejected
+246,Jonathan Delgado,Male,3.52,ME,Data Science,"Java, TensorFlow, MongoDB, C++",2.0,https://portfolio.fake/hernandezsteven,Rejected
+247,Kimberly Liu,Male,3.56,EE,AI/ML,"HTML, Pandas, Docker, CSS, Kubernetes, C++",3.0,https://portfolio.fake/james35,Accepted
+248,Christopher Smith,Other,3.09,CS,Cybersecurity,"C++, Node.js, React, MongoDB, Docker, Python",1.1,https://portfolio.fake/williamschristina,Accepted
+249,Steven Mcknight,Male,2.68,IT,Web Dev,"C++, MongoDB, Python",2.6,https://portfolio.fake/zschwartz,Rejected
+250,Brent Barker,Other,3.49,IT,DevOps,"HTML, Docker, Node.js",0.6,https://portfolio.fake/thomasarthur,Accepted
+251,Timothy Chapman,Other,3.68,IT,Web Dev,"CSS, MongoDB, Node.js",2.1,https://portfolio.fake/thorntonclaire,Rejected
+252,Eric Thomas,Other,2.78,ME,Cybersecurity,"Java, SQL, CSS, Pandas",1.5,https://portfolio.fake/teresajensen,Accepted
+253,Justin Jimenez,Female,2.07,EE,Cybersecurity,"React, Kubernetes, JavaScript, MongoDB",1.2,https://portfolio.fake/sharon68,Pending
+254,Cathy Murphy,Female,3.1,ME,Data Science,"Pandas, C++, Node.js, HTML, React, TensorFlow",2.4,https://portfolio.fake/rperez,Rejected
+255,Robin Montgomery,Other,3.5,IT,DevOps,"Node.js, C++, JavaScript, MongoDB",2.8,https://portfolio.fake/yolanda21,Pending
+256,Hannah Collins,Other,3.18,ECE,Web Dev,"Docker, Pandas, Kubernetes, React",0.8,https://portfolio.fake/mollyhall,Pending
+257,David Juarez,Female,3.91,ECE,Data Science,"HTML, Java, CSS, TensorFlow",1.8,https://portfolio.fake/vsullivan,Pending
+258,Benjamin Silva,Male,3.55,IT,AI/ML,"Python, React, SQL",0.8,https://portfolio.fake/breanna36,Pending
+259,Margaret Perry,Female,3.83,ME,DevOps,"Java, Node.js, React, MongoDB, Docker, JavaScript",0.2,https://portfolio.fake/richard72,Rejected
+260,Ashley Duncan,Male,3.77,EE,AI/ML,"Python, HTML, Node.js, React",2.4,https://portfolio.fake/mcowan,Accepted
+261,Daniel Williams,Other,3.28,ME,Web Dev,"Docker, React, C++, TensorFlow, HTML, Node.js",1.2,https://portfolio.fake/christopherandrews,Accepted
+262,Cory Stark,Female,3.97,IT,DevOps,"Pandas, TensorFlow, Kubernetes, JavaScript",1.2,https://portfolio.fake/brian10,Pending
+263,Stephanie Mills,Other,2.41,CS,Cybersecurity,"CSS, SQL, React, Docker, JavaScript",2.4,https://portfolio.fake/cheyenne80,Accepted
+264,Troy Bradley,Other,2.87,CS,Web Dev,"JavaScript, Node.js, Python",0.8,https://portfolio.fake/ysmith,Pending
+265,Mary Morgan,Male,2.56,ME,Data Science,"HTML, TensorFlow, Pandas, Kubernetes, Java",1.1,https://portfolio.fake/baileybowen,Pending
+266,Ethan Harris,Male,3.83,CS,DevOps,"Node.js, JavaScript, SQL, HTML, TensorFlow",2.2,https://portfolio.fake/patrick44,Accepted
+267,Monique Perez MD,Female,2.17,ME,Web Dev,"Python, C++, TensorFlow, Pandas, React, JavaScript",2.2,https://portfolio.fake/watsonpaul,Pending
+268,Sarah Thornton,Other,2.45,ECE,DevOps,"MongoDB, Python, JavaScript, SQL, Java, TensorFlow",0.9,https://portfolio.fake/daniel72,Pending
+269,Michael Patterson,Female,2.29,IT,Cybersecurity,"Node.js, Python, React, JavaScript",0.3,https://portfolio.fake/charles59,Pending
+270,Tom Smith,Female,3.76,EE,Data Science,"TensorFlow, C++, CSS, Python, Docker, React",0.2,https://portfolio.fake/mdunn,Accepted
+271,Sara Moses,Other,2.42,ECE,DevOps,"JavaScript, Java, React, Kubernetes, TensorFlow, MongoDB",2.9,https://portfolio.fake/riosjennifer,Pending
+272,Andrew Ramirez,Female,3.04,IT,Data Science,"React, HTML, C++",2.0,https://portfolio.fake/mark93,Rejected
+273,Julia Johnson,Other,2.59,IT,AI/ML,"Python, Kubernetes, MongoDB, HTML",2.3,https://portfolio.fake/pamelaparrish,Rejected
+274,Tamara Gardner,Female,3.45,CS,Data Science,"Kubernetes, JavaScript, TensorFlow, Pandas, SQL, HTML",2.7,https://portfolio.fake/ymay,Pending
+275,Donald Diaz,Female,3.37,ME,Cybersecurity,"Docker, SQL, HTML, CSS",1.3,https://portfolio.fake/margaret62,Rejected
+276,Dillon Richards,Female,2.22,EE,Cybersecurity,"React, SQL, Docker, Node.js",1.6,https://portfolio.fake/perkinsvirginia,Rejected
+277,Daniel Palmer,Female,3.0,CS,Web Dev,"Pandas, MongoDB, C++, Python, CSS",0.9,https://portfolio.fake/mwells,Rejected
+278,Amber Blair,Other,2.14,ME,DevOps,"React, Java, C++",0.0,https://portfolio.fake/ysmith,Pending
+279,Troy Hunter,Male,2.89,CS,Data Science,"Python, SQL, Kubernetes, MongoDB, HTML",0.7,https://portfolio.fake/mariemccarthy,Pending
+280,Joanne Lewis,Male,3.74,EE,AI/ML,"TensorFlow, C++, React, Python",2.9,https://portfolio.fake/megan09,Rejected
+281,Sarah West,Other,3.0,IT,Web Dev,"TensorFlow, HTML, JavaScript, SQL, Java",0.3,https://portfolio.fake/david19,Rejected
+282,Edwin Bradley,Female,3.1,ME,Data Science,"React, Java, Pandas",2.5,https://portfolio.fake/valerie64,Rejected
+283,Vincent Randall,Male,3.91,CS,AI/ML,"HTML, MongoDB, Java, Node.js, Kubernetes, Python",0.4,https://portfolio.fake/jgarza,Accepted
+284,Rebecca Greer,Female,3.3,CS,Cybersecurity,"SQL, Pandas, Java, TensorFlow",1.5,https://portfolio.fake/jacksonmichael,Pending
+285,Amanda Carey,Male,2.4,EE,AI/ML,"HTML, SQL, Java",1.6,https://portfolio.fake/john42,Rejected
+286,Kari Mercado,Other,2.62,CS,Web Dev,"Docker, Python, MongoDB",1.9,https://portfolio.fake/codyferguson,Rejected
+287,Marcus Grimes,Other,3.96,EE,Web Dev,"Node.js, Java, Kubernetes, CSS, Python",1.5,https://portfolio.fake/lukebrown,Accepted
+288,William Williams,Other,2.21,EE,Web Dev,"JavaScript, TensorFlow, Pandas",1.0,https://portfolio.fake/torrescynthia,Accepted
+289,Jennifer Decker,Male,2.52,IT,AI/ML,"React, SQL, Kubernetes, CSS, C++",1.2,https://portfolio.fake/wrightkevin,Pending
+290,Brandon Arnold,Male,3.93,EE,Cybersecurity,"CSS, HTML, TensorFlow, C++, React, Pandas",2.7,https://portfolio.fake/theodore71,Pending
+291,Julia Juarez,Male,2.91,CS,Web Dev,"Python, Java, Docker, Kubernetes",2.2,https://portfolio.fake/jared04,Rejected
+292,Joshua Colon,Other,3.85,ME,DevOps,"Kubernetes, TensorFlow, MongoDB, C++",0.1,https://portfolio.fake/kingscott,Rejected
+293,Lori Waller,Other,3.5,EE,Data Science,"Kubernetes, CSS, React",2.6,https://portfolio.fake/derek64,Pending
+294,Jon Mason,Other,3.17,ECE,DevOps,"C++, Python, Docker, Java, SQL, JavaScript",2.8,https://portfolio.fake/hscott,Rejected
+295,Kathy Watts,Female,3.06,CS,Web Dev,"Python, HTML, React, Node.js, TensorFlow, Docker",1.5,https://portfolio.fake/gwright,Pending
+296,Mrs. Alicia Tanner,Male,3.11,IT,Data Science,"Docker, Pandas, React, TensorFlow",1.0,https://portfolio.fake/michaelgarcia,Accepted
+297,Joseph Eaton,Female,2.5,CS,Data Science,"Pandas, Node.js, SQL, Kubernetes, React",0.2,https://portfolio.fake/thompsoncrystal,Accepted
+298,Patricia Ramos,Female,3.13,CS,AI/ML,"Pandas, Docker, C++, HTML, React, Kubernetes",2.0,https://portfolio.fake/luischoi,Pending
+299,Eric Gill,Other,3.72,CS,Web Dev,"Java, Kubernetes, TensorFlow, React, JavaScript, HTML",1.3,https://portfolio.fake/johnsonmichael,Accepted
+300,Melinda Smith,Female,2.62,CS,Cybersecurity,"CSS, MongoDB, Docker, Java, SQL, JavaScript",2.1,https://portfolio.fake/samantha30,Rejected
