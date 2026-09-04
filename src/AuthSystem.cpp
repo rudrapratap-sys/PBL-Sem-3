@@ -10,8 +10,6 @@ using json = nlohmann::json;
 using namespace std;
 
 
-// Constructor
-
 AuthSystem::AuthSystem(string fileName)
 {
     this->fileName = fileName;
@@ -19,8 +17,6 @@ AuthSystem::AuthSystem(string fileName)
     loadUsers();
 }
 
-
-// Check whether email already exists
 
 bool AuthSystem::emailExists(const string& email) const
 {
@@ -36,13 +32,10 @@ bool AuthSystem::emailExists(const string& email) const
 }
 
 
-// Load users from JSON file
-
 void AuthSystem::loadUsers()
 {
     ifstream file(fileName);
 
-    // If file doesn't exist
     if (!file.is_open())
     {
         cout << "Users file not found. Creating a new one..." << endl;
@@ -90,7 +83,6 @@ void AuthSystem::loadUsers()
 }
 
 
-// Save users to JSON file
 
 void AuthSystem::saveUsers() const
 {
@@ -124,9 +116,6 @@ void AuthSystem::saveUsers() const
     file.close();
 }
 
-
-// Register user
-
 bool AuthSystem::registerUser()
 {
     string name;
@@ -144,9 +133,6 @@ bool AuthSystem::registerUser()
     cout << "Enter your email: ";
     getline(cin, email);
 
-
-    // Check duplicate email
-
     if (emailExists(email))
     {
         cout << "\nAn account with this email already exists!\n";
@@ -158,7 +144,6 @@ bool AuthSystem::registerUser()
     getline(cin, password);
 
 
-    // Basic validation
 
     if (name.empty() || email.empty() || password.empty())
     {
@@ -167,17 +152,11 @@ bool AuthSystem::registerUser()
     }
 
 
-    // Create User object
 
     User newUser(name, email, password);
 
-
-    // Add to vector
-
     users.push_back(newUser);
 
-
-    // Save to JSON
 
     saveUsers();
 
@@ -187,8 +166,6 @@ bool AuthSystem::registerUser()
     return true;
 }
 
-
-// Login user
 
 bool AuthSystem::loginUser()
 {
@@ -206,8 +183,6 @@ bool AuthSystem::loginUser()
     cout << "Enter your password: ";
     getline(cin, password);
 
-
-    // Search user
 
     for (const User& user : users)
     {
@@ -238,8 +213,6 @@ bool AuthSystem::loginUser()
     return false;
 }
 
-
-// Display users
 
 void AuthSystem::displayUsers() const
 {

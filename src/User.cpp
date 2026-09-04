@@ -1,6 +1,5 @@
 #include "../include/User.h"
 
-// Default constructor
 User::User()
 {
     name = "";
@@ -8,15 +7,12 @@ User::User()
     password = "";
 }
 
-// Parameterized constructor
 User::User(string name, string email, string password)
 {
     this->name = name;
     this->email = email;
     this->password = password;
 }
-
-// Getters
 
 string User::getName() const
 {
@@ -32,8 +28,6 @@ string User::getPassword() const
 {
     return password;
 }
-
-// Setters
 
 void User::setName(string name)
 {
