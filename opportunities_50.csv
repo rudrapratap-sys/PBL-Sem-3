@@ -1,0 +1,51 @@
+opportunity_id,title,organization,category,domain,min_cgpa,required_skills,deadline,location,benefits
+1,AI Research Internship,TechNova Research,Internship,Artificial Intelligence,8.0,Python|Machine Learning|Statistics,2026-09-20,India,Research Experience
+2,Machine Learning Internship,DataMind Labs,Internship,Machine Learning,7.0,Python|Machine Learning|Pandas|NumPy,2026-09-25,India,Stipend
+3,Data Science Internship,DataCorp,Internship,Data Science,7.5,Python|SQL|Pandas|Statistics,2026-09-30,India,Stipend
+4,Web Development Internship,WebWorks,Internship,Web Development,6.5,HTML|CSS|JavaScript|Git,2026-09-18,India,Certificate
+5,Full Stack Development Internship,CodeCraft,Internship,Web Development,7.0,HTML|CSS|JavaScript|Node.js|MongoDB,2026-10-05,India,Stipend
+6,Android Development Internship,AppForge,Internship,Mobile Development,7.0,Java|Kotlin|Android|Git,2026-09-28,India,Stipend
+7,Flutter Developer Internship,MobileNext,Internship,Mobile Development,6.5,Dart|Flutter|Git,2026-10-10,India,Certificate
+8,Cloud Computing Internship,CloudScale,Internship,Cloud Computing,7.0,Linux|Networking|AWS|Python,2026-09-22,India,Stipend
+9,Cybersecurity Internship,SecureNet,Internship,Cybersecurity,7.5,Networking|Linux|Python|Cybersecurity,2026-09-27,India,Stipend
+10,DevOps Internship,DeployPro,Internship,DevOps,7.0,Linux|Git|Docker|CI/CD,2026-10-12,India,Stipend
+11,AI Fellowship,FutureAI Foundation,Fellowship,Artificial Intelligence,8.0,Python|Machine Learning|Deep Learning,2026-09-15,India,Certificate
+12,Women in Technology Scholarship,TechWomen Foundation,Scholarship,Technology,7.5,Programming|Communication|Leadership,2026-09-30,India,Financial Aid
+13,STEM Excellence Scholarship,STEM India,Scholarship,STEM,8.0,Academic Excellence|Programming,2026-10-08,India,Scholarship
+14,Merit Coding Scholarship,CodeForAll,Scholarship,Programming,8.5,C++|Java|Python|DSA,2026-09-24,India,Financial Aid
+15,Research Excellence Fellowship,ResearchHub,Fellowship,Research,8.0,Research|Python|Statistics,2026-10-01,India,Research Grant
+16,Data Analytics Fellowship,Analytics Foundation,Fellowship,Data Science,7.5,Python|SQL|Excel|Statistics,2026-09-29,India,Mentorship
+17,National Coding Challenge,CodeArena,Competition,Programming,6.0,C++|Java|Python|DSA,2026-09-17,Online,Prizes
+18,AI Innovation Challenge,InnovateAI,Competition,Artificial Intelligence,7.0,Python|Machine Learning|Problem Solving,2026-09-21,Online,Prizes
+19,Cybersecurity CTF,CyberDefenders,Competition,Cybersecurity,6.5,Linux|Networking|Cybersecurity|Python,2026-09-19,Online,Certificate
+20,Hackathon for Social Good,Build4Good,Hackathon,Software Development,6.0,Programming|Git|Problem Solving|Teamwork,2026-09-26,Online,Prizes
+21,Smart India Hackathon,SIH,Hackathon,Innovation,6.0,Programming|Problem Solving|Git|Teamwork,2026-10-15,India,Prizes
+22,GreenTech Hackathon,GreenTech,Hackathon,Sustainability,6.5,Python|IoT|Problem Solving|Teamwork,2026-10-03,India,Prizes
+23,FinTech Innovation Challenge,FinInnovate,Competition,FinTech,7.0,Python|SQL|Data Analysis,2026-10-06,Online,Prizes
+24,Open Source Contribution Program,OpenSource Community,Program,Software Development,6.0,Git|GitHub|C++|Python,2026-10-20,Online,Certificate
+25,Cloud Skills Certification,CloudAcademy,Certification,Cloud Computing,6.0,Linux|Networking|AWS,2026-10-25,Online,Certification
+26,Python Developer Certification,PyLearn,Certification,Programming,6.0,Python|OOP|Problem Solving,2026-10-18,Online,Certification
+27,Data Analytics Certification,DataSkills,Certification,Data Science,6.5,Python|SQL|Statistics|Excel,2026-10-22,Online,Certification
+28,Cybersecurity Certification Program,CyberSafe,Certification,Cybersecurity,6.5,Networking|Linux|Cybersecurity,2026-10-30,Online,Certification
+29,AI Summer Research Program,AI Research Center,Research,Artificial Intelligence,8.0,Python|Machine Learning|Research,2026-11-05,India,Research Experience
+30,NLP Research Program,LanguageAI Lab,Research,Natural Language Processing,7.5,Python|NLP|Machine Learning,2026-10-28,India,Research Experience
+31,Computer Vision Research Program,VisionLab,Research,Computer Vision,8.0,Python|OpenCV|Machine Learning,2026-11-02,India,Research Experience
+32,Robotics Research Internship,RoboTech,Internship,Robotics,7.5,C++|Python|Robotics|Arduino,2026-10-14,India,Stipend
+33,IoT Innovation Internship,IoTWorks,Internship,Internet of Things,7.0,C|C++|Arduino|IoT,2026-10-09,India,Stipend
+34,Blockchain Development Internship,BlockLabs,Internship,Blockchain,7.0,JavaScript|Solidity|Git|Blockchain,2026-10-17,India,Certificate
+35,Game Development Internship,GameForge,Internship,Game Development,6.5,C++|Unity|C#|Git,2026-10-11,India,Stipend
+36,UI/UX Design Internship,DesignSphere,Internship,UI/UX,6.0,Figma|UI Design|UX Research|Prototyping,2026-09-23,India,Stipend
+37,Product Management Fellowship,ProductNext,Fellowship,Product Management,7.0,Communication|Leadership|Problem Solving|Research,2026-10-07,India,Mentorship
+38,Technical Writing Fellowship,WriteTech,Fellowship,Technical Writing,6.5,Technical Writing|Communication|Research,2026-10-16,Online,Certificate
+39,Entrepreneurship Grant,StartupIndia,Grant,Entrepreneurship,7.0,Business|Leadership|Communication|Innovation,2026-11-10,India,Funding
+40,Student Innovation Grant,InnovateIndia,Grant,Innovation,7.5,Research|Innovation|Problem Solving,2026-10-31,India,Funding
+41,International Student Exchange,GlobalEd,Exchange,International Education,8.0,Communication|Academic Excellence|Leadership,2026-11-15,International,Travel Support
+42,Research Exchange Program,GlobalResearch,Exchange,Research,8.0,Research|Python|Statistics|Communication,2026-11-20,International,Travel Support
+43,Women in AI Program,WomenAI Network,Program,Artificial Intelligence,7.0,Python|Machine Learning|Communication,2026-10-27,Online,Mentorship
+44,Rural Technology Fellowship,RuralTech,Fellowship,Social Technology,7.0,Programming|Communication|Problem Solving,2026-11-01,India,Stipend
+45,EdTech Innovation Challenge,EduInnovate,Competition,EdTech,6.5,Python|Web Development|Problem Solving,2026-10-24,Online,Prizes
+46,Healthcare AI Challenge,HealthAI,Competition,Healthcare AI,7.5,Python|Machine Learning|Data Analysis,2026-11-08,Online,Prizes
+47,Financial Inclusion Hackathon,FinAccess,Hackathon,FinTech,6.5,Python|Web Development|SQL|Teamwork,2026-11-03,India,Prizes
+48,National Research Internship,National Research Lab,Internship,Research,8.0,Python|C++|Research|Statistics,2026-11-12,India,Research Experience
+49,Software Engineering Internship,SoftCore Technologies,Internship,Software Engineering,7.0,C++|Java|DSA|Git|OOP,2026-10-29,India,Stipend
+50,Competitive Programming Fellowship,AlgoMasters,Fellowship,Competitive Programming,7.5,C++|DSA|Algorithms|Problem Solving,2026-10-19,Online,Mentorship
