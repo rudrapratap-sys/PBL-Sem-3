@@ -88,7 +88,6 @@ void AuthSystem::saveUsers() const
 {
     json data = json::array();
 
-
     for (const User& user : users)
     {
         json userData;
@@ -100,9 +99,7 @@ void AuthSystem::saveUsers() const
         data.push_back(userData);
     }
 
-
     ofstream file(fileName);
-
 
     if (!file.is_open())
     {
@@ -110,9 +107,7 @@ void AuthSystem::saveUsers() const
         return;
     }
 
-
     file << data.dump(4);
-
     file.close();
 }
 
@@ -122,13 +117,10 @@ bool AuthSystem::registerUser()
     string email;
     string password;
 
-
     cout << "\n========== REGISTER ==========\n";
-
 
     cout << "Enter your name: ";
     getline(cin >> ws, name);
-
 
     cout << "Enter your email: ";
     getline(cin, email);
@@ -139,11 +131,8 @@ bool AuthSystem::registerUser()
         return false;
     }
 
-
     cout << "Enter your password: ";
     getline(cin, password);
-
-
 
     if (name.empty() || email.empty() || password.empty())
     {
@@ -151,38 +140,29 @@ bool AuthSystem::registerUser()
         return false;
     }
 
-
-
     User newUser(name, email, password);
 
     users.push_back(newUser);
 
-
     saveUsers();
-
 
     cout << "\nRegistration successful!\n";
 
     return true;
 }
 
-
 bool AuthSystem::loginUser()
 {
     string email;
     string password;
 
-
     cout << "\n========== LOGIN ==========\n";
-
 
     cout << "Enter your email: ";
     getline(cin >> ws, email);
 
-
     cout << "Enter your password: ";
     getline(cin, password);
-
 
     for (const User& user : users)
     {
@@ -213,18 +193,15 @@ bool AuthSystem::loginUser()
     return false;
 }
 
-
 void AuthSystem::displayUsers() const
 {
     cout << "\n========== USERS ==========\n";
-
 
     if (users.empty())
     {
         cout << "No users registered.\n";
         return;
     }
-
 
     for (const User& user : users)
     {
