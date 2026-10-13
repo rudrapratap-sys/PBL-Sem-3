@@ -1,222 +1,163 @@
-#include "../include/AuthSystem.h"
+#include "AuthSystem.h"
 
-#include <iostream>
+#include "Utils.h"
+
 #include <fstream>
-
-#include "../json.hpp"
-
-using json = nlohmann::json;
+#include <sstream>
 
 using namespace std;
 
-
-AuthSystem::AuthSystem(string fileName)
-{
-    this->fileName = fileName;
-
+AuthSystem::AuthSystem() {
     loadUsers();
 }
 
-
-bool AuthSystem::emailExists(const string& email) const
-{
-    for (const User& user : users)
-    {
-        if (user.getEmail() == email)
-        {
-            return true;
-        }
-    }
-
-    return false;
+string AuthSystem::makePasswordHash(const string& password) {
+    // Academic demo only: for now we are only adding a fixed salt.
+    // Future improvement: use a proper password hasher like bcrypt or Argon2.
+    return password + "_some_salt_by_piyush";
 }
 
+bool AuthSystem::isValidEmail(const string& email) {
+    // size_t is used for string positions instead of int.
+    // It stores values from 0 to positive only, so it cannot be negative.
+    // also .find() return size_t not int
+    size_t at = email.find('@');
+    size_t dot = email.rfind('.');
 
-void AuthSystem::loadUsers()
-{
-    ifstream file(fileName);
-
-    if (!file.is_open())
-    {
-        cout << "Users file not found. Creating a new one..." << endl;
-
-        ofstream newFile(fileName);
-
-        if (newFile.is_open())
-        {
-            newFile << "[]";
-            newFile.close();
-        }
-
-        return;
-    }
-
-
-    try
-    {
-        json data;
-
-        file >> data;
-
-        file.close();
-
-
-        users.clear();
-
-
-        for (const auto& item : data)
-        {
-            string name = item["name"];
-            string email = item["email"];
-            string password = item["password"];
-
-            User user(name, email, password);
-
-            users.push_back(user);
-        }
-    }
-    catch (const exception& e)
-    {
-        cout << "Error reading users.json!" << endl;
-        cout << e.what() << endl;
-    }
-}
-
-
-
-void AuthSystem::saveUsers() const
-{
-    json data = json::array();
-
-    for (const User& user : users)
-    {
-        json userData;
-
-        userData["name"] = user.getName();
-        userData["email"] = user.getEmail();
-        userData["password"] = user.getPassword();
-
-        data.push_back(userData);
-    }
-
-    ofstream file(fileName);
-
-    if (!file.is_open())
-    {
-        cout << "Error opening users.json for writing!" << endl;
-        return;
-    }
-
-    file << data.dump(4);
-    file.close();
-}
-
-bool AuthSystem::registerUser()
-{
-    string name;
-    string email;
-    string password;
-
-    cout << "\n========== REGISTER ==========\n";
-
-    cout << "Enter your name: ";
-    getline(cin >> ws, name);
-
-    cout << "Enter your email: ";
-    getline(cin, email);
-
-    if (emailExists(email))
-    {
-        cout << "\nAn account with this email already exists!\n";
+    // If find() or rfind() does not find the character, it returns string::npos.
+    if (at == string::npos) {
         return false;
     }
 
-    cout << "Enter your password: ";
-    getline(cin, password);
-
-    if (name.empty() || email.empty() || password.empty())
-    {
-        cout << "\nAll fields are required!\n";
+    if (dot == string::npos) {
         return false;
     }
 
-    User newUser(name, email, password);
+    if (at == 0) {
+        return false;
+    }
 
-    users.push_back(newUser);
+    if (dot <= at + 1) {
+        return false;
+    }
 
-    saveUsers();
-
-    cout << "\nRegistration successful!\n";
+    if (dot == email.size() - 1) {
+        return false;
+    }
 
     return true;
 }
 
-bool AuthSystem::loginUser()
-{
-    string email;
-    string password;
-
-    cout << "\n========== LOGIN ==========\n";
-
-    cout << "Enter your email: ";
-    getline(cin >> ws, email);
-
-    cout << "Enter your password: ";
-    getline(cin, password);
-
-    for (const User& user : users)
-    {
-        if (user.getEmail() == email)
-        {
-            if (user.getPassword() == password)
-            {
-                cout << "\nLogin successful!\n";
-
-                cout << "Welcome, "
-                     << user.getName()
-                     << "!\n";
-
-                return true;
-            }
-            else
-            {
-                cout << "\nIncorrect password!\n";
-
-                return false;
-            }
+bool AuthSystem::emailExists(const string& email) {
+    for (User& user : users) {
+        if (Utils::equalsIgnoreCase(user.getEmail(), email)) {
+            return true;
         }
     }
-
-
-    cout << "\nNo account found with this email!\n";
-
     return false;
 }
 
-void AuthSystem::displayUsers() const
-{
-    cout << "\n========== USERS ==========\n";
+string AuthSystem::generateUserId() {
+    // Simple ID generation for this project.
+    // If 3 users are already saved, the next user ID will be U4.
+    int nextNumber = users.size() + 1;
+    return "U" + to_string(nextNumber);
+}
 
-    if (users.empty())
-    {
-        cout << "No users registered.\n";
-        return;
+bool AuthSystem::loadUsers() {
+    users.clear();
+
+    ifstream file(filePath);
+    if (!file) {
+        return true;
     }
 
-    for (const User& user : users)
-    {
-        cout << "Name     : "
-             << user.getName()
-             << endl;
-
-        cout << "Email    : "
-             << user.getEmail()
-             << endl;
-
-        cout << "Password : "
-             << user.getPassword()
-             << endl;
-
-        cout << "--------------------------\n";
+    string line;
+    while (getline(file, line)) {
+        vector<string> parts = Utils::split(line, '|');
+        if (parts.size() == 4) {
+            users.push_back(User(parts[0], parts[1], parts[2], parts[3]));
+        }
     }
+
+    return true;
+}
+
+bool AuthSystem::saveUsers() {
+    ofstream file(filePath);
+    if (!file) {
+        return false;
+    }
+
+    for (User& user : users) {
+        file << user.getUserId() << "|"
+             << user.getName() << "|"
+             << user.getEmail() << "|"
+             << user.getPasswordHash() << "\n";
+    }
+
+    return true;
+}
+
+bool AuthSystem::registerUser(const string& name,
+                              const string& email,
+                              const string& password,
+                              User& createdUser,
+                              string& message) {
+    string cleanedName = Utils::trim(name);
+    string cleanedEmail = Utils::trim(email);
+
+    if (cleanedName.empty()) {
+        message = "Name cannot be empty.";
+        return false;
+    }
+
+    if (!isValidEmail(cleanedEmail)) {
+        message = "Please enter a valid email address.";
+        return false;
+    }
+
+    if (emailExists(cleanedEmail)) {
+        message = "An account with this email already exists.";
+        return false;
+    }
+
+    if (password.size() < 4) {
+        message = "Password should contain at least 4 characters for this demo.";
+        return false;
+    }
+
+    createdUser = User(generateUserId(), cleanedName, cleanedEmail, makePasswordHash(password));
+    users.push_back(createdUser);
+
+    if (!saveUsers()) {
+        message = "Could not save user data.";
+        return false;
+    }
+
+    message = "Registration successful.";
+    return true;
+}
+
+bool AuthSystem::loginUser(const string& email,
+                           const string& password,
+                           User& loggedInUser,
+                           string& message) {
+    string cleanedEmail = Utils::trim(email);
+    string enteredPasswordValue = makePasswordHash(password);
+
+    for (User& user : users) {
+        if (Utils::equalsIgnoreCase(user.getEmail(), cleanedEmail)) {
+            if (user.getPasswordHash() == enteredPasswordValue) {
+                loggedInUser = user;
+                message = "Login successful.";
+                return true;
+            }
+            message = "Wrong password.";
+            return false;
+        }
+    }
+
+    message = "No account found with this email.";
+    return false;
 }

@@ -1,0 +1,6 @@
+*.exe
+*.o
+build/
+.vscode/
+data/users.txt
+data/students.txt

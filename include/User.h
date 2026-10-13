@@ -1,28 +1,29 @@
-#ifndef USER_H
-#define USER_H
+#pragma once
 
 #include <string>
 
 using namespace std;
 
-class User
-{
+class User {
 private:
+    string userId;
     string name;
     string email;
-    string password;
+    string passwordHash;
 
 public:
     User();
-    User(string name, string email, string password);
+    User(const string& userId,
+         const string& name,
+         const string& email,
+         const string& passwordHash);
 
-    string getName() const;
-    string getEmail() const;
-    string getPassword() const;
+    string getUserId();
+    string getName();
+    string getEmail();
+    string getPasswordHash();
 
-    void setName(string name);
-    void setEmail(string email);
-    void setPassword(string password);
+    void setName(const string& name);
+    void setEmail(const string& email);
+    void setPasswordHash(const string& passwordHash);
 };
-
-#endif

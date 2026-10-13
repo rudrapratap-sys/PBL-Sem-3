@@ -1,45 +1,43 @@
-#include "../include/User.h"
+#include "User.h"
 
-User::User()
-{
-    name = "";
-    email = "";
-    password = "";
+using namespace std;
+
+User::User() {
 }
 
-User::User(string name, string email, string password)
-{
-    this->name = name;
-    this->email = email;
-    this->password = password;
+// Member initializer list: directly stores parameter values into class variables.
+// Example: userId(userId) means the class variable userId gets the parameter userId.
+User::User(const string& userId,
+           const string& name,
+           const string& email,
+           const string& passwordHash)
+    : userId(userId), name(name), email(email), passwordHash(passwordHash) {
 }
 
-string User::getName() const
-{
+string User::getUserId() {
+    return userId;
+}
+
+string User::getName() {
     return name;
 }
 
-string User::getEmail() const
-{
+string User::getEmail() {
     return email;
 }
 
-string User::getPassword() const
-{
-    return password;
+string User::getPasswordHash() {
+    return passwordHash;
 }
 
-void User::setName(string name)
-{
+void User::setName(const string& name) {
     this->name = name;
 }
 
-void User::setEmail(string email)
-{
+void User::setEmail(const string& email) {
     this->email = email;
 }
 
-void User::setPassword(string password)
-{
-    this->password = password;
+void User::setPasswordHash(const string& passwordHash) {
+    this->passwordHash = passwordHash;
 }

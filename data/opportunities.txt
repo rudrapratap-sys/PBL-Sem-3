@@ -1,0 +1,7 @@
+Web Development Internship|Internship|Web Developer|6.50|HTML,CSS,JavaScript|Remote
+Data Analysis Workshop|Workshop|Data Analyst|0.00|Excel,SQL|Online
+C++ Coding Hackathon|Hackathon|Software Developer|0.00|C++,DSA|College Campus
+AI ML Bootcamp|Training|AI ML Beginner|7.00|Python,Maths|Online
+Cyber Security Internship|Internship|Cyber Security Beginner|7.50|Networking,Linux,Python|Delhi
+Open Source Program|Program|Software Developer|0.00|Git,OOP|Remote
+Power BI Scholarship Course|Scholarship|Data Analyst|6.00|Excel,Power BI|Online

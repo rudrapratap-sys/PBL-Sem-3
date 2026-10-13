@@ -1,0 +1,5 @@
+Software Developer|C++,OOP,DSA,Git,SQL
+Web Developer|HTML,CSS,JavaScript,Git,React
+Data Analyst|Excel,SQL,Python,Statistics,Power BI
+Cyber Security Beginner|Networking,Linux,Python,Security Basics,Git
+AI ML Beginner|Python,Maths,Statistics,Machine Learning,Data Visualization
