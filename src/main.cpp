@@ -13,84 +13,7 @@
 
 // using namespace std;
 
-int readInt(const string& message, int minimum, int maximum) {
-    int value;
 
-    while (true) {
-        cout << message;
-        cin >> value;
-
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout << "Please enter a valid number.\n";
-        }
-        else {
-            cin.ignore(1000, '\n');
-
-            if (value >= minimum && value <= maximum) {
-                return value;
-            }
-
-            cout << "Enter a number from "
-                 << minimum << " to " << maximum << ".\n";
-        }
-    }
-}
-
-double readDouble(const string& message, double minimum, double maximum) {
-    double value;
-
-    while (true) {
-        cout << message;
-        cin >> value;
-
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout << "Please enter a valid number.\n";
-        }
-        else {
-            cin.ignore(1000, '\n');
-
-            if (value >= minimum && value <= maximum) {
-                return value;
-            }
-
-            cout << "Enter a value from "
-                 << minimum << " to " << maximum << ".\n";
-        }
-    }
-}
-
-string readText(const string& message) {
-    cout << message;
-
-    string input;
-    getline(cin, input);
-
-    return Utils::trim(input);
-}
-
-void waitForEnter() {
-    cout << "\nPress Enter to continue...";
-    string temp;
-    getline(cin, temp);
-}
-
-void printList(const vector<string>& items) {
-    if (items.empty()) {
-        cout << "None";
-        return;
-    }
-
-    for (size_t i = 0; i < items.size(); i++) {
-        cout << items[i];
-        if (i + 1 < items.size()) {
-            cout << ", ";
-        }
-    }
-}
 
 // void registerFlow(AuthSystem& authSystem, StudentManager& studentManager) {
 //     cout << "\n--- Register New Account ---\n";
@@ -347,16 +270,76 @@ void printList(const vector<string>& items) {
 //     return 0;
 // }
 
-// hello
-#include<iostream>
+#include <iostream>
+#include <iomanip>
+#include <unordered_map>
+#include <vector>
+#include <string>
 
 #include "AuthSystem.h"
-#include "OpportunityEngine.h"
-#include "SkillGapAnalyzer.h"
 #include "StudentManager.h"
 #include "Utils.h"
 
 using namespace std;
+
+int readInt(const string& message, int minimum, int maximum) {
+    int value;
+
+    while (true) {
+        cout << message;
+        cin >> value;
+
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter a valid number.\n";
+        }
+        else {
+            cin.ignore(1000, '\n');
+
+            if (value >= minimum && value <= maximum) {
+                return value;
+            }
+
+            cout << "Enter a number from "
+                 << minimum << " to " << maximum << ".\n";
+        }
+    }
+}
+
+double readDouble(const string& message, double minimum, double maximum) {
+    double value;
+
+    while (true) {
+        cout << message;
+        cin >> value;
+
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter a valid number.\n";
+        }
+        else {
+            cin.ignore(1000, '\n');
+
+            if (value >= minimum && value <= maximum) {
+                return value;
+            }
+
+            cout << "Enter a value from "
+                 << minimum << " to " << maximum << ".\n";
+        }
+    }
+}
+
+string readText(const string& message) {
+    cout << message;
+
+    string input;
+    getline(cin, input);
+
+    return Utils::trim(input);
+}
 
 void waitForEnter() {
     cout << "\nPress Enter to continue...";
@@ -366,15 +349,10 @@ void waitForEnter() {
 
 bool login_user(AuthSystem& authSystem, User& loggedInUser) {
     cout << "\n--- Login ---\n";
-    string email ;
-    cout<<"Enter email: ";
-    getline(cin, email);
-    email = Utils::trim(email);
 
-    string password ;
-    cout<<"Enter password: ";
-    getline(cin, password);
-    password = Utils::trim(password);
+    string email = readText("Enter email: ");
+    string password = readText("Enter password: ");
+
     string message;
 
     if (authSystem.loginUser(email, password, loggedInUser, message)) {
@@ -384,121 +362,158 @@ bool login_user(AuthSystem& authSystem, User& loggedInUser) {
 
     cout << "Login failed: " << message << "\n";
     waitForEnter();
+
     return false;
 }
 
-void register_user(AuthSystem& authSystem, StudentManager& studentManager) {
+void register_user(AuthSystem& authSystem,
+                   StudentManager& studentManager) {
     cout << "\n--- Register New Account ---\n";
-    string name ;
-    cout<<"Enter full name: ";
-    getline(cin,name);
-    name = Utils::trim(name);
 
-    string email ;
-    cout<<"Enter email: ";
-    getline(cin, email);
-    email = Utils::trim(email);
-
-    string password ;
-    cout<<"Enter password: ";
-    getline(cin, password);
-    password = Utils::trim(password);
+    string name = readText("Enter full name: ");
+    string email = readText("Enter email: ");
+    string password = readText("Enter password: ");
 
     User createdUser;
     string message;
 
-    if (authSystem.registerUser(name, email, password, createdUser, message)) {
+    if (authSystem.registerUser(name, email, password,
+                               createdUser, message)) {
         Student student(createdUser);
         studentManager.saveProfile(student);
-        cout << message << " Your user ID is " << createdUser.getUserId() << ".\n";
-    } else {
+
+        cout << message << " Your user ID is "
+             << createdUser.getUserId() << ".\n";
+    }
+    else {
         cout << "Registration failed: " << message << "\n";
     }
 
     waitForEnter();
 }
 
-void editBasicDetails(Student& student, StudentManager& studentManager) {
+void editBasicDetails(Student& student,
+                      StudentManager& studentManager) {
     cout << "\n--- Edit Basic Details ---\n";
 
     student.setBranch(readText("Branch (example: CSE): "));
     student.setYear(readInt("Year (1-4): ", 1, 4));
     student.setCgpa(readDouble("CGPA (0-10): ", 0.0, 10.0));
 
-    string interests = readText("Interests separated by comma (example: AI,Web): ");
+    string interests = readText(
+        "Interests separated by comma (example: AI,Web): "
+    );
+
     student.setInterests(Utils::splitAndTrim(interests, ','));
 
     studentManager.saveProfile(student);
+
     cout << "Profile updated.\n";
     waitForEnter();
 }
 
 void addSkill(Student& student, StudentManager& studentManager) {
-    cout << "\n--- Add Skill ---\n";
-    string skill = readText("Skill name: ");
+    cout << "\n--- Add Skills ---\n";
 
-    if (student.addSkill(skill)) {
+    string skill = readText(
+        "Enter skills with score (e.g. Python:5, C:6, C++:9): "
+    );
+
+    if (skill.empty()) {
+        cout << "Skill input is empty.\n";
+    }
+    else {
+        student.setSkills(skill);
         studentManager.saveProfile(student);
-        cout << "Skill added.\n";
-    } else {
-        cout << "Skill is empty or already present.\n";
+        cout << "Skills updated.\n";
     }
 
     waitForEnter();
 }
 
-void editBasicDetails(){}
-void addSkill(){}
-void removeSkill(){}
-void selectTargetRole(){}
-void analyzeSkillGap(){}
-void discoverOpportunities(){}
+void removeSkill(Student& student, StudentManager& studentManager) {
+    cout << "\n--- Remove Skill ---\n";
 
+    unordered_map<string, int> skills = student.getSkills();
+
+    if (skills.empty()) {
+        cout << "No skills to remove.\n";
+        waitForEnter();
+        return;
+    }
+
+    cout << "Current skills:\n";
+
+    for (const auto& s : skills) {
+        cout << "  " << s.first << " : "
+             << s.second << "/10\n";
+    }
+
+    string skill = readText("Skill to remove: ");
+
+    if (student.removeSkill(skill)) {
+        studentManager.saveProfile(student);
+        cout << "Skill removed.\n";
+    }
+    else {
+        cout << "Skill not found.\n";
+    }
+
+    waitForEnter();
+}
 
 void studentDashboard(Student& student,
-                      StudentManager& studentManager,
-                      SkillGapAnalyzer& analyzer,
-                      OpportunityEngine& engine) {
+                      StudentManager& studentManager) {
     while (true) {
         cout << "\n==============================\n";
-        cout << " Student Dashboard - " << student.getName() << "\n";
+        cout << " Student Dashboard - "
+             << student.getName() << "\n";
         cout << "==============================\n";
+
         cout << "1. View Profile\n";
         cout << "2. Edit Basic Details\n";
-        cout << "3. Add Skill\n";
+        cout << "3. Add Skills\n";
         cout << "4. Remove Skill\n";
-        cout << "5. Select Target Role\n";
-        cout << "6. Analyze Skill Gap\n";
-        cout << "7. Discover Opportunities\n";
+        cout << "5. Select Target Role (Coming Soon)\n";
+        cout << "6. Analyze Skill Gap (Coming Soon)\n";
+        cout << "7. Discover Opportunities (Coming Soon)\n";
         cout << "8. Logout\n";
 
-        int choice ;
-        cout<<"Enter choice : ";
-        cin>>choice;
+        int choice = readInt("Enter choice: ", 1, 8);
 
         switch (choice) {
             case 1:
                 student.displayProfile();
                 waitForEnter();
                 break;
+
             case 2:
                 editBasicDetails(student, studentManager);
                 break;
+
             case 3:
                 addSkill(student, studentManager);
                 break;
+
             case 4:
                 removeSkill(student, studentManager);
                 break;
+
             case 5:
-                selectTargetRole(student, analyzer, studentManager);
+                cout << "Target role feature coming soon.\n";
+                waitForEnter();
                 break;
+
             case 6:
-                analyzeSkillGap(student, analyzer);
+                cout << "Skill gap analysis coming soon.\n";
+                waitForEnter();
                 break;
+
             case 7:
-                discoverOpportunities(student, engine);
+                cout << "Opportunity finder coming soon.\n";
+                waitForEnter();
                 break;
+
             case 8:
                 studentManager.saveProfile(student);
                 cout << "Logged out.\n";
@@ -507,27 +522,21 @@ void studentDashboard(Student& student,
     }
 }
 
-int main(){
-
+int main() {
     AuthSystem authSystem;
     StudentManager studentManager;
-    SkillGapAnalyzer analyzer;
-    OpportunityEngine engine;
 
     while (true) {
-        
         cout << "\n============================================\n";
         cout << " Skill Gap Navigator + Opportunity Finder\n";
         cout << "============================================\n";
+
         cout << "1. Register\n";
         cout << "2. Login\n";
         cout << "3. Exit\n";
 
-        int choice ;
-        cout<<"Enter choice: 1, 2, 3 : ";
-        cin>>choice;
+        int choice = readInt("Enter choice (1-3): ", 1, 3);
 
-        
         switch (choice) {
             case 1:
                 register_user(authSystem, studentManager);
@@ -538,21 +547,17 @@ int main(){
 
                 if (login_user(authSystem, loggedInUser)) {
                     Student student =
-                    studentManager.loadProfile(loggedInUser);
-                    studentDashboard(student, studentManager, analyzer, engine);
+                        studentManager.loadProfile(loggedInUser);
+
+                    studentDashboard(student, studentManager);
                 }
+
                 break;
             }
 
             case 3:
                 cout << "Thank you for using the project.\n";
                 return 0;
-
-            default:
-                cout << "Enter a valid choice: ";
-                break;
         }
-
-
     }
 }
