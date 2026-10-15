@@ -13,64 +13,84 @@
 
 // using namespace std;
 
-// int readInt(const string& message, int minimum, int maximum) {
-//     while (true) {
-//         cout << message;
-//         string input;
-//         getline(cin, input);
+int readInt(const string& message, int minimum, int maximum) {
+    int value;
 
-//         stringstream ss(input);
-//         int value;
-//         if (ss >> value && value >= minimum && value <= maximum) {
-//             return value;
-//         }
+    while (true) {
+        cout << message;
+        cin >> value;
 
-//         cout << "Please enter a number from " << minimum << " to " << maximum << ".\n";
-//     }
-// }
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter a valid number.\n";
+        }
+        else {
+            cin.ignore(1000, '\n');
 
-// double readDouble(const string& message, double minimum, double maximum) {
-//     while (true) {
-//         cout << message;
-//         string input;
-//         getline(cin, input);
+            if (value >= minimum && value <= maximum) {
+                return value;
+            }
 
-//         stringstream ss(input);
-//         double value;
-//         if (ss >> value && value >= minimum && value <= maximum) {
-//             return value;
-//         }
+            cout << "Enter a number from "
+                 << minimum << " to " << maximum << ".\n";
+        }
+    }
+}
 
-//         cout << "Please enter a value from " << minimum << " to " << maximum << ".\n";
-//     }
-// }
+double readDouble(const string& message, double minimum, double maximum) {
+    double value;
 
-// string readText(const string& message) {
-//     cout << message;
-//     string input;
-//     getline(cin, input);
-//     return Utils::trim(input);
-// }
+    while (true) {
+        cout << message;
+        cin >> value;
 
-// void waitForEnter() {
-//     cout << "\nPress Enter to continue...";
-//     string temp;
-//     getline(cin, temp);
-// }
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter a valid number.\n";
+        }
+        else {
+            cin.ignore(1000, '\n');
 
-// void printList(const vector<string>& items) {
-//     if (items.empty()) {
-//         cout << "None";
-//         return;
-//     }
+            if (value >= minimum && value <= maximum) {
+                return value;
+            }
 
-//     for (size_t i = 0; i < items.size(); i++) {
-//         cout << items[i];
-//         if (i + 1 < items.size()) {
-//             cout << ", ";
-//         }
-//     }
-// }
+            cout << "Enter a value from "
+                 << minimum << " to " << maximum << ".\n";
+        }
+    }
+}
+
+string readText(const string& message) {
+    cout << message;
+
+    string input;
+    getline(cin, input);
+
+    return Utils::trim(input);
+}
+
+void waitForEnter() {
+    cout << "\nPress Enter to continue...";
+    string temp;
+    getline(cin, temp);
+}
+
+void printList(const vector<string>& items) {
+    if (items.empty()) {
+        cout << "None";
+        return;
+    }
+
+    for (size_t i = 0; i < items.size(); i++) {
+        cout << items[i];
+        if (i + 1 < items.size()) {
+            cout << ", ";
+        }
+    }
+}
 
 // void registerFlow(AuthSystem& authSystem, StudentManager& studentManager) {
 //     cout << "\n--- Register New Account ---\n";
@@ -327,7 +347,7 @@
 //     return 0;
 // }
 
-
+// hello
 #include<iostream>
 
 #include "AuthSystem.h"
@@ -393,6 +413,35 @@ void register_user(AuthSystem& authSystem, StudentManager& studentManager) {
         cout << message << " Your user ID is " << createdUser.getUserId() << ".\n";
     } else {
         cout << "Registration failed: " << message << "\n";
+    }
+
+    waitForEnter();
+}
+
+void editBasicDetails(Student& student, StudentManager& studentManager) {
+    cout << "\n--- Edit Basic Details ---\n";
+
+    student.setBranch(readText("Branch (example: CSE): "));
+    student.setYear(readInt("Year (1-4): ", 1, 4));
+    student.setCgpa(readDouble("CGPA (0-10): ", 0.0, 10.0));
+
+    string interests = readText("Interests separated by comma (example: AI,Web): ");
+    student.setInterests(Utils::splitAndTrim(interests, ','));
+
+    studentManager.saveProfile(student);
+    cout << "Profile updated.\n";
+    waitForEnter();
+}
+
+void addSkill(Student& student, StudentManager& studentManager) {
+    cout << "\n--- Add Skill ---\n";
+    string skill = readText("Skill name: ");
+
+    if (student.addSkill(skill)) {
+        studentManager.saveProfile(student);
+        cout << "Skill added.\n";
+    } else {
+        cout << "Skill is empty or already present.\n";
     }
 
     waitForEnter();

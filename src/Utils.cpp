@@ -1,64 +1,80 @@
 #include "Utils.h"
 
-#include <algorithm>
-#include <cctype>
-#include <sstream>
 
 using namespace std;
 
 namespace Utils {
     string trim(const string& text) {
-        size_t start = 0;
-        while (start < text.size() && isspace(static_cast<unsigned char>(text[start]))) {
+        int start = 0;
+        int end = text.length() - 1;
+
+        // Skip spaces from the beginning
+        while (start < text.length() && text[start] == ' ') {
             start++;
         }
 
-        size_t end = text.size();
-        while (end > start && isspace(static_cast<unsigned char>(text[end - 1]))) {
+        // Skip spaces from the end
+        while (end >= start && text[end] == ' ') {
             end--;
-        }
+        }   
 
-        return text.substr(start, end - start);
+        return text.substr(start, end - start + 1);
     }
 
     string toLower(string text) {
-        transform(text.begin(), text.end(), text.begin(), [](unsigned char ch) {
-            return static_cast<char>(tolower(ch));
-        });
-        return text;
+    for (int i = 0; i < text.length(); i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z') {
+            text[i] = text[i] + 32;
+        }
     }
+
+    return text;
+}
 
     vector<string> split(const string& text, char delimiter) {
         vector<string> parts;
-        stringstream ss(text);
-        string item;
+        string item = "";
 
-        while (getline(ss, item, delimiter)) {
-            parts.push_back(item);
-        }
-
-        return parts;
-    }
-
-    vector<string> splitAndTrim(const string& text, char delimiter) {
-        vector<string> parts;
-        for (const string& item : split(text, delimiter)) {
-            string cleaned = trim(item);
-            if (!cleaned.empty()) {
-                parts.push_back(cleaned);
+        for (int i = 0; i < text.length(); i++) {
+            if (text[i] == delimiter) {
+                parts.push_back(item);
+                item = "";
+            } else {
+                item += text[i];
             }
         }
+
+        parts.push_back(item);
+
         return parts;
     }
 
     string join(const vector<string>& items, char delimiter) {
-        string result;
-        for (size_t i = 0; i < items.size(); i++) {
+        string result = "";
+
+        for (int i = 0; i < items.size(); i++) {
             result += items[i];
-            if (i + 1 < items.size()) {
+
+            if (i < items.size() - 1) {
                 result += delimiter;
             }
         }
+
+        return result;
+    }
+
+    vector<string> splitAndTrim(const string& text, char delimiter) {
+        vector<string> parts = split(text, delimiter);
+        vector<string> result;
+
+        for (int i = 0; i < parts.size(); i++) {
+            string item = trim(parts[i]);
+
+            if (item != "") {
+                result.push_back(item);
+            }
+        }
+
         return result;
     }
 
