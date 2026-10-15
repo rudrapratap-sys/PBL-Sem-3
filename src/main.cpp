@@ -510,7 +510,7 @@ void studentDashboard(Student& student,
                 break;
 
             case 7:
-                cout << "Opportunity finder coming soon.\n";
+                student.predictOpportunities();
                 waitForEnter();
                 break;
 

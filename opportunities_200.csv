@@ -1,0 +1,401 @@
+opportunity_id,name,description,category,min_gpa,location,required_skills
+OPP001,Junior Python Developer,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,6.5,mumbai,"{""Python"":3,""numpy"":3}"
+OPP002,Python Development Intern,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,5.5,Delhi,"{""Django"":9,""Python"":6}"
+OPP003,Campus Innovation Hackathon,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,0.0,mumbai,"{""Java"":8,""networking"":9}"
+OPP004,Python Foundations Workshop,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,5.0,mumbai,"{""airflow"":8,""docker"":6,""networking"":3}"
+OPP005,Graduate Software Engineer,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,7.0,Delhi,"{""Python"":5,""pandas"":4,""numpy"":2,""Flask"":3}"
+OPP006,Data Analytics Intern,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,7.5,dehradun,"{""airflow"":5,""Python"":5}"
+OPP007,AI for Good Buildathon,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,6.5,Delhi,"{""airflow"":8,""Flask"":1}"
+OPP008,Web Development Bootcamp,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,5.0,Delhi,"{""Java"":1,""Django"":0,""Flask"":10,""HTML"":3}"
+OPP009,Cloud Support Associate,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,6.5,dehradun,"{""docker"":7,""networking"":10,""aws"":5}"
+OPP010,Cloud Engineering Intern,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,6.0,Delhi,"{""aws"":9,""asure"":10,""networking"":2,""docker"":8}"
+OPP011,Cloud-Native Challenge,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,6.0,Delhi,"{""networking"":0,""asure"":3,""Python"":0,""docker"":5,""aws"":6}"
+OPP012,Cloud Fundamentals Workshop,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,6.0,dehradun,"{""Python"":10,""asure"":7,""docker"":6}"
+OPP013,Data Operations Associate,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,8.0,dehradun,"{""numpy"":8,""pandas"":8,""Python"":4}"
+OPP014,Backend Engineering Intern,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,6.0,mumbai,"{""C++"":1,""Java"":0,""Flask"":1,""docker"":2,""Django"":10}"
+OPP015,Data Sprint Hackathon,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,0.0,mumbai,"{""aws"":8,""Python"":4,""pandas"":8,""numpy"":0,""airflow"":10}"
+OPP016,Docker Hands-on Lab,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,6.0,Delhi,"{""asure"":2,""docker"":7,""aws"":0,""Python"":4}"
+OPP017,Backend Developer,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,8.0,Delhi,"{""docker"":10,""C++"":8}"
+OPP018,Frontend Development Intern,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,6.5,dehradun,"{""Django"":8,""JS"":0,""Java"":9}"
+OPP019,Web App Weekend,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,0.0,Delhi,"{""HTML"":4,""Django"":3}"
+OPP020,Data Engineering Starter Workshop,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,0.0,Delhi,"{""Python"":1,""airflow"":8}"
+OPP021,Web Developer,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,7.0,dehradun,"{""Java"":8,""JS"":3,""Flask"":4,""Django"":6,""HTML"":10}"
+OPP022,DevOps Intern,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,6.0,Delhi,"{""docker"":0,""aws"":9,""Python"":8,""asure"":3,""networking"":9}"
+OPP023,Open Source Hack Day,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,0.0,Delhi,"{""airflow"":0,""docker"":3}"
+OPP024,Networking Essentials Lab,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,6.0,dehradun,"{""networking"":3,""aws"":8,""docker"":2,""asure"":9}"
+OPP025,Network Support Engineer,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,7.5,dehradun,"{""docker"":1,""C"":1,""networking"":10}"
+OPP026,Data Pipeline Intern,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,6.0,Delhi,"{""airflow"":0,""aws"":6,""numpy"":5,""Python"":1,""pandas"":3}"
+OPP027,Smart City Prototype Challenge,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,0.0,mumbai,"{""C++"":3,""Django"":1,""networking"":7,""HTML"":8,""Flask"":1}"
+OPP028,Pandas and NumPy Workshop,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,5.0,dehradun,"{""Python"":2,""pandas"":6}"
+OPP029,Automation Engineer,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,7.0,dehradun,"{""aws"":6,""Python"":0,""C++"":6}"
+OPP030,Network Operations Intern,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,7.5,Delhi,"{""docker"":4,""C"":3,""networking"":0,""asure"":9}"
+OPP031,Campus Innovation Hackathon - Cohort A,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,0.0,Delhi,"{""Python"":8,""networking"":8,""numpy"":2,""Flask"":0}"
+OPP032,Python Foundations Workshop - Cohort A,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,5.0,Delhi,"{""numpy"":10,""C"":3}"
+OPP033,Junior Python Developer - Cohort A,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,8.0,mumbai,"{""Django"":1,""Python"":6,""numpy"":10}"
+OPP034,Python Development Intern - Cohort A,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,6.5,dehradun,"{""numpy"":3,""pandas"":4,""Django"":6,""Flask"":2}"
+OPP035,AI for Good Buildathon - Cohort A,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,0.0,mumbai,"{""networking"":7,""aws"":9,""C"":9,""Python"":1}"
+OPP036,Web Development Bootcamp - Cohort A,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,5.0,dehradun,"{""Java"":5,""Django"":1,""HTML"":3}"
+OPP037,Graduate Software Engineer - Cohort A,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,8.0,dehradun,"{""Flask"":10,""numpy"":8,""Django"":0}"
+OPP038,Data Analytics Intern - Cohort A,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,7.5,Delhi,"{""pandas"":1,""numpy"":1}"
+OPP039,Cloud-Native Challenge - Cohort A,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,6.5,dehradun,"{""asure"":3,""aws"":10,""Python"":10,""networking"":4}"
+OPP040,Cloud Fundamentals Workshop - Cohort A,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,0.0,dehradun,"{""docker"":4,""networking"":0}"
+OPP041,Cloud Support Associate - Cohort A,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,8.0,Delhi,"{""asure"":7,""aws"":8,""Python"":6}"
+OPP042,Cloud Engineering Intern - Cohort A,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,6.5,mumbai,"{""docker"":8,""aws"":0}"
+OPP043,Data Sprint Hackathon - Cohort A,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,6.0,Delhi,"{""airflow"":4,""pandas"":5,""Python"":0}"
+OPP044,Docker Hands-on Lab - Cohort A,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,0.0,Delhi,"{""docker"":6,""asure"":9,""networking"":2}"
+OPP045,Data Operations Associate - Cohort A,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,6.5,dehradun,"{""airflow"":5,""Python"":6,""aws"":10}"
+OPP046,Backend Engineering Intern - Cohort A,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,6.0,dehradun,"{""docker"":0,""Python"":7,""Django"":3}"
+OPP047,Web App Weekend - Cohort A,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.0,Delhi,"{""Django"":10,""JS"":3,""HTML"":6,""Java"":5}"
+OPP048,Data Engineering Starter Workshop - Cohort A,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,6.0,dehradun,"{""numpy"":0,""airflow"":1,""aws"":4,""pandas"":2}"
+OPP049,Backend Developer - Cohort A,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,7.0,dehradun,"{""Python"":6,""Flask"":5}"
+OPP050,Frontend Development Intern - Cohort A,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,7.0,Delhi,"{""Flask"":4,""JS"":0}"
+OPP051,Open Source Hack Day - Cohort A,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.0,mumbai,"{""JS"":10,""Django"":5,""C"":9}"
+OPP052,Networking Essentials Lab - Cohort A,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,5.0,dehradun,"{""asure"":10,""C"":6}"
+OPP053,Web Developer - Cohort A,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,8.0,mumbai,"{""Java"":10,""JS"":6,""HTML"":10,""Flask"":2}"
+OPP054,DevOps Intern - Cohort A,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,6.5,dehradun,"{""networking"":3,""docker"":6,""aws"":9,""asure"":9}"
+OPP055,Smart City Prototype Challenge - Cohort A,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,6.0,Delhi,"{""Flask"":2,""docker"":10,""Java"":1,""pandas"":4,""networking"":8}"
+OPP056,Pandas and NumPy Workshop - Cohort A,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,0.0,dehradun,"{""numpy"":2,""pandas"":0,""Python"":0}"
+OPP057,Network Support Engineer - Cohort A,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,6.5,mumbai,"{""docker"":10,""C"":9}"
+OPP058,Data Pipeline Intern - Cohort A,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,7.0,Delhi,"{""airflow"":1,""aws"":6,""Python"":3,""numpy"":2,""pandas"":8}"
+OPP059,Campus Innovation Hackathon - Cohort B,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,6.0,dehradun,"{""networking"":7,""asure"":2,""C"":7}"
+OPP060,Python Foundations Workshop - Cohort B,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,6.0,dehradun,"{""asure"":7,""pandas"":4,""Flask"":3,""C++"":10,""aws"":4}"
+OPP061,Automation Engineer - Cohort A,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,7.0,dehradun,"{""airflow"":4,""aws"":3,""Python"":4}"
+OPP062,Network Operations Intern - Cohort A,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,6.0,mumbai,"{""aws"":3,""C"":6}"
+OPP063,AI for Good Buildathon - Cohort B,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,6.5,Delhi,"{""C"":5,""Django"":8,""asure"":7}"
+OPP064,Web Development Bootcamp - Cohort B,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,5.0,Delhi,"{""Flask"":0,""Java"":9,""Django"":6}"
+OPP065,Junior Python Developer - Cohort B,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,7.5,Delhi,"{""numpy"":7,""Flask"":3,""pandas"":4,""Python"":6}"
+OPP066,Python Development Intern - Cohort B,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,7.5,mumbai,"{""numpy"":2,""Flask"":9,""Django"":8,""Python"":0,""pandas"":6}"
+OPP067,Cloud-Native Challenge - Cohort B,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,5.0,Delhi,"{""docker"":2,""networking"":7}"
+OPP068,Cloud Fundamentals Workshop - Cohort B,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,5.0,dehradun,"{""networking"":5,""asure"":5,""docker"":6,""aws"":4}"
+OPP069,Graduate Software Engineer - Cohort B,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,7.0,Delhi,"{""Flask"":8,""Python"":0}"
+OPP070,Data Analytics Intern - Cohort B,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,5.5,mumbai,"{""Python"":3,""aws"":3}"
+OPP071,Data Sprint Hackathon - Cohort B,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,5.0,dehradun,"{""pandas"":10,""aws"":1,""airflow"":9}"
+OPP072,Docker Hands-on Lab - Cohort B,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,0.0,dehradun,"{""asure"":2,""aws"":4,""Python"":1,""docker"":9}"
+OPP073,Cloud Support Associate - Cohort B,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,6.0,dehradun,"{""networking"":4,""aws"":10,""docker"":9,""asure"":1,""Python"":9}"
+OPP074,Cloud Engineering Intern - Cohort B,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,7.0,mumbai,"{""asure"":6,""docker"":7,""Python"":1,""aws"":6,""networking"":5}"
+OPP075,Web App Weekend - Cohort B,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.5,dehradun,"{""Flask"":8,""JS"":10,""Django"":4}"
+OPP076,Data Engineering Starter Workshop - Cohort B,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,6.0,mumbai,"{""aws"":4,""numpy"":7,""pandas"":3,""Python"":7,""airflow"":9}"
+OPP077,Data Operations Associate - Cohort B,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,7.0,mumbai,"{""numpy"":7,""Python"":3,""pandas"":5,""aws"":4,""airflow"":5}"
+OPP078,Backend Engineering Intern - Cohort B,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,6.0,mumbai,"{""Flask"":3,""Python"":6,""Java"":7,""docker"":8}"
+OPP079,Open Source Hack Day - Cohort B,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.0,mumbai,"{""docker"":1,""airflow"":4,""Flask"":3,""aws"":6,""Python"":3}"
+OPP080,Networking Essentials Lab - Cohort B,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,5.0,Delhi,"{""docker"":5,""asure"":7,""aws"":4,""C"":4}"
+OPP081,Backend Developer - Cohort B,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,8.0,mumbai,"{""docker"":5,""Java"":1}"
+OPP082,Frontend Development Intern - Cohort B,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,7.5,mumbai,"{""JS"":7,""Java"":4,""Django"":9}"
+OPP083,Smart City Prototype Challenge - Cohort B,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,0.0,mumbai,"{""C"":3,""asure"":5,""Java"":2,""HTML"":4}"
+OPP084,Pandas and NumPy Workshop - Cohort B,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,6.0,dehradun,"{""numpy"":8,""Python"":4,""airflow"":2}"
+OPP085,Web Developer - Cohort B,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,7.5,dehradun,"{""HTML"":7,""Django"":7}"
+OPP086,DevOps Intern - Cohort B,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,7.0,Delhi,"{""docker"":1,""asure"":1,""aws"":6}"
+OPP087,Campus Innovation Hackathon - Advanced Track,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,0.0,Delhi,"{""C++"":9,""networking"":4}"
+OPP088,Python Foundations Workshop - Advanced Track,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,6.0,mumbai,"{""pandas"":6,""aws"":9}"
+OPP089,Network Support Engineer - Cohort B,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,7.5,dehradun,"{""C"":7,""docker"":4,""aws"":9}"
+OPP090,Data Pipeline Intern - Cohort B,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,6.0,dehradun,"{""aws"":3,""Python"":10}"
+OPP091,AI for Good Buildathon - Advanced Track,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,0.0,Delhi,"{""C++"":2,""Java"":8}"
+OPP092,Web Development Bootcamp - Advanced Track,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,5.0,Delhi,"{""Flask"":9,""Java"":7}"
+OPP093,Automation Engineer - Cohort B,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,6.5,dehradun,"{""airflow"":7,""C++"":1,""aws"":10}"
+OPP094,Network Operations Intern - Cohort B,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,6.5,Delhi,"{""docker"":3,""networking"":10,""asure"":2}"
+OPP095,Cloud-Native Challenge - Advanced Track,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,6.0,dehradun,"{""docker"":4,""aws"":9}"
+OPP096,Cloud Fundamentals Workshop - Advanced Track,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,6.0,mumbai,"{""networking"":6,""asure"":4}"
+OPP097,Junior Python Developer - Advanced Track,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,6.5,mumbai,"{""Flask"":5,""Python"":9,""numpy"":4,""Django"":0,""pandas"":1}"
+OPP098,Python Development Intern - Advanced Track,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,7.5,mumbai,"{""numpy"":2,""Python"":7}"
+OPP099,Data Sprint Hackathon - Advanced Track,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,6.0,mumbai,"{""numpy"":1,""pandas"":7,""aws"":5,""airflow"":6,""Python"":5}"
+OPP100,Docker Hands-on Lab - Advanced Track,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,5.0,mumbai,"{""aws"":6,""asure"":7}"
+OPP101,Graduate Software Engineer - Advanced Track,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,6.0,mumbai,"{""Django"":4,""Python"":5,""pandas"":1,""Flask"":6,""numpy"":8}"
+OPP102,Data Analytics Intern - Advanced Track,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,7.5,Delhi,"{""airflow"":10,""Python"":7,""aws"":0,""pandas"":3,""numpy"":4}"
+OPP103,Web App Weekend - Advanced Track,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.0,mumbai,"{""Flask"":10,""Java"":9,""HTML"":3,""Django"":2}"
+OPP104,Data Engineering Starter Workshop - Advanced Track,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,0.0,dehradun,"{""aws"":1,""airflow"":3}"
+OPP105,Cloud Support Associate - Advanced Track,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,7.0,dehradun,"{""aws"":4,""networking"":8}"
+OPP106,Cloud Engineering Intern - Advanced Track,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,6.5,dehradun,"{""networking"":3,""aws"":9,""Python"":8,""docker"":2,""asure"":1}"
+OPP107,Open Source Hack Day - Advanced Track,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.5,Delhi,"{""networking"":0,""aws"":4,""pandas"":4,""HTML"":9}"
+OPP108,Networking Essentials Lab - Advanced Track,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,5.0,Delhi,"{""C"":7,""docker"":5,""aws"":3,""asure"":3,""networking"":9}"
+OPP109,Data Operations Associate - Advanced Track,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,6.0,Delhi,"{""Python"":6,""numpy"":10,""airflow"":10,""pandas"":2,""aws"":7}"
+OPP110,Backend Engineering Intern - Advanced Track,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,6.0,Delhi,"{""Python"":7,""Django"":0,""docker"":2,""C++"":6}"
+OPP111,Smart City Prototype Challenge - Advanced Track,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,6.5,dehradun,"{""aws"":10,""HTML"":1,""JS"":5,""numpy"":10,""Django"":8}"
+OPP112,Pandas and NumPy Workshop - Advanced Track,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,5.0,Delhi,"{""aws"":10,""Python"":10,""numpy"":4,""airflow"":3,""pandas"":1}"
+OPP113,Backend Developer - Advanced Track,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,6.0,dehradun,"{""Django"":4,""Java"":0}"
+OPP114,Frontend Development Intern - Advanced Track,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,6.0,Delhi,"{""Django"":5,""Java"":6}"
+OPP115,Campus Innovation Hackathon - Student Edition,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,5.0,dehradun,"{""numpy"":2,""docker"":1,""aws"":9,""C++"":6,""airflow"":9}"
+OPP116,Python Foundations Workshop - Student Edition,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,6.0,Delhi,"{""Java"":4,""Flask"":7,""docker"":4}"
+OPP117,Web Developer - Advanced Track,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,7.5,dehradun,"{""Django"":9,""JS"":4,""HTML"":10,""Flask"":6,""Java"":4}"
+OPP118,DevOps Intern - Advanced Track,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,6.5,mumbai,"{""networking"":3,""Python"":6,""docker"":9}"
+OPP119,AI for Good Buildathon - Student Edition,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,0.0,mumbai,"{""airflow"":6,""HTML"":4,""Python"":0,""docker"":9}"
+OPP120,Web Development Bootcamp - Student Edition,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,6.0,mumbai,"{""Django"":10,""JS"":3,""Java"":9,""Flask"":4,""HTML"":10}"
+OPP121,Network Support Engineer - Advanced Track,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,7.0,mumbai,"{""networking"":7,""C"":0,""aws"":9}"
+OPP122,Data Pipeline Intern - Advanced Track,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,6.0,mumbai,"{""Python"":6,""numpy"":2,""pandas"":3}"
+OPP123,Cloud-Native Challenge - Student Edition,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,6.5,Delhi,"{""Python"":7,""asure"":4,""docker"":5,""aws"":1}"
+OPP124,Cloud Fundamentals Workshop - Student Edition,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,0.0,dehradun,"{""aws"":5,""networking"":1,""asure"":6}"
+OPP125,Automation Engineer - Advanced Track,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,7.0,mumbai,"{""aws"":10,""airflow"":10}"
+OPP126,Network Operations Intern - Advanced Track,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,6.0,mumbai,"{""asure"":0,""networking"":9,""C"":8,""docker"":5,""aws"":9}"
+OPP127,Data Sprint Hackathon - Student Edition,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,0.0,Delhi,"{""airflow"":10,""numpy"":6}"
+OPP128,Docker Hands-on Lab - Student Edition,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,0.0,Delhi,"{""docker"":7,""asure"":1}"
+OPP129,Junior Python Developer - Student Edition,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,8.0,mumbai,"{""Flask"":10,""Django"":8,""pandas"":6}"
+OPP130,Python Development Intern - Student Edition,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,5.5,mumbai,"{""Flask"":9,""Python"":6,""pandas"":4}"
+OPP131,Web App Weekend - Student Edition,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.0,Delhi,"{""JS"":5,""Flask"":1,""Java"":10,""HTML"":5}"
+OPP132,Data Engineering Starter Workshop - Student Edition,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,0.0,Delhi,"{""numpy"":10,""pandas"":3,""Python"":10,""airflow"":10,""aws"":9}"
+OPP133,Graduate Software Engineer - Student Edition,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,6.5,Delhi,"{""pandas"":1,""Django"":8,""numpy"":3,""Python"":9}"
+OPP134,Data Analytics Intern - Student Edition,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,5.5,mumbai,"{""pandas"":2,""Python"":8,""aws"":4,""airflow"":2}"
+OPP135,Open Source Hack Day - Student Edition,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.0,Delhi,"{""C++"":5,""Python"":3}"
+OPP136,Networking Essentials Lab - Student Edition,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,6.0,Delhi,"{""asure"":6,""networking"":8,""docker"":1}"
+OPP137,Cloud Support Associate - Student Edition,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,8.0,dehradun,"{""networking"":8,""asure"":3,""Python"":9,""docker"":0,""aws"":10}"
+OPP138,Cloud Engineering Intern - Student Edition,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,5.5,dehradun,"{""docker"":10,""Python"":1,""aws"":7,""asure"":7,""networking"":1}"
+OPP139,Smart City Prototype Challenge - Student Edition,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,6.0,dehradun,"{""C"":9,""C++"":10,""HTML"":9}"
+OPP140,Pandas and NumPy Workshop - Student Edition,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,5.0,dehradun,"{""airflow"":10,""aws"":10,""Python"":8,""numpy"":3}"
+OPP141,Data Operations Associate - Student Edition,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,7.0,dehradun,"{""airflow"":6,""numpy"":6,""pandas"":1}"
+OPP142,Backend Engineering Intern - Student Edition,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,5.5,Delhi,"{""docker"":10,""C++"":7,""Flask"":1,""Python"":1}"
+OPP143,Campus Innovation Hackathon - Track 143,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,6.0,mumbai,"{""C"":8,""airflow"":0,""asure"":9,""JS"":8,""C++"":8}"
+OPP144,Python Foundations Workshop - Track 144,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,6.0,Delhi,"{""Django"":10,""JS"":6}"
+OPP145,Backend Developer - Student Edition,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,7.5,Delhi,"{""Flask"":9,""C++"":8,""docker"":3,""Python"":2}"
+OPP146,Frontend Development Intern - Student Edition,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,7.5,Delhi,"{""Django"":1,""Java"":4}"
+OPP147,AI for Good Buildathon - Track 147,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,6.0,Delhi,"{""asure"":10,""pandas"":10,""aws"":8,""numpy"":0,""airflow"":9}"
+OPP148,Web Development Bootcamp - Track 148,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,0.0,mumbai,"{""Django"":5,""Java"":0,""JS"":2}"
+OPP149,Web Developer - Student Edition,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,7.0,Delhi,"{""HTML"":8,""JS"":3,""Django"":6,""Java"":6,""Flask"":7}"
+OPP150,DevOps Intern - Student Edition,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,5.5,mumbai,"{""asure"":0,""Python"":2,""networking"":2,""docker"":9}"
+OPP151,Cloud-Native Challenge - Track 151,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,6.5,mumbai,"{""asure"":10,""networking"":6}"
+OPP152,Cloud Fundamentals Workshop - Track 152,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,6.0,dehradun,"{""networking"":6,""asure"":1,""docker"":4,""Python"":10,""aws"":10}"
+OPP153,Network Support Engineer - Student Edition,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,6.5,dehradun,"{""networking"":0,""aws"":3,""docker"":4,""C"":3}"
+OPP154,Data Pipeline Intern - Student Edition,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,7.5,mumbai,"{""numpy"":6,""Python"":2,""airflow"":2,""pandas"":6}"
+OPP155,Data Sprint Hackathon - Track 155,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,0.0,dehradun,"{""aws"":6,""numpy"":0,""Python"":6}"
+OPP156,Docker Hands-on Lab - Track 156,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,6.0,mumbai,"{""asure"":9,""networking"":6}"
+OPP157,Automation Engineer - Student Edition,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,7.5,Delhi,"{""airflow"":2,""Python"":9,""docker"":7,""aws"":5,""C++"":1}"
+OPP158,Network Operations Intern - Student Edition,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,6.5,Delhi,"{""docker"":1,""C"":6,""asure"":4}"
+OPP159,Web App Weekend - Track 159,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.0,mumbai,"{""JS"":8,""HTML"":8,""Django"":3,""Flask"":5}"
+OPP160,Data Engineering Starter Workshop - Track 160,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,6.0,Delhi,"{""pandas"":4,""Python"":3,""airflow"":2}"
+OPP161,Junior Python Developer - Track 161,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,8.0,dehradun,"{""pandas"":7,""Flask"":9}"
+OPP162,Python Development Intern - Track 162,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,6.5,mumbai,"{""numpy"":7,""pandas"":7,""Flask"":10,""Python"":4}"
+OPP163,Open Source Hack Day - Track 163,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.5,dehradun,"{""JS"":1,""pandas"":4}"
+OPP164,Networking Essentials Lab - Track 164,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,6.0,Delhi,"{""networking"":4,""asure"":1}"
+OPP165,Graduate Software Engineer - Track 165,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,7.5,Delhi,"{""Flask"":9,""Python"":7,""pandas"":8,""Django"":2,""numpy"":0}"
+OPP166,Data Analytics Intern - Track 166,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,7.5,Delhi,"{""Python"":7,""pandas"":7,""aws"":8,""numpy"":8}"
+OPP167,Smart City Prototype Challenge - Track 167,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,6.0,Delhi,"{""JS"":5,""HTML"":10,""Django"":9,""aws"":0}"
+OPP168,Pandas and NumPy Workshop - Track 168,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,0.0,mumbai,"{""Python"":10,""airflow"":9,""pandas"":2,""numpy"":5}"
+OPP169,Cloud Support Associate - Track 169,"Help monitor cloud resources and troubleshoot basic deployment issues.
+Document incidents and support reliable application operations.",job,8.0,mumbai,"{""asure"":10,""Python"":6,""networking"":2}"
+OPP170,Cloud Engineering Intern - Track 170,"Assist with cloud deployments and resource monitoring.
+Learn infrastructure basics, access control, and operational practices.",internship,6.0,mumbai,"{""asure"":10,""networking"":5}"
+OPP171,Campus Innovation Hackathon - Track 171,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,6.0,Delhi,"{""docker"":6,""networking"":8}"
+OPP172,Python Foundations Workshop - Track 172,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,0.0,Delhi,"{""HTML"":7,""C++"":3,""Java"":3,""JS"":2}"
+OPP173,Data Operations Associate - Track 173,"Prepare datasets and validate data quality for analytics workflows.
+Assist with scheduled jobs, reports, and operational documentation.",job,6.5,Delhi,"{""Python"":9,""aws"":2,""numpy"":9,""pandas"":6}"
+OPP174,Backend Engineering Intern - Track 174,"Implement and test small backend features under mentorship.
+Help document APIs and investigate reported bugs.",internship,6.5,mumbai,"{""docker"":7,""Flask"":0,""Java"":6}"
+OPP175,AI for Good Buildathon - Track 175,"Create a technology prototype focused on a social or environmental challenge.
+Judges evaluate usefulness, implementation, and clarity of the demo.",hackathon,5.0,dehradun,"{""Flask"":7,""numpy"":3,""HTML"":8}"
+OPP176,Web Development Bootcamp - Track 176,"Learn the basics of building and styling web interfaces.
+Create a small page and connect it to a simple interactive feature.",workshop,0.0,Delhi,"{""JS"":4,""Django"":6,""Flask"":8,""Java"":8,""HTML"":6}"
+OPP177,Backend Developer - Track 177,"Develop API endpoints and server-side application logic.
+Write tests and help improve performance and maintainability.",job,8.0,Delhi,"{""C++"":5,""Python"":8,""Django"":1}"
+OPP178,Frontend Development Intern - Track 178,"Build and refine web interfaces using common web technologies.
+Test layouts and collaborate with backend teammates.",internship,6.0,dehradun,"{""HTML"":8,""JS"":2,""Flask"":6,""Django"":1}"
+OPP179,Cloud-Native Challenge - Track 179,"Design and prototype a small service with a reliable deployment workflow.
+Teams demonstrate their solution and explain key technical decisions.",hackathon,0.0,dehradun,"{""docker"":8,""networking"":5,""Python"":3,""aws"":6}"
+OPP180,Cloud Fundamentals Workshop - Track 180,"Explore cloud concepts, deployment options, and basic operations.
+Complete guided exercises and discuss common cloud use cases.",workshop,0.0,Delhi,"{""docker"":10,""asure"":5,""Python"":2}"
+OPP181,Web Developer - Track 181,"Create responsive web pages and connect them to application services.
+Work with designers and developers to refine user experiences.",job,6.0,dehradun,"{""Flask"":7,""JS"":9,""Django"":0,""Java"":1}"
+OPP182,DevOps Intern - Track 182,"Help maintain development environments and containerized services.
+Practice deployment automation and basic monitoring.",internship,5.5,Delhi,"{""aws"":4,""networking"":3,""docker"":4}"
+OPP183,Data Sprint Hackathon - Track 183,"Explore a provided dataset and build a useful data-driven prototype.
+Participants present insights, a working demo, and limitations.",hackathon,0.0,mumbai,"{""airflow"":1,""aws"":7,""Python"":9}"
+OPP184,Docker Hands-on Lab - Track 184,"Learn how containers package applications and their dependencies.
+Build and run a sample containerized service.",workshop,0.0,mumbai,"{""aws"":0,""asure"":9,""Python"":5}"
+OPP185,Network Support Engineer - Track 185,"Assist with network monitoring, connectivity checks, and issue resolution.
+Maintain clear records of configurations and troubleshooting steps.",job,6.0,dehradun,"{""aws"":8,""networking"":8,""asure"":8,""C"":8,""docker"":8}"
+OPP186,Data Pipeline Intern - Track 186,"Assist with scheduled data ingestion and transformation tasks.
+Validate outputs and document pipeline behavior.",internship,5.5,mumbai,"{""Python"":5,""airflow"":1,""pandas"":5,""numpy"":3,""aws"":10}"
+OPP187,Web App Weekend - Track 187,"Create a functional web application in a short team-based event.
+Focus on usability, collaboration, and a clear demonstration.",hackathon,6.5,mumbai,"{""JS"":10,""HTML"":2,""Java"":10,""Django"":7}"
+OPP188,Data Engineering Starter Workshop - Track 188,"Explore data ingestion, transformation, and scheduled workflows.
+Build a small pipeline and discuss validation and reliability.",workshop,0.0,Delhi,"{""pandas"":7,""Python"":0,""numpy"":4}"
+OPP189,Automation Engineer - Track 189,"Create scripts to reduce repetitive engineering tasks.
+Test automation workflows and document how they are used.",job,7.5,dehradun,"{""Python"":8,""airflow"":6,""docker"":8}"
+OPP190,Network Operations Intern - Track 190,"Help investigate connectivity issues and monitor network status.
+Maintain troubleshooting notes and simple operational reports.",internship,6.5,dehradun,"{""aws"":5,""asure"":0}"
+OPP191,Open Source Hack Day - Track 191,"Collaborate on a small open-source tool or improvement.
+Participants share their contributions and explain how others can use them.",hackathon,6.5,dehradun,"{""aws"":6,""JS"":6}"
+OPP192,Networking Essentials Lab - Track 192,"Practice basic networking concepts and troubleshooting methods.
+Use guided scenarios to understand connectivity and common failures.",workshop,6.0,dehradun,"{""aws"":5,""docker"":8,""asure"":4,""C"":1}"
+OPP193,Junior Python Developer - Track 193,"Build and maintain Python features for internal applications.
+Work with a small engineering team to test, document, and improve code.",job,7.0,Delhi,"{""Flask"":8,""pandas"":4}"
+OPP194,Python Development Intern - Track 194,"Support development of small Python tools and application features.
+Learn code reviews, debugging, testing, and version-control practices.",internship,7.5,mumbai,"{""numpy"":4,""Django"":7}"
+OPP195,Smart City Prototype Challenge - Track 195,"Develop a prototype addressing mobility, services, or urban operations.
+Teams explain the problem, proposed solution, and implementation.",hackathon,0.0,Delhi,"{""C++"":0,""airflow"":5,""Flask"":9,""JS"":6,""aws"":4}"
+OPP196,Pandas and NumPy Workshop - Track 196,"Learn array and tabular data operations with practical examples.
+Clean, transform, and summarize a small dataset.",workshop,5.0,dehradun,"{""numpy"":0,""pandas"":2,""Python"":1,""aws"":3,""airflow"":10}"
+OPP197,Graduate Software Engineer - Track 197,"Contribute to software modules and fix bugs across the development cycle.
+Collaborate with developers during code reviews and testing.",job,6.5,mumbai,"{""Django"":5,""Python"":5,""numpy"":7,""Flask"":1,""pandas"":9}"
+OPP198,Data Analytics Intern - Track 198,"Clean datasets and prepare basic analysis for project teams.
+Help create repeatable data preparation scripts and reports.",internship,7.0,mumbai,"{""airflow"":3,""numpy"":1,""aws"":0,""pandas"":2}"
+OPP199,Campus Innovation Hackathon - Track 199,"Build a prototype that solves a practical campus or community problem.
+Teams present a demo, explain their design, and share lessons learned.",hackathon,5.0,Delhi,"{""networking"":7,""pandas"":3,""C"":9,""HTML"":4,""airflow"":7}"
+OPP200,Python Foundations Workshop - Track 200,"Practice core Python concepts through short guided exercises.
+Complete a mini task and learn habits for writing readable code.",workshop,6.0,dehradun,"{""asure"":2,""C"":7,""Flask"":1}"

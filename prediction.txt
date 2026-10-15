@@ -1,0 +1,125 @@
+TOP 15 CLOSEST OPPORTUNITIES
+============================
+
+Student skills: Python:10, C:10
+
+1. Opportunity ID: OPP090
+   Skill distance: 10.440
+   Name: Data Pipeline Intern - Cohort B
+   Category: internship
+   Location: dehradun
+   Minimum GPA: 6.0
+   Description: Assist with scheduled data ingestion and transformation tasks. Validate outputs and document pipeline behavior.
+
+2. Opportunity ID: OPP098
+   Skill distance: 10.630
+   Name: Python Development Intern - Advanced Track
+   Category: internship
+   Location: mumbai
+   Minimum GPA: 7.5
+   Description: Support development of small Python tools and application features. Learn code reviews, debugging, testing, and version-control practices.
+
+3. Opportunity ID: OPP200
+   Skill distance: 10.677
+   Name: Python Foundations Workshop - Track 200
+   Category: workshop
+   Location: dehradun
+   Minimum GPA: 6.0
+   Description: Practice core Python concepts through short guided exercises. Complete a mini task and learn habits for writing readable code.
+
+4. Opportunity ID: OPP046
+   Skill distance: 10.863
+   Name: Backend Engineering Intern - Cohort A
+   Category: internship
+   Location: dehradun
+   Minimum GPA: 6.0
+   Description: Implement and test small backend features under mentorship. Help document APIs and investigate reported bugs.
+
+5. Opportunity ID: OPP062
+   Skill distance: 11.180
+   Name: Network Operations Intern - Cohort A
+   Category: internship
+   Location: mumbai
+   Minimum GPA: 6.0
+   Description: Help investigate connectivity issues and monitor network status. Maintain troubleshooting notes and simple operational reports.
+
+6. Opportunity ID: OPP134
+   Skill distance: 11.314
+   Name: Data Analytics Intern - Student Edition
+   Category: internship
+   Location: mumbai
+   Minimum GPA: 5.5
+   Description: Clean datasets and prepare basic analysis for project teams. Help create repeatable data preparation scripts and reports.
+
+7. Opportunity ID: OPP122
+   Skill distance: 11.358
+   Name: Data Pipeline Intern - Advanced Track
+   Category: internship
+   Location: mumbai
+   Minimum GPA: 6.0
+   Description: Assist with scheduled data ingestion and transformation tasks. Validate outputs and document pipeline behavior.
+
+8. Opportunity ID: OPP177
+   Skill distance: 11.402
+   Name: Backend Developer - Track 177
+   Category: job
+   Location: Delhi
+   Minimum GPA: 8.0
+   Description: Develop API endpoints and server-side application logic. Write tests and help improve performance and maintainability.
+
+9. Opportunity ID: OPP158
+   Skill distance: 11.533
+   Name: Network Operations Intern - Student Edition
+   Category: internship
+   Location: Delhi
+   Minimum GPA: 6.5
+   Description: Help investigate connectivity issues and monitor network status. Maintain troubleshooting notes and simple operational reports.
+
+10. Opportunity ID: OPP049
+   Skill distance: 11.874
+   Name: Backend Developer - Cohort A
+   Category: job
+   Location: dehradun
+   Minimum GPA: 7.0
+   Description: Develop API endpoints and server-side application logic. Write tests and help improve performance and maintainability.
+
+11. Opportunity ID: OPP097
+   Skill distance: 11.958
+   Name: Junior Python Developer - Advanced Track
+   Category: job
+   Location: mumbai
+   Minimum GPA: 6.5
+   Description: Build and maintain Python features for internal applications. Work with a small engineering team to test, document, and improve code.
+
+12. Opportunity ID: OPP110
+   Skill distance: 12.207
+   Name: Backend Engineering Intern - Advanced Track
+   Category: internship
+   Location: Delhi
+   Minimum GPA: 6.0
+   Description: Implement and test small backend features under mentorship. Help document APIs and investigate reported bugs.
+
+13. Opportunity ID: OPP006
+   Skill distance: 12.247
+   Name: Data Analytics Intern
+   Category: internship
+   Location: dehradun
+   Minimum GPA: 7.5
+   Description: Clean datasets and prepare basic analysis for project teams. Help create repeatable data preparation scripts and reports.
+
+14. Opportunity ID: OPP123
+   Skill distance: 12.288
+   Name: Cloud-Native Challenge - Student Edition
+   Category: hackathon
+   Location: Delhi
+   Minimum GPA: 6.5
+   Description: Design and prototype a small service with a reliable deployment workflow. Teams demonstrate their solution and explain key technical decisions.
+
+15. Opportunity ID: OPP183
+   Skill distance: 12.288
+   Name: Data Sprint Hackathon - Track 183
+   Category: hackathon
+   Location: mumbai
+   Minimum GPA: 0.0
+   Description: Explore a provided dataset and build a useful data-driven prototype. Participants present insights, a working demo, and limitations.
+

@@ -36,6 +36,7 @@ public:
 
     unordered_map<string, int> getSkills();
     vector<string> getInterests();
+    bool predictOpportunities();
 
     // Setters
     void setBranch(const string& branch);
