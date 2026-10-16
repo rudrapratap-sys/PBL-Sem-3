@@ -1,30 +1,18 @@
 #pragma once
 
-#include "Opportunity.h"
 #include "Student.h"
 
 #include <string>
-#include <vector>
-
-using namespace std;
-
-struct OpportunityResult {
-    Opportunity opportunity;
-    bool eligible;
-    double score;
-    vector<string> matchedSkills;
-    vector<string> missingSkills;
-    string reason;
-};
 
 class OpportunityEngine {
 private:
-    string filePath;
-    vector<Opportunity> opportunities;
+    std::string csvFile;
+    std::string outputFile;
 
 public:
-    explicit OpportunityEngine(const string& filePath = "data/opportunities.txt");
+    explicit OpportunityEngine(
+        const std::string& csvFile = "opportunities_200.csv",
+        const std::string& outputFile = "filtered.json");
 
-    bool loadOpportunities();
-    vector<OpportunityResult> findOpportunities(Student& student);
+    bool filter(Student& student);
 };

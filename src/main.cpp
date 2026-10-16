@@ -279,6 +279,7 @@
 #include "AuthSystem.h"
 #include "StudentManager.h"
 #include "Utils.h"
+#include "OpportunityEngine.h"
 
 using namespace std;
 
@@ -392,6 +393,20 @@ void register_user(AuthSystem& authSystem,
     waitForEnter();
 }
 
+string prefer(){
+    cout<<"which category do you prefer ? \n1.Jobs \n2.Internships \n3.Hackathons \n4.Workshops \n5.Any \n";
+    int c = readInt("Enter your choice : " , 1 , 5 );
+    switch(c){
+
+        case 1 : return "job" ;
+        case 2 : return "internship";
+        case 3 : return "hackathon";
+        case 4 : return "workshop";
+        case 5 : return "Any";
+    }
+
+    return "Any";
+}
 void editBasicDetails(Student& student,
                       StudentManager& studentManager) {
     cout << "\n--- Edit Basic Details ---\n";
@@ -399,6 +414,8 @@ void editBasicDetails(Student& student,
     student.setBranch(readText("Branch (example: CSE): "));
     student.setYear(readInt("Year (1-4): ", 1, 4));
     student.setCgpa(readDouble("CGPA (0-10): ", 0.0, 10.0));
+    student.setPreferredCategory(prefer());
+
 
     string interests = readText(
         "Interests separated by comma (example: AI,Web): "
@@ -464,6 +481,7 @@ void removeSkill(Student& student, StudentManager& studentManager) {
 
 void studentDashboard(Student& student,
                       StudentManager& studentManager) {
+    OpportunityEngine engine;
     while (true) {
         cout << "\n==============================\n";
         cout << " Student Dashboard - "
@@ -476,7 +494,7 @@ void studentDashboard(Student& student,
         cout << "4. Remove Skill\n";
         cout << "5. Select Target Role (Coming Soon)\n";
         cout << "6. Analyze Skill Gap (Coming Soon)\n";
-        cout << "7. Discover Opportunities (Coming Soon)\n";
+        cout << "7. Discover Opportunities\n";
         cout << "8. Logout\n";
 
         int choice = readInt("Enter choice: ", 1, 8);
@@ -509,10 +527,16 @@ void studentDashboard(Student& student,
                 waitForEnter();
                 break;
 
-            case 7:
-                student.predictOpportunities();
+            case 7: {
+                bool result = engine.filter(student);
+
+                if (result) {
+                    student.predictOpportunities();
+                }
+
                 waitForEnter();
                 break;
+            }
 
             case 8:
                 studentManager.saveProfile(student);
@@ -546,8 +570,7 @@ int main() {
                 User loggedInUser;
 
                 if (login_user(authSystem, loggedInUser)) {
-                    Student student =
-                        studentManager.loadProfile(loggedInUser);
+                    Student student = studentManager.loadProfile(loggedInUser);
 
                     studentDashboard(student, studentManager);
                 }

@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <iomanip>
-#include <fstream>
 #include <cstdlib>
 
 
@@ -20,34 +19,7 @@ Student::Student(const User& user)
 }
 
 bool Student::predictOpportunities(){
-    // Save the student's skills
-    ofstream file("student_skills.json");
-
-    if (!file) {
-        cout << "Could not create skills file.\n";
-        return false;
-    }
-
-    file << "{\n";
-
-    auto it = skills.begin();
-
-    while (it != skills.end()) {
-        file << "    \"" << it->first << "\": " << it->second;
-
-        ++it;
-
-        if (it != skills.end()) {
-            file << ",";
-        }
-
-        file << "\n";
-    }
-
-    file << "}\n";
-    file.close();
-
-    // Run the Python script
+    // The opportunity filter writes the profile and skills to filtered.json.
     int result = system("python prediction.py");
 
     if (result != 0) {
@@ -55,7 +27,7 @@ bool Student::predictOpportunities(){
         return false;
     }
 
-    cout << "Top 15 opportunities saved to prediction.txt\n";
+    cout << "Recommendations displayed above.\n";
     return true;
 }
 // Getters

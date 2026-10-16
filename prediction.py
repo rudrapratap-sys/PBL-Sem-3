@@ -1,139 +1,79 @@
+
 import json
-import os
-import sys
 import pickle
-import pandas as pd
+import numpy as np
 
 MODEL_FILE = "knn_opportunity_model.pkl"
-OUTPUT_FILE = "prediction.txt"
-SKILLS_INPUT_FILE = "student_skills.json"
-TOP_N = 15
+DATA_FILE = "filtered.json"
 
+# 1. Load the trained model bundle
+with open(MODEL_FILE, "rb") as file:
+    bundle = pickle.load(file)
 
-def load_student_skills():
-    """Read skills like {"Python": 7, "pandas": 5} from a JSON file."""
-    if not os.path.exists(SKILLS_INPUT_FILE):
-        raise FileNotFoundError(
-            f"{SKILLS_INPUT_FILE} not found. Create it with the student's skills."
-        )
+model = bundle["model"]
+skill_columns = bundle["skill_columns"]
+opportunity_ids = bundle["opportunity_ids"]
+training_vectors = np.asarray(bundle["training_vectors"])
 
-    with open(SKILLS_INPUT_FILE, "r", encoding="utf-8") as file:
-        skills = json.load(file)
+# 2. Load filtered JSON data
+with open(DATA_FILE, "r", encoding="utf-8") as file:
+    data = json.load(file)
 
-    if not isinstance(skills, dict):
-        raise ValueError("student_skills.json must contain a JSON object.")
+student = data["student"]
+opportunities = data["opportunities"]
 
-    cleaned = {}
-    for name, score in skills.items():
-        try:
-            score = float(score)
-        except (TypeError, ValueError):
-            continue
-        if 0 <= score <= 10:
-            cleaned[str(name)] = score
-    return cleaned
+if not opportunities:
+    print("No opportunities passed the C++ filters.")
+    raise SystemExit
 
+# 3. Create student skill vector
+student_skills = student.get("skills", {})
 
-def main():
-    # Clear the old prediction file every run, even if there is an error.
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as output:
-        output.write("TOP 15 CLOSEST OPPORTUNITIES\n")
-        output.write("============================\n\n")
+query = np.array([
+    float(student_skills.get(skill, 0))
+    for skill in skill_columns
+], dtype=float)
 
-    if not os.path.exists(MODEL_FILE):
-        raise FileNotFoundError(
-            f"{MODEL_FILE} not found. Run train.py first."
-        )
+query = np.clip(query, 0, 10).reshape(1, -1)
 
-    with open(MODEL_FILE, "rb") as file:
-        bundle = pickle.load(file)
+# 4. Map opportunity IDs to training vectors
+id_to_index = {
+    str(opp_id): i
+    for i, opp_id in enumerate(opportunity_ids)
+}
 
-    model = bundle["model"]
-    skill_columns = bundle["skill_columns"]
-    opportunity_ids = bundle["opportunity_ids"]
-    training_vectors = bundle["training_vectors"]
+candidates = {}
 
-    student_skills = load_student_skills()
+for opportunity in opportunities:
+    opp_id = str(opportunity.get("opportunity_id", ""))
 
-    # Default every skill column to 0, then fill skills provided by the student.
-    student_vector = [0.0] * len(skill_columns)
-    column_index = {name: i for i, name in enumerate(skill_columns)}
+    if opp_id in id_to_index:
+        candidates[opp_id] = opportunity
 
-    unknown_skills = []
-    for skill, score in student_skills.items():
-        if skill in column_index:
-            student_vector[column_index[skill]] = score
-        else:
-            unknown_skills.append(skill)
+if not candidates:
+    print("No filtered opportunities matched the training dataset IDs.")
+    raise SystemExit
 
-    distances, indices = model.kneighbors(
-        [student_vector],
-        n_neighbors=min(TOP_N, len(opportunity_ids))
-    )
+# 5. Calculate distances for filtered opportunities
+ranked = []
 
-    # Load original opportunity details if the original CSV is available.
-    details = {}
-    possible_files = [
-        "opportunities_200.csv",
-        "knn_opportunity_dataset.csv",
-        "opportunity_skill_features.csv",
-    ]
-    for filename in possible_files:
-        if os.path.exists(filename):
-            try:
-                original = pd.read_csv(filename)
-                if "opportunity_id" in original.columns:
-                    details = {
-                        str(row["opportunity_id"]): row
-                        for _, row in original.iterrows()
-                    }
-                    break
-            except Exception:
-                pass
+for opp_id, opportunity in candidates.items():
+    index = id_to_index[opp_id]
+    vector = training_vectors[index]
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as output:
-        output.write("TOP 15 CLOSEST OPPORTUNITIES\n")
-        output.write("============================\n\n")
-        output.write("Student skills: ")
-        output.write(", ".join(f"{k}:{v:g}" for k, v in student_skills.items()) or "None provided")
-        output.write("\n\n")
+    distance = np.linalg.norm(query[0] - vector)
+    ranked.append((distance, opportunity))
 
-        if unknown_skills:
-            output.write(
-                "Ignored unknown skills (not in the trained columns): "
-                + ", ".join(unknown_skills) + "\n\n"
-            )
+ranked.sort(key=lambda item: item[0])
 
-        for rank, (distance, index) in enumerate(
-            zip(distances[0], indices[0]), start=1
-        ):
-            opportunity_id = opportunity_ids[index]
-            output.write(f"{rank}. Opportunity ID: {opportunity_id}\n")
-            output.write(f"   Skill distance: {distance:.3f}\n")
+# 6. Display top 5 opportunities
+print("\nStudent:", student.get("name", "Unknown"))
+print("\n===== TOP 5 OPPORTUNITIES =====")
 
-            row = details.get(opportunity_id)
-            if row is not None:
-                for column in ["name", "category", "location", "min_gpa", "description"]:
-                    if column in row.index and pd.notna(row[column]):
-                        label = {
-                            "name": "Name",
-                            "category": "Category",
-                            "location": "Location",
-                            "min_gpa": "Minimum GPA",
-                            "description": "Description",
-                        }[column]
-                        output.write(f"   {label}: {str(row[column]).replace(chr(10), ' ')}\n")
-            output.write("\n")
-
-    print(f"Predictions saved to {OUTPUT_FILE}")
-
-
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as error:
-        # Append the error to the output file for easier debugging.
-        with open(OUTPUT_FILE, "a", encoding="utf-8") as output:
-            output.write(f"\nPrediction failed: {error}\n")
-        print(f"Prediction failed: {error}", file=sys.stderr)
-        sys.exit(1)
+for rank, (distance, opportunity) in enumerate(ranked[:5], start=1):
+    print(f"\nRank: {rank}")
+    print("ID:", opportunity.get("opportunity_id", "Unknown"))
+    print("Name:", opportunity.get("name", "Unknown"))
+    print("Category:", opportunity.get("category", "Unknown"))
+    print("Location:", opportunity.get("location", "Unknown"))
+    print(f"Skill distance: {distance:.2f}")

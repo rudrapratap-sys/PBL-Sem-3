@@ -48,7 +48,7 @@ PBL/
 Run this command from the project folder:
 
 ```bash
-g++ -std=c++17 -Iinclude src/main.cpp src/User.cpp src/Student.cpp src/AuthSystem.cpp src/StudentManager.cpp src/Utils.cpp src/SkillGapAnalyzer.cpp src/Opportunity.cpp src/OpportunityEngine.cpp -o skill_gap_navigator.exe
+g++ -std=c++17 -Iinclude src/main.cpp src/User.cpp src/Student.cpp src/AuthSystem.cpp src/StudentManager.cpp src/Utils.cpp src/SkillGapAnalyzer.cpp src/OpportunityEngine.cpp -o skill_gap_navigator.exe
 ```
 
 ## Run
@@ -68,7 +68,8 @@ On Windows PowerShell:
 - `data/users.txt`: created automatically after registration.
 - `data/students.txt`: created automatically for saved student profiles.
 - `data/roles.txt`: sample role and skill requirement data.
-- `data/opportunities.txt`: sample opportunity data.
+- `opportunities_200.csv`: sample opportunity data used by the opportunity filter.
+- `filtered.json`: generated for the Python opportunity recommender.
 
 The project uses simple `|` separated text files to keep the code easy to explain.
 

@@ -1,127 +1,197 @@
-// #include "OpportunityEngine.h"
+#include "OpportunityEngine.h"
+#include "Utils.h"
 
-// #include "Utils.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <unordered_map>
+#include "nlohmann/json.hpp"
 
-// #include <algorithm>
-// #include <fstream>
-// #include <sstream>
-// #include <unordered_set>
+using namespace std;
+using json = nlohmann::json;
 
-// using namespace std;
 
-// OpportunityEngine::OpportunityEngine(const string& filePath) : filePath(filePath) {
-//     loadOpportunities();
-// }
+// Read CSV correctly, including quoted commas and newlines
+static vector<vector<string>> readCSV(istream& file) {
+    vector<vector<string>> rows;
+    vector<string> row;
+    string field;
+    char ch;
+    bool insideQuotes = false;
 
-// bool OpportunityEngine::loadOpportunities() {
-//     opportunities.clear();
+    while (file.get(ch)) {
+        if (ch == '"') {
+            if (insideQuotes && file.peek() == '"') {
+                field += '"';
+                file.get(ch);
+            } else {
+                insideQuotes = !insideQuotes;
+            }
+        }
+        else if (ch == ',' && !insideQuotes) {
+            row.push_back(field);
+            field.clear();
+        }
+        else if ((ch == '\n' || ch == '\r') && !insideQuotes) {
+            if (ch == '\r' && file.peek() == '\n') {
+                file.get(ch);
+            }
 
-//     ifstream file(filePath);
-//     if (!file) {
-//         return false;
-//     }
+            row.push_back(field);
+            rows.push_back(row);
 
-//     string line;
-//     while (getline(file, line)) {
-//         vector<string> parts = Utils::split(line, '|');
-//         if (parts.size() >= 6) {
-//             double minCgpa = 0.0;
-//             try {
-//                 minCgpa = stod(parts[3]);
-//             } catch (...) {
-//                 minCgpa = 0.0;
-//             }
+            row.clear();
+            field.clear();
+        }
+        else {
+            field += ch;
+        }
+    }
 
-//             opportunities.push_back(Opportunity(
-//                 Utils::trim(parts[0]),
-//                 Utils::trim(parts[1]),
-//                 Utils::trim(parts[2]),
-//                 minCgpa,
-//                 Utils::splitAndTrim(parts[4], ','),
-//                 Utils::trim(parts[5])
-//             ));
-//         }
-//     }
+    // Handle the last row if the file has no final newline
+    if (!field.empty() || !row.empty()) {
+        row.push_back(field);
+        rows.push_back(row);
+    }
 
-//     return true;
-// }
+    return rows;
+}
 
-// vector<OpportunityResult> OpportunityEngine::findOpportunities(Student& student) {
-//     vector<OpportunityResult> results;
-//     unordered_set<string> studentSkillSet;
 
-//     for (const string& skill : student.getSkills()) {
-//         studentSkillSet.insert(Utils::toLower(Utils::trim(skill)));
-//     }
+// Filter opportunities
+bool OpportunityEngine::filter(Student& student) {
 
-//     for (Opportunity& opportunity : opportunities) {
-//         OpportunityResult result;
-//         result.opportunity = opportunity;
-//         result.eligible = student.getCgpa() >= opportunity.getMinCgpa();
-//         result.score = 0.0;
+    // 1. Open the CSV file
+    ifstream file(csvFile);
 
-//         for (const string& skill : opportunity.getRequiredSkills()) {
-//             if (studentSkillSet.count(Utils::toLower(skill))) {
-//                 result.matchedSkills.push_back(skill);
-//             } else {
-//                 result.missingSkills.push_back(skill);
-//             }
-//         }
+    if (!file) {
+        cerr << "Error: Cannot open " << csvFile << endl;
+        return false;
+    }
 
-//         if (!result.eligible) {
-//             stringstream reason;
-//             reason << "Not eligible because minimum CGPA is "
-//                    << opportunity.getMinCgpa() << ".";
-//             result.reason = reason.str();
-//             results.push_back(result);
-//             continue;
-//         }
+    // 2. Read all CSV records
+    vector<vector<string>> rows = readCSV(file);
+    file.close();
 
-//         if (!opportunity.getRequiredSkills().empty()) {
-//             result.score += 60.0 * result.matchedSkills.size() / opportunity.getRequiredSkills().size();
-//         }
+    if (rows.empty()) {
+        cerr << "Error: CSV file is empty." << endl;
+        return false;
+    }
 
-//         if (Utils::equalsIgnoreCase(opportunity.getDomain(), student.getTargetRole())) {
-//             result.score += 25.0;
-//         }
+    // 3. Find column positions using the header
+    unordered_map<string, int> columns;
 
-//         if (!Utils::equalsIgnoreCase(student.getPreferredCategory(), "Any") &&
-//             Utils::equalsIgnoreCase(opportunity.getCategory(), student.getPreferredCategory())) {
-//             result.score += 15.0;
-//         }
+    for (int i = 0; i < rows[0].size(); i++) {
+        columns[rows[0][i]] = i;
+    }
 
-//         if (result.score > 100.0) {
-//             result.score = 100.0;
-//         }
+    if (columns.find("category") == columns.end() ||
+        columns.find("min_gpa") == columns.end()) {
+        cerr << "Error: Required CSV columns are missing." << endl;
+        return false;
+    }
 
-//         stringstream reason;
-//         reason << "Eligible. Skill match: "
-//                << result.matchedSkills.size() << "/"
-//                << opportunity.getRequiredSkills().size() << ".";
+    double cgpa = student.getCgpa();
+    string preferredCategory =
+        Utils::toLower(student.getPreferredCategory());
 
-//         if (Utils::equalsIgnoreCase(opportunity.getDomain(), student.getTargetRole())) {
-//             reason << " Domain matches target role.";
-//         }
+    json filteredOpportunities = json::array();
 
-//         if (Utils::equalsIgnoreCase(opportunity.getCategory(), student.getPreferredCategory())) {
-//             reason << " Category matches preference.";
-//         }
+    // 4. Process each opportunity
+    for (int i = 1; i < rows.size(); i++) {
 
-//         result.reason = reason.str();
-//         results.push_back(result);
-//     }
+        const vector<string>& row = rows[i];
 
-//     sort(results.begin(), results.end(), [](OpportunityResult first, OpportunityResult second) {
-//         if (first.eligible != second.eligible) {
-//             return first.eligible > second.eligible;
-//         }
+        // Skip incomplete records
+        if (row.size() != rows[0].size()) {
+            continue;
+        }
 
-//         if (first.score != second.score) {
-//             return first.score > second.score;
-//         }
+        try {
+            double minimumGPA =
+                stod(row[columns["min_gpa"]]);
 
-//         return first.opportunity.getTitle() < second.opportunity.getTitle();
-//     });
+            string category =
+                Utils::toLower(row[columns["category"]]);
 
-//     return results;
-// }
+            // Check CGPA
+            if (minimumGPA > cgpa) {
+                continue;
+            }
+
+            // Check preferred category
+            if (preferredCategory != "any" &&
+                category != preferredCategory) {
+                continue;
+            }
+
+            // 5. Convert the matching CSV row to JSON
+            json opportunity;
+
+            for (const auto& column : columns) {
+                const string& key = column.first;
+                const string& value = row[column.second];
+
+                if (key == "min_gpa") {
+                    opportunity[key] = stod(value);
+                }
+                else if (key == "required_skills") {
+                    // Convert skills from JSON text into a JSON object
+                    json skills = json::parse(
+                        value, nullptr, false
+                    );
+
+                    if (skills.is_discarded()) {
+                        opportunity[key] = value;
+                    } else {
+                        opportunity[key] = skills;
+                    }
+                }
+                else {
+                    opportunity[key] = value;
+                }
+            }
+
+            filteredOpportunities.push_back(opportunity);
+        }
+        catch (const exception&) {
+            // Skip records with invalid numeric values
+            continue;
+        }
+    }
+
+    // 6. Store student details and matching opportunities
+    json result;
+
+    result["student"] = {
+        {"userId", student.getUserId()},
+        {"name", student.getName()},
+        {"email", student.getEmail()},
+        {"cgpa", cgpa},
+        {"preferredCategory", student.getPreferredCategory()}
+    };
+
+    result["opportunities"] = filteredOpportunities;
+
+    // 7. Save the result to the JSON file
+    ofstream output(outputFile);
+
+    if (!output) {
+        cerr << "Error: Cannot create " << outputFile << endl;
+        return false;
+    }
+
+    output << result.dump(4) << '\n';
+
+    if (!output) {
+        cerr << "Error: Failed to write JSON file." << endl;
+        return false;
+    }
+
+    cout << "Filtering completed successfully!" << endl;
+    cout << "Matching opportunities: "
+         << filteredOpportunities.size() << endl;
+    cout << "Saved to: " << outputFile << endl;
+
+    return true;
+}
