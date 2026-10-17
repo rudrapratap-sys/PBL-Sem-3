@@ -1,18 +1,16 @@
 #pragma once
 
-#include "Student.h"
+using namespace std ;
 
 #include <string>
+#include "Student.h"
 
 class OpportunityEngine {
 private:
-    std::string csvFile;
-    std::string outputFile;
+    string csvFile = "opportunities_200.csv";
+    string outputFile = "filtered.json";
 
 public:
-    explicit OpportunityEngine(
-        const std::string& csvFile = "opportunities_200.csv",
-        const std::string& outputFile = "filtered.json");
-
+    // Filter opportunities and save them to JSON
     bool filter(Student& student);
 };

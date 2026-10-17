@@ -18,14 +18,13 @@ private:
     string preferredCategory;
 
     // Skill name -> proficiency score (0 to 10)
-    unordered_map<string, int> skills;
+    unordered_map<string, int> skills; // {"python":6 , "C": 5}
 
     vector<string> interests;
 
 public:
     // Constructors
-    Student();
-    explicit Student(const User& user);
+    Student(const User& user);
 
     // Getters
     string getBranch();

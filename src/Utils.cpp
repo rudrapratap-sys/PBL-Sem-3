@@ -49,36 +49,13 @@ namespace Utils {
         return parts;
     }
 
-    string join(const vector<string>& items, char delimiter) {
-        string result = "";
 
-        for (int i = 0; i < items.size(); i++) {
-            result += items[i];
-
-            if (i < items.size() - 1) {
-                result += delimiter;
-            }
+    bool compare(const string& first, const string& second) {
+        if(toLower(trim(first)) == toLower(trim(second))){
+            return true;
         }
-
-        return result;
-    }
-
-    vector<string> splitAndTrim(const string& text, char delimiter) {
-        vector<string> parts = split(text, delimiter);
-        vector<string> result;
-
-        for (int i = 0; i < parts.size(); i++) {
-            string item = trim(parts[i]);
-
-            if (item != "") {
-                result.push_back(item);
-            }
+        else{
+            return false;
         }
-
-        return result;
-    }
-
-    bool equalsIgnoreCase(const string& first, const string& second) {
-        return toLower(trim(first)) == toLower(trim(second));
     }
 }
