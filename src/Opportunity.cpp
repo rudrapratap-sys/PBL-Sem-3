@@ -1,44 +1,59 @@
-#include "Opportunity.h"
+
+#include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-Opportunity::Opportunity() : minCgpa(0.0) {
-}
+class Opportunity {
+private:
+    string title;
+    string category;
+    string domain;
+    double minCgpa;
+    vector<string> requiredSkills;
+    string location;
 
-Opportunity::Opportunity(const string& title,
-                         const string& category,
-                         const string& domain,
-                         double minCgpa,
-                         const vector<string>& requiredSkills,
-                         const string& location)
-    : title(title),
-      category(category),
-      domain(domain),
-      minCgpa(minCgpa),
-      requiredSkills(requiredSkills),
-      location(location) {
-}
+public:
 
-string Opportunity::getTitle() {
-    return title;
-}
+    Opportunity() : minCgpa(0.0) {
+    }
 
-string Opportunity::getCategory() {
-    return category;
-}
+    Opportunity(const string& title,
+                const string& category,
+                const string& domain,
+                double minCgpa,
+                const vector<string>& requiredSkills,
+                const string& location)
+        : title(title),
+          category(category),
+          domain(domain),
+          minCgpa(minCgpa),
+          requiredSkills(requiredSkills),
+          location(location) {
+    }
 
-string Opportunity::getDomain() {
-    return domain;
-}
+    string getTitle() {
+        return title;
+    }
 
-double Opportunity::getMinCgpa() {
-    return minCgpa;
-}
+    string getCategory() {
+        return category;
+    }
 
-vector<string> Opportunity::getRequiredSkills() {
-    return requiredSkills;
-}
+    string getDomain() {
+        return domain;
+    }
 
-string Opportunity::getLocation() {
-    return location;
-}
+    double getMinCgpa() {
+        return minCgpa;
+    }
+
+    vector<string> getRequiredSkills() {
+        return requiredSkills;
+    }
+
+    string getLocation() {
+        return location;
+    }
+};

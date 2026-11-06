@@ -276,10 +276,14 @@
 #include <vector>
 #include <string>
 
-#include "AuthSystem.h"
-#include "StudentManager.h"
-#include "Utils.h"
-#include "OpportunityEngine.h"
+// Include implementation files instead of header files
+#include "Utils.cpp"
+#include "User.cpp"
+#include "Student.cpp"
+#include "Opportunity.cpp"
+#include "AuthSystem.cpp"
+#include "StudentManager.cpp"
+#include "OpportunityEngine.cpp"
 
 using namespace std;
 
@@ -379,7 +383,7 @@ void register_user(AuthSystem& authSystem,
     string message;
 
     if (authSystem.registerUser(name, email, password,
-                               createdUser, message)) {
+                                createdUser, message)) {
         Student student(createdUser);
         studentManager.saveProfile(student);
 
@@ -393,23 +397,28 @@ void register_user(AuthSystem& authSystem,
     waitForEnter();
 }
 
-string prefer(){
-    
+string prefer() {
 
-    cout<<"which category do you prefer ? \n1.Jobs \n2.Internships \n3.Hackathons \n4.Workshops \n5.Any \n";
-    int c = readInt("Enter your choice : " , 1 , 5 );
-    
-    switch(c){
+    cout << "Which category do you prefer?\n"
+         << "1. Jobs\n"
+         << "2. Internships\n"
+         << "3. Hackathons\n"
+         << "4. Workshops\n"
+         << "5. Any\n";
 
-        case 1 : return "job" ;
-        case 2 : return "internship";
-        case 3 : return "hackathon";
-        case 4 : return "workshop";
-        case 5 : return "Any" ;
-    
+    int c = readInt("Enter your choice: ", 1, 5);
+
+    switch (c) {
+        case 1: return "job";
+        case 2: return "internship";
+        case 3: return "hackathon";
+        case 4: return "workshop";
+        case 5: return "Any";
     }
+
     return "Any";
 }
+
 void editBasicDetails(Student& student,
                       StudentManager& studentManager) {
     cout << "\n--- Edit Basic Details ---\n";
@@ -418,7 +427,6 @@ void editBasicDetails(Student& student,
     student.setYear(readInt("Year (1-4): ", 1, 4));
     student.setCgpa(readDouble("CGPA (0-10): ", 0.0, 10.0));
     student.setPreferredCategory(prefer());
-
 
     string interests = readText(
         "Interests separated by comma (example: AI,Web): "
@@ -436,16 +444,16 @@ void addSkill(Student& student, StudentManager& studentManager) {
     cout << "\n--- Add Skills ---\n";
 
     string skill = readText(
-    "Enter your skills with proficiency scores (e.g., Python:5, C:6, C++:9)\n\n"
-    "Choose a score based on your knowledge and experience:\n"
-    "1-3   Beginner      : You know the basics and can write simple programs.\n"
-    "4-6   Intermediate  : You understand concepts and have built small projects.\n"
-    "7-8   Advanced      : You can build complex projects and solve problems independently.\n"
-    "9-10  Expert        : You have developed real-world projects and can apply your skills confidently.\n\n"
-    "Be honest with your ratings to help us recommend suitable opportunities and identify your skill gaps.\n\n"
-    "Format: SkillName1:Score, SkillName2:Score\n"
-    "Your skills: "
-);
+        "Enter your skills with proficiency scores (e.g., Python:5, C:6, C++:9)\n\n"
+        "Choose a score based on your knowledge and experience:\n"
+        "1-3   Beginner      : You know the basics and can write simple programs.\n"
+        "4-6   Intermediate  : You understand concepts and have built small projects.\n"
+        "7-8   Advanced      : You can build complex projects and solve problems independently.\n"
+        "9-10  Expert        : You have developed real-world projects and can apply your skills confidently.\n\n"
+        "Be honest with your ratings to help us recommend suitable opportunities and identify your skill gaps.\n\n"
+        "Format: SkillName1:Score, SkillName2:Score\n"
+        "Your skills: "
+    );
 
     if (skill.empty()) {
         cout << "Skill input is empty.\n";
@@ -493,6 +501,7 @@ void removeSkill(Student& student, StudentManager& studentManager) {
 void studentDashboard(Student& student,
                       StudentManager& studentManager) {
     OpportunityEngine engine;
+
     while (true) {
         cout << "\n==============================\n";
         cout << " Student Dashboard - "
@@ -567,7 +576,7 @@ int main() {
         cout << " Skill Gap Navigator + Opportunity Finder\n";
         cout << "============================================\n";
 
-        cout << "1. Register\n"; 
+        cout << "1. Register\n";
         cout << "2. Login\n";
         cout << "3. Exit\n";
 
@@ -582,7 +591,8 @@ int main() {
                 User loggedInUser;
 
                 if (login_user(authSystem, loggedInUser)) {
-                    Student student = studentManager.loadProfile(loggedInUser);
+                    Student student =
+                        studentManager.loadProfile(loggedInUser);
 
                     studentDashboard(student, studentManager);
                 }
