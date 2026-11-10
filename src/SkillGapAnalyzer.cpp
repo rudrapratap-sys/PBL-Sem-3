@@ -1,157 +1,253 @@
-// #include "SkillGapAnalyzer.h"
+#include <algorithm>
+#include <fstream>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
-// #include "Utils.h"
+#include "../include/nlohmann/json.hpp"
 
-// #include <fstream>
-// #include <queue>
-// #include <unordered_map>
-// #include <unordered_set>
+using namespace std;
+using json = nlohmann::json;
 
-// using namespace std;
+struct SkillEvaluation {
+    string skillName;
+    int studentLevel;
+    int requiredLevel;
+    double achievement;
+    string status;
+};
 
-// SkillGapAnalyzer::SkillGapAnalyzer(const string& filePath)
-//     : filePath(filePath) {
-//     addPrerequisite("DSA", "C++");
-//     addPrerequisite("DSA", "OOP");
-//     addPrerequisite("React", "JavaScript");
-//     addPrerequisite("Power BI", "Excel");
-//     addPrerequisite("Machine Learning", "Python");
-//     addPrerequisite("Machine Learning", "Maths");
-//     addPrerequisite("Machine Learning", "Statistics");
-//     addPrerequisite("Data Visualization", "Statistics");
-//     addPrerequisite("Security Basics", "Networking");
-//     loadRoles();
-// }
+struct OpportunityResult {
+    string id;
+    string name;
 
-// void SkillGapAnalyzer::addPrerequisite(const string& skill, const string& prerequisite) {
-//     prerequisites[Utils::toLower(skill)].push_back(prerequisite);
-// }
+    vector<SkillEvaluation> skills;
 
-// bool SkillGapAnalyzer::loadRoles() {
-//     roles.clear();
+    double readinessScore;
+    double gpaScore;
+    double opportunityScore;
 
-//     ifstream file(filePath);
-//     if (!file) {
-//         return false;
-//     }
+    bool gpaEligible;
+};
 
-//     string line;
-//     while (getline(file, line)) {
-//         vector<string> parts = Utils::split(line, '|');
-//         if (parts.size() >= 2) {
-//             string roleName = Utils::trim(parts[0]);
-//             vector<string> skills = Utils::splitAndTrim(parts[1], ',');
-//             if (!roleName.empty() && !skills.empty()) {
-//                 roles.push_back({roleName, skills});
-//             }
-//         }
-//     }
+class SkillGapAnalyzer {
+private:
+    int getStudentLevel(
+        const unordered_map<string, int>& studentSkills,
+        const string& requiredSkill
+    ) const {
+        for (const auto& skill : studentSkills) {
+            if (Utils::compare(skill.first, requiredSkill)) {
+                return skill.second;
+            }
+        }
 
-//     return true;
-// }
+        return 0;
+    }
+    double calculateAchievement(
+        int studentLevel,
+        int requiredLevel
+    ) const {
+        if (requiredLevel <= 0) {
+            return 0.0;
+        }
 
-// vector<string> SkillGapAnalyzer::getRoleNames() {
-//     vector<string> names;
-//     for (const auto& role : roles) {
-//         names.push_back(role.first);
-//     }
-//     return names;
-// }
+        double ratio =
+            static_cast<double>(studentLevel) /
+            requiredLevel;
 
-// vector<string> SkillGapAnalyzer::getSkillsForRole(const string& roleName) {
-//     for (const auto& role : roles) {
-//         if (Utils::equalsIgnoreCase(role.first, roleName)) {
-//             return role.second;
-//         }
-//     }
-//     return {};
-// }
+        if (ratio > 1.0) {
+            ratio = 1.0;
+        }
 
-// SkillGapResult SkillGapAnalyzer::analyze(Student& student, const string& roleName) {
-//     SkillGapResult result;
-//     result.readinessScore = 0.0;
-//     result.cycleFound = false;
+        return ratio * 100.0;
+    }
 
-//     vector<string> requiredSkills = getSkillsForRole(roleName);
-//     unordered_set<string> studentSkillSet;
+    double calculateGpaScore(
+        double studentCgpa,
+        double minimumGpa
+    ) const {
+      
+        if (minimumGpa <= 0.0) {
+            return 100.0;
+        }
 
-//     for (const string& skill : student.getSkills()) {
-//         studentSkillSet.insert(Utils::toLower(Utils::trim(skill)));
-//     }
+        double ratio = studentCgpa / minimumGpa;
 
-//     for (const string& skill : requiredSkills) {
-//         if (studentSkillSet.count(Utils::toLower(Utils::trim(skill)))) {
-//             result.matchedSkills.push_back(skill);
-//         } else {
-//             result.missingSkills.push_back(skill);
-//         }
-//     }
+        if (ratio > 1.0) {
+            ratio = 1.0;
+        }
 
-//     if (!requiredSkills.empty()) {
-//         result.readinessScore = (100.0 * result.matchedSkills.size()) / requiredSkills.size();
-//     }
+        if (ratio < 0.0) {
+            ratio = 0.0;
+        }
 
-//     result.roadmap = makeRoadmap(result.missingSkills, result.cycleFound);
-//     return result;
-// }
+        return ratio * 100.0;
+    }
 
-// vector<string> SkillGapAnalyzer::makeRoadmap(const vector<string>& missingSkills,
-//                                                        bool& cycleFound) {
-//     vector<string> roadmap;
-//     unordered_set<string> missingSet;
-//     unordered_map<string, string> originalName;
-//     unordered_map<string, int> indegree;
-//     unordered_map<string, vector<string>> graph;
+public:
+   
+    OpportunityResult analyzeOpportunity(
+        Student& student,
+        const json& opportunity
+    ) const {
+        OpportunityResult result;
 
-//     for (const string& skill : missingSkills) {
-//         string key = Utils::toLower(skill);
-//         missingSet.insert(key);
-//         originalName[key] = skill;
-//         indegree[key] = 0;
-//     }
+        result.id =
+            opportunity.value("opportunity_id", "");
 
-//     for (const string& skill : missingSkills) {
-//         string skillKey = Utils::toLower(skill);
-//         auto found = prerequisites.find(skillKey);
+        result.name =
+            opportunity.value("name", "Unknown");
 
-//         if (found == prerequisites.end()) {
-//             continue;
-//         }
+        double minimumGpa =
+            opportunity.value("min_gpa", 0.0);
 
-//         for (const string& prereq : found->second) {
-//             string prereqKey = Utils::toLower(prereq);
-//             if (missingSet.count(prereqKey)) {
-//                 graph[prereqKey].push_back(skillKey);
-//                 indegree[skillKey]++;
-//             }
-//         }
-//     }
+        result.readinessScore = 0.0;
+        result.gpaScore = 0.0;
+        result.opportunityScore = 0.0;
 
-//     queue<string> ready;
-//     for (const string& skill : missingSkills) {
-//         string key = Utils::toLower(skill);
-//         if (indegree[key] == 0) {
-//             ready.push(key);
-//         }
-//     }
+        unordered_map<string, int> studentSkills =
+            student.getSkills();
 
-//     while (!ready.empty()) {
-//         string current = ready.front();
-//         ready.pop();
-//         roadmap.push_back(originalName[current]);
+        const json& requiredSkills =
+            opportunity["required_skills"];
 
-//         for (const string& next : graph[current]) {
-//             indegree[next]--;
-//             if (indegree[next] == 0) {
-//                 ready.push(next);
-//             }
-//         }
-//     }
+        double totalAchievement = 0.0;
+        int requiredSkillCount = 0;
 
-//     cycleFound = roadmap.size() != missingSkills.size();
-//     if (cycleFound) {
-//         return missingSkills;
-//     }
+        for (
+            auto item = requiredSkills.begin();
+            item != requiredSkills.end();
+            ++item
+        ) {
+            string skillName = item.key();
+            int requiredLevel = item.value().get<int>();
 
-//     return roadmap;
-// }
+           
+            if (requiredLevel <= 0) {
+                continue;
+            }
+
+            int studentLevel =
+                getStudentLevel(
+                    studentSkills,
+                    skillName
+                );
+
+            double achievement =
+                calculateAchievement(
+                    studentLevel,
+                    requiredLevel
+                );
+
+            SkillEvaluation evaluation;
+
+            evaluation.skillName = skillName;
+            evaluation.studentLevel = studentLevel;
+            evaluation.requiredLevel = requiredLevel;
+            evaluation.achievement = achievement;
+
+            if (studentLevel == 0) {
+                evaluation.status = "Missing";
+            }
+            else if (studentLevel < requiredLevel) {
+                evaluation.status = "Needs Improvement";
+            }
+            else {
+                evaluation.status = "Matched";
+            }
+
+            result.skills.push_back(evaluation);
+
+            totalAchievement += achievement;
+            requiredSkillCount++;
+        }
+
+       
+        if (requiredSkillCount > 0) {
+            result.readinessScore =
+                totalAchievement /
+                requiredSkillCount;
+        }
+
+        result.gpaEligible =
+            minimumGpa <= 0.0 ||
+            student.getCgpa() >= minimumGpa;
+
+        result.gpaScore =
+            calculateGpaScore(
+                student.getCgpa(),
+                minimumGpa
+            );
+
+        
+        result.opportunityScore =
+            (0.70 * result.readinessScore) +
+            (0.30 * result.gpaScore);
+
+        return result;
+    }
+
+   
+    vector<OpportunityResult> analyze(
+        Student& student,
+        const string& filePath = "filtered.json"
+    ) const {
+        vector<OpportunityResult> results;
+
+        ifstream file(filePath);
+
+        if (!file) {
+            return results;
+        }
+
+        json data;
+
+        try {
+            file >> data;
+        }
+        catch (...) {
+            return results;
+        }
+
+        if (
+            !data.contains("opportunities") ||
+            !data["opportunities"].is_array()
+        ) {
+            return results;
+        }
+
+        for (const json& opportunity :
+             data["opportunities"]) {
+
+            if (
+                !opportunity.contains("required_skills") ||
+                !opportunity["required_skills"].is_object()
+            ) {
+                continue;
+            }
+
+            OpportunityResult result =
+                analyzeOpportunity(
+                    student,
+                    opportunity
+                );
+
+            
+            if (!result.skills.empty()) {
+                results.push_back(result);
+            }
+        }
+
+        sort(
+            results.begin(),
+            results.end(),
+            [](const OpportunityResult& first,
+               const OpportunityResult& second) {
+                return first.opportunityScore >
+                       second.opportunityScore;
+            }
+        );
+        return results;
+    }
+};

@@ -12,7 +12,7 @@ using json = nlohmann::json;
 
 class OpportunityEngine {
 private:
-    string csvFile = "opportunities.csv";
+    string csvFile = "opportunities_200.csv";
     string outputFile = "filtered.json";
 
 public:
