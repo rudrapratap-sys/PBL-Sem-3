@@ -4,3 +4,7 @@ build/
 .vscode/
 data/users.txt
 data/students.txt
+
+# Local test and user data
+users.txt
+students.txt
