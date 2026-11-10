@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 
-#include "User.cpp"
-#include "Utils.cpp"
 
 using namespace std;
 

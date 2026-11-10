@@ -1,43 +1,55 @@
-#include "User.h"
+#include <string>
 
 using namespace std;
 
-User::User() {
-}
+class User {
+private:
+    string userId;
+    string name;
+    string email;
+    string passwordHash;
 
-// Member initializer list: directly stores parameter values into class variables.
-// Example: userId(userId) means the class variable userId gets the parameter userId.
-User::User(const string& userId,
-           const string& name,
-           const string& email,
-           const string& passwordHash)
-    : userId(userId), name(name), email(email), passwordHash(passwordHash) {
-}
+    // Member initializer list: directly stores parameter values into class variables.
+    // Example: userId(userId) means the class variable userId gets the parameter userId.
+public:
+    User() {
+    }
 
-string User::getUserId() {
-    return userId;
-}
+    User(const string& userId,
+         const string& name,
+         const string& email,
+         const string& passwordHash)
+        : userId(userId),
+          name(name),
+          email(email),
+          passwordHash(passwordHash) {
+    }
 
-string User::getName() {
-    return name;
-}
+    string getUserId() {
+        return userId;
+    }
 
-string User::getEmail() {
-    return email;
-}
+    string getName() {
+        return name;
+    }
 
-string User::getPasswordHash() {
-    return passwordHash;
-}
+    string getEmail() {
+        return email;
+    }
 
-void User::setName(const string& name) {
-    this->name = name;
-}
+    string getPasswordHash() {
+        return passwordHash;
+    }
 
-void User::setEmail(const string& email) {
-    this->email = email;
-}
+    void setName(const string& name) {
+        this->name = name;
+    }
 
-void User::setPasswordHash(const string& passwordHash) {
-    this->passwordHash = passwordHash;
-}
+    void setEmail(const string& email) {
+        this->email = email;
+    }
+
+    void setPasswordHash(const string& passwordHash) {
+        this->passwordHash = passwordHash;
+    }
+};

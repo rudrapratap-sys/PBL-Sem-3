@@ -4,3 +4,7 @@ build/
 .vscode/
 data/users.txt
 data/students.txt
+
+users.txt
+students.txt
+filtered.json

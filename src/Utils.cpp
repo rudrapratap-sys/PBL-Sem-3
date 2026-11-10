@@ -1,8 +1,6 @@
-#include "Utils.h"
-
-
+#include <string>
+#include <vector>
 using namespace std;
-
 namespace Utils {
     string trim(const string& text) {
         int start = 0;
@@ -57,5 +55,28 @@ namespace Utils {
         else{
             return false;
         }
+    }
+    vector<string> splitAndTrim(const string& text, char delimiter) {
+        vector<string> parts = split(text, delimiter);
+    
+        for (string& part : parts) {
+            part = trim(part);
+        }
+    
+        return parts;
+    }
+    
+    string join(const vector<string>& items, char delimiter) {
+        string result = "";
+    
+        for (int i = 0; i < static_cast<int>(items.size()); i++) {
+            result += items[i];
+    
+            if (i < static_cast<int>(items.size()) - 1) {
+                result += delimiter;
+            }
+        }
+    
+        return result;
     }
 }

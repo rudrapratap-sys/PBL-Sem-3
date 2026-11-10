@@ -4,9 +4,7 @@
 #include <vector>
 #include <unordered_map>
 #include <string>
-
-#include "Utils.cpp"
-#include "Student.cpp"
+#include <any>
 #include "nlohmann/json.hpp"
 
 using namespace std;
@@ -14,7 +12,7 @@ using json = nlohmann::json;
 
 class OpportunityEngine {
 private:
-    string csvFile = "opportunities.csv";
+    string csvFile = "opportunities_200.csv";
     string outputFile = "filtered.json";
 
 public:

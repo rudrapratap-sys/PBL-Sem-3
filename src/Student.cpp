@@ -6,9 +6,6 @@
 #include <vector>
 #include <unordered_map>
 
-#include "Utils.cpp"
-#include "User.cpp"
-
 using namespace std;
 
 class Student : public User {

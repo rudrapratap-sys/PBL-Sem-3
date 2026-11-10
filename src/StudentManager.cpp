@@ -6,9 +6,6 @@
 #include <iomanip>
 #include <string>
 
-#include "Utils.cpp"
-#include "Student.cpp"
-
 using namespace std;
 
 class StudentManager {
