@@ -1,119 +1,260 @@
-/*
 #include <iostream>
 #include <string>
 #include <vector>
 #include <queue>
-#include "Roadmap.h"
+
 using namespace std;
 
-// Job constructor
-Job::Job(string jobName, vector<string> jobSkills)
+class Job
 {
-    name = jobName;
-    skills = jobSkills;
-    int n = skills.size();
-    adj.resize(n);
-    // Creating graph
-    for (int i = 0; i < n - 1; i++)
-    {
-        adj[i].push_back(i + 1);
-    }
-}
-// Return job name
-string Job::getName()
-{
-    return name;
-}
-// Traverse the job graph using BFS
-void Job::traverse()
-{
-    int n = skills.size();
-    if (n == 0)
-    {
-        cout << "No skills available.\n";
-        return;
-    }
-    vector<bool> visited(n, false);
-    queue<int> q;
+private:
+    string name;
+    vector<string> skills;
+    vector<vector<int>> adj;
 
-    // BFS from the first skill
-    q.push(0);
-    visited[0] = true;
-    cout << "\nJob Role: " << name << "\n\n";
-    bool first = true;
-    while (!q.empty())
+    int getStudentLevel(Student& student, const string& skillName)
     {
-        int current = q.front();
-        q.pop();
-        if (!first)
+        
+        for (const auto& item : student.getSkills())
         {
-            cout << " -> ";
-        }
-        cout << "[" << skills[current] << "]";
-        first = false;
-        for (int next : adj[current])
-        {
-            if (!visited[next])
+                     if (Utils::compare(item.first, skillName))
             {
-                visited[next] = true;
-                q.push(next);
+                return item.second;
             }
         }
+        return 0;
     }
-    cout << endl;
-}
-// Roadmap constructor
-Roadmap::Roadmap()
-{
-    jobs.push_back(Job("Software Developer",
-        {"C++", "OOP", "Data Structures", "Algorithms"}));
 
-    jobs.push_back(Job("Web Developer",
-        {"HTML", "CSS", "JavaScript", "React"}));
-
-    jobs.push_back(Job("Data Analyst",
-        {"Python", "SQL", "Excel", "Statistics"}));
-
-    jobs.push_back(Job("AI/ML Engineer",
-        {"Python", "Mathematics", "Machine Learning", "Deep Learning"}));
-
-    jobs.push_back(Job("Cybersecurity Analyst",
-        {"Networking", "Linux", "Python", "Security Basics"}));
-
-    jobs.push_back(Job("Cloud Engineer",
-        {"Linux", "Networking", "Cloud Computing", "Docker"}));
-
-    jobs.push_back(Job("DevOps Engineer",
-        {"Linux", "Git", "Docker", "CI/CD"}));
-
-    jobs.push_back(Job("Mobile App Developer",
-        {"Programming", "OOP", "Android", "APIs"}));
-}
-
-// Return total number of jobs
-int Roadmap::getJobCount()
-{
-    return jobs.size();
-}
-// Return job name at a given index
-string Roadmap::getJobName(int index)
-{
-    if (index >= 0 && index < jobs.size())
+public:
+    Job(const string& jobName, const vector<string>& jobSkills)
     {
-        return jobs[index].getName();
+        name = jobName;
+        skills = jobSkills;
+
+        int n = skills.size();
+        adj.resize(n);
+
+        //connect each skills to next
+        for (int i = 0; i < n - 1; i++)
+        {
+            adj[i].push_back(i + 1);
+        }
     }
-    return "Invalid Job";
-}
-// Display required skills for a selected job
-void Roadmap::displayJobGraph(int index)
+
+    string getName()
+    {
+        return name;
+    }
+
+    void printList(const vector<int>& list, const vector<int>& levels)
+    {
+        for (int i = 0; i < (int)list.size(); i++)
+        {
+            if (i > 0)
+            {
+                cout << " -> ";
+            }
+            cout << "[" << skills[list[i]] << " (" << levels[list[i]] << "/10)]";
+        }
+        cout << "\n";
+    }
+
+
+    void showRoadmap(Student& student)
+    {
+        const int STRONG_LEVEL = 8;
+        int n = skills.size();
+
+        cout << "\n===== Roadmap: " << name << " =====\n";
+
+        if (n == 0)
+        {
+            cout << "No skills available for this job.\n";
+            return;
+        }
+
+        vector<int> levels(n, 0);
+        vector<int> learnFirst;
+        vector<int> reviseLater;
+        int mastered = 0;
+
+        vector<bool> visited(n, false);
+        queue<int> q;
+        q.push(0);
+        visited[0] = true;
+
+        while (!q.empty())
+        {
+            int current = q.front();
+            q.pop();
+
+            levels[current] = getStudentLevel(student, skills[current]);
+
+            if (levels[current] == 10)
+            {
+                mastered++;
+            }
+            else if (levels[current] >= STRONG_LEVEL)
+            {
+                reviseLater.push_back(current);
+            }
+            else
+            {
+                learnFirst.push_back(current);
+            }
+
+            for (int next : adj[current])
+            {
+                if (!visited[next])
+                {
+                    visited[next] = true;
+                    q.push(next);
+                }
+            }
+        }
+
+        if (learnFirst.empty() && reviseLater.empty())
+        {
+            cout << "All skills mastered! You are ready for this job.\n";
+            return;
+        }
+
+        if (!learnFirst.empty())
+        {
+            cout << "\nLearn first (in this order):\n";
+            printList(learnFirst, levels);
+        }
+        else
+        {
+            cout << "\nNothing new to learn. Just revise your strong skills.\n";
+        }
+
+        if (!reviseLater.empty())
+        {
+            cout << "\nRevise later (you are already strong):\n";
+            printList(reviseLater, levels);
+        }
+
+        if (mastered > 0)
+        {
+            cout << "\nSkills already mastered (10/10) and skipped: " << mastered << "(";
+
+            bool firstName = true;
+            for(int i=0; i<n; i++)
+            {
+                if (levels[i]==10)
+                {
+                    if(!firstName)
+                    {
+                        cout << ",";
+                    }
+                    cout << skills[i];
+                    firstName = false;
+                }
+            }
+            cout << ")\n";
+        }
+    }
+};
+
+
+class Roadmap
 {
-    if (index >= 0 && index < jobs.size())
+private:
+    vector<Job> jobs;
+
+public:
+    Roadmap()
     {
-        jobs[index].traverse();
+        jobs.push_back(Job("Software Developer",
+            {"C++", "OOP", "Data Structures", "Algorithms",
+             "Git", "SQL", "System Design"}));
+
+        jobs.push_back(Job("Web Developer",
+            {"HTML", "CSS", "JavaScript", "Git",
+             "React", "Node.js", "SQL"}));
+
+        jobs.push_back(Job("Data Analyst",
+            {"Excel", "SQL", "Python", "Statistics",
+             "Pandas", "Data Visualization", "Power BI"}));
+
+        jobs.push_back(Job("Data Scientist",
+            {"Python", "Statistics", "SQL", "Pandas",
+             "Data Visualization", "Machine Learning", "Deep Learning"}));
+
+        jobs.push_back(Job("AI/ML Engineer",
+            {"Python", "Mathematics", "Statistics", "Machine Learning",
+             "Deep Learning", "NLP", "Generative AI"}));
+
+        jobs.push_back(Job("Cyber Security Analyst",
+            {"Networking", "Operating Systems", "Linux",
+             "Python", "Security Basics", "Ethical Hacking"}));
+
+        jobs.push_back(Job("Mobile App Developer",
+            {"Programming Basics", "OOP", "Java",
+             "Android Development", "APIs", "Git"}));
+
+        jobs.push_back(Job("Cloud Engineer",
+            {"Linux", "Networking", "Python", "Cloud Computing",
+             "Docker", "Kubernetes", "CI/CD"}));
+
+        jobs.push_back(Job("DevOps Engineer",
+            {"Linux", "Git", "Scripting", "CI/CD",
+             "Docker", "Kubernetes", "Cloud Computing"}));
+
+        jobs.push_back(Job("UI/UX Designer",
+            {"Design Principles", "Color Theory", "Typography",
+             "Wireframing", "Prototyping", "Figma", "Usability Testing"}));
+
+        jobs.push_back(Job("Database Administrator",
+            {"SQL", "Database Design", "Normalization",
+             "Query Optimization", "Backup and Recovery", "Database Security"}));
+
+        jobs.push_back(Job("Software Tester",
+            {"Programming Basics", "Testing Basics", "Test Cases",
+             "Bug Tracking", "SQL", "Automation Testing", "Selenium"}));
     }
-    else
+
+    void showMenu(Student& student)
     {
-        cout << "Invalid job selection.\n";
+        int choice;
+        int total = jobs.size();
+
+        while (true)
+        {
+            cout << "\n===== CAREER ROADMAP =====\n";
+            cout << "--- Available Job Roles--- \n";
+            for (int i = 0; i < total; i++)
+            {
+                cout << i + 1 << ". " << jobs[i].getName() << "\n";
+            }
+            cout << "0. Back to Dashboard\n";
+            cout << "Choose a job role to see what to learn next, based on your skills: ";
+            cin >> choice;
+
+            if (cin.fail())
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid input! Enter a number.\n";
+                continue;
+            }
+
+            cin.ignore(1000, '\n');
+
+            if (choice == 0)
+            {
+                return;
+            }
+
+            if (choice < 1 || choice > total)
+            {
+                cout << "Invalid choice! Enter a number from 1 to " << total << ".\n";
+                continue;
+            }
+
+            jobs[choice - 1].showRoadmap(student);
+            return;
+        }
     }
-}
-    */
+};

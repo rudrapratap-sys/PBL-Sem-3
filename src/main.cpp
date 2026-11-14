@@ -285,6 +285,7 @@
 #include "StudentManager.cpp"
 #include "OpportunityEngine.cpp"
 #include "SkillGapAnalyzer.cpp"
+#include "RoadMap.cpp"
 
 using namespace std;
 
@@ -516,9 +517,10 @@ void studentDashboard(Student& student,
         cout << "5. Select Target Role (Coming Soon)\n";
         cout << "6. Analyze Skill Gap\n";
         cout << "7. Discover Opportunities\n";
-        cout << "8. Logout\n";
+        cout << "8. View Roadmap\n";
+        cout << "9. Logout\n";
 
-        int choice = readInt("Enter choice: ", 1, 8);
+        int choice = readInt("Enter choice: ", 1, 9);
 
         switch (choice) {
             case 1:
@@ -619,7 +621,15 @@ void studentDashboard(Student& student,
                 break;
             }
 
-            case 8:
+            case 8: {
+                Roadmap roadmap;
+                roadmap.showMenu(student);
+                waitForEnter();
+                break;
+            }
+            
+
+            case 9:
                 studentManager.saveProfile(student);
                 cout << "Logged out.\n";
                 return;
