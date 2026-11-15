@@ -546,70 +546,15 @@ void studentDashboard(Student& student,
                 waitForEnter();
                 break;
 
-            case 6: {
-                    SkillGapAnalyzer analyzer;
-                
-                    bool filtered = engine.filter(student);
-                
-                    if (!filtered) {
-                        cout << "Could not prepare opportunities for analysis.\n";
-                        waitForEnter();
-                        break;
-                    }
-                
-                    vector<OpportunityResult> results =
-                        analyzer.analyze(student);
-                
-                    if (results.empty()) {
-                        cout << "No opportunities could be analyzed.\n";
-                        waitForEnter();
-                        break;
-                    }
-                
-                    cout << "\n===== TOP 5 OPPORTUNITY MATCHES =====\n";
-                
-                    int resultCount = min(
-                        5,
-                        static_cast<int>(results.size())
-                    );
-                
-                    for (int i = 0; i < resultCount; i++) {
-                        OpportunityResult& result = results[i];
-                
-                        cout << "\n-----------------------------------\n";
-                        cout << "Rank: " << i + 1 << "\n";
-                        cout << "Opportunity: " << result.name << "\n";
-                        cout << "Readiness Score: "
-                             << fixed << setprecision(2)
-                             << result.readinessScore << "%\n";
-                
-                        cout << "GPA Score: "
-                             << result.gpaScore << "%\n";
-                
-                        cout << "Opportunity Match Score: "
-                             << result.opportunityScore << "%\n";
-                
-                        cout << "GPA Eligibility: "
-                             << (result.gpaEligible ? "Eligible" : "Not Eligible")
-                             << "\n";
-                
-                        cout << "\nSkill Analysis:\n";
-                
-                        for (const SkillEvaluation& skill : result.skills) {
-                            cout << "- " << skill.skillName
-                                 << " | Current: " << skill.studentLevel
-                                 << " | Required: " << skill.requiredLevel
-                                 << " | Achievement: "
-                                 << skill.achievement << "%"
-                                 << " | " << skill.status
-                                 << "\n";
-                        }
-                    }
-                
-                    waitForEnter();
-                    break;
-                }
-
+            case 6:
+            {
+                SkillGapAnalyzer analyzer;
+                analyzer.displayDashboard(student);
+            
+                waitForEnter();
+                break;
+            }
+            
             case 7: {
                 bool result = engine.filter(student);
 
