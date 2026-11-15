@@ -13,43 +13,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "Delhi",
-            "min_gpa": 5.5,
-            "name": "Python Development Intern",
-            "opportunity_id": "OPP002",
-            "required_skills": {
-                "Django": 9,
-                "Python": 6
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Campus Innovation Hackathon",
-            "opportunity_id": "OPP003",
-            "required_skills": {
-                "Java": 8,
-                "networking": 9
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "mumbai",
-            "min_gpa": 5.0,
-            "name": "Python Foundations Workshop",
-            "opportunity_id": "OPP004",
-            "required_skills": {
-                "airflow": 8,
-                "docker": 6,
-                "networking": 3
-            }
-        },
-        {
             "category": "job",
             "description": "Contribute to software modules and fix bugs across the development cycle.\nCollaborate with developers during code reviews and testing.",
             "location": "Delhi",
@@ -61,44 +24,6 @@
                 "Python": 5,
                 "numpy": 2,
                 "pandas": 4
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "dehradun",
-            "min_gpa": 7.5,
-            "name": "Data Analytics Intern",
-            "opportunity_id": "OPP006",
-            "required_skills": {
-                "Python": 5,
-                "airflow": 5
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "AI for Good Buildathon",
-            "opportunity_id": "OPP007",
-            "required_skills": {
-                "Flask": 1,
-                "airflow": 8
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Web Development Bootcamp",
-            "opportunity_id": "OPP008",
-            "required_skills": {
-                "Django": 0,
-                "Flask": 10,
-                "HTML": 3,
-                "Java": 1
             }
         },
         {
@@ -115,48 +40,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Cloud Engineering Intern",
-            "opportunity_id": "OPP010",
-            "required_skills": {
-                "asure": 10,
-                "aws": 9,
-                "docker": 8,
-                "networking": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Cloud-Native Challenge",
-            "opportunity_id": "OPP011",
-            "required_skills": {
-                "Python": 0,
-                "asure": 3,
-                "aws": 6,
-                "docker": 5,
-                "networking": 0
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Cloud Fundamentals Workshop",
-            "opportunity_id": "OPP012",
-            "required_skills": {
-                "Python": 10,
-                "asure": 7,
-                "docker": 6
-            }
-        },
-        {
             "category": "job",
             "description": "Prepare datasets and validate data quality for analytics workflows.\nAssist with scheduled jobs, reports, and operational documentation.",
             "location": "dehradun",
@@ -170,50 +53,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Backend Engineering Intern",
-            "opportunity_id": "OPP014",
-            "required_skills": {
-                "C++": 1,
-                "Django": 10,
-                "Flask": 1,
-                "Java": 0,
-                "docker": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Data Sprint Hackathon",
-            "opportunity_id": "OPP015",
-            "required_skills": {
-                "Python": 4,
-                "airflow": 10,
-                "aws": 8,
-                "numpy": 0,
-                "pandas": 8
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Docker Hands-on Lab",
-            "opportunity_id": "OPP016",
-            "required_skills": {
-                "Python": 4,
-                "asure": 2,
-                "aws": 0,
-                "docker": 7
-            }
-        },
-        {
             "category": "job",
             "description": "Develop API endpoints and server-side application logic.\nWrite tests and help improve performance and maintainability.",
             "location": "Delhi",
@@ -223,43 +62,6 @@
             "required_skills": {
                 "C++": 8,
                 "docker": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Frontend Development Intern",
-            "opportunity_id": "OPP018",
-            "required_skills": {
-                "Django": 8,
-                "JS": 0,
-                "Java": 9
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Web App Weekend",
-            "opportunity_id": "OPP019",
-            "required_skills": {
-                "Django": 3,
-                "HTML": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Data Engineering Starter Workshop",
-            "opportunity_id": "OPP020",
-            "required_skills": {
-                "Python": 1,
-                "airflow": 8
             }
         },
         {
@@ -278,47 +80,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "DevOps Intern",
-            "opportunity_id": "OPP022",
-            "required_skills": {
-                "Python": 8,
-                "asure": 3,
-                "aws": 9,
-                "docker": 0,
-                "networking": 9
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Open Source Hack Day",
-            "opportunity_id": "OPP023",
-            "required_skills": {
-                "airflow": 0,
-                "docker": 3
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Networking Essentials Lab",
-            "opportunity_id": "OPP024",
-            "required_skills": {
-                "asure": 9,
-                "aws": 8,
-                "docker": 2,
-                "networking": 3
-            }
-        },
-        {
             "category": "job",
             "description": "Assist with network monitoring, connectivity checks, and issue resolution.\nMaintain clear records of configurations and troubleshooting steps.",
             "location": "dehradun",
@@ -329,48 +90,6 @@
                 "C": 1,
                 "docker": 1,
                 "networking": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Data Pipeline Intern",
-            "opportunity_id": "OPP026",
-            "required_skills": {
-                "Python": 1,
-                "airflow": 0,
-                "aws": 6,
-                "numpy": 5,
-                "pandas": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Smart City Prototype Challenge",
-            "opportunity_id": "OPP027",
-            "required_skills": {
-                "C++": 3,
-                "Django": 1,
-                "Flask": 1,
-                "HTML": 8,
-                "networking": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Pandas and NumPy Workshop",
-            "opportunity_id": "OPP028",
-            "required_skills": {
-                "Python": 2,
-                "pandas": 6
             }
         },
         {
@@ -387,46 +106,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "Delhi",
-            "min_gpa": 7.5,
-            "name": "Network Operations Intern",
-            "opportunity_id": "OPP030",
-            "required_skills": {
-                "C": 3,
-                "asure": 9,
-                "docker": 4,
-                "networking": 0
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Campus Innovation Hackathon - Cohort A",
-            "opportunity_id": "OPP031",
-            "required_skills": {
-                "Flask": 0,
-                "Python": 8,
-                "networking": 8,
-                "numpy": 2
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Python Foundations Workshop - Cohort A",
-            "opportunity_id": "OPP032",
-            "required_skills": {
-                "C": 3,
-                "numpy": 10
-            }
-        },
-        {
             "category": "job",
             "description": "Build and maintain Python features for internal applications.\nWork with a small engineering team to test, document, and improve code.",
             "location": "mumbai",
@@ -437,47 +116,6 @@
                 "Django": 1,
                 "Python": 6,
                 "numpy": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Python Development Intern - Cohort A",
-            "opportunity_id": "OPP034",
-            "required_skills": {
-                "Django": 6,
-                "Flask": 2,
-                "numpy": 3,
-                "pandas": 4
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "AI for Good Buildathon - Cohort A",
-            "opportunity_id": "OPP035",
-            "required_skills": {
-                "C": 9,
-                "Python": 1,
-                "aws": 9,
-                "networking": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Web Development Bootcamp - Cohort A",
-            "opportunity_id": "OPP036",
-            "required_skills": {
-                "Django": 1,
-                "HTML": 3,
-                "Java": 5
             }
         },
         {
@@ -494,44 +132,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "Delhi",
-            "min_gpa": 7.5,
-            "name": "Data Analytics Intern - Cohort A",
-            "opportunity_id": "OPP038",
-            "required_skills": {
-                "numpy": 1,
-                "pandas": 1
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Cloud-Native Challenge - Cohort A",
-            "opportunity_id": "OPP039",
-            "required_skills": {
-                "Python": 10,
-                "asure": 3,
-                "aws": 10,
-                "networking": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Cloud Fundamentals Workshop - Cohort A",
-            "opportunity_id": "OPP040",
-            "required_skills": {
-                "docker": 4,
-                "networking": 0
-            }
-        },
-        {
             "category": "job",
             "description": "Help monitor cloud resources and troubleshoot basic deployment issues.\nDocument incidents and support reliable application operations.",
             "location": "Delhi",
@@ -542,44 +142,6 @@
                 "Python": 6,
                 "asure": 7,
                 "aws": 8
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "Cloud Engineering Intern - Cohort A",
-            "opportunity_id": "OPP042",
-            "required_skills": {
-                "aws": 0,
-                "docker": 8
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Data Sprint Hackathon - Cohort A",
-            "opportunity_id": "OPP043",
-            "required_skills": {
-                "Python": 0,
-                "airflow": 4,
-                "pandas": 5
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Docker Hands-on Lab - Cohort A",
-            "opportunity_id": "OPP044",
-            "required_skills": {
-                "asure": 9,
-                "docker": 6,
-                "networking": 2
             }
         },
         {
@@ -596,47 +158,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Backend Engineering Intern - Cohort A",
-            "opportunity_id": "OPP046",
-            "required_skills": {
-                "Django": 3,
-                "Python": 7,
-                "docker": 0
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Web App Weekend - Cohort A",
-            "opportunity_id": "OPP047",
-            "required_skills": {
-                "Django": 10,
-                "HTML": 6,
-                "JS": 3,
-                "Java": 5
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Data Engineering Starter Workshop - Cohort A",
-            "opportunity_id": "OPP048",
-            "required_skills": {
-                "airflow": 1,
-                "aws": 4,
-                "numpy": 0,
-                "pandas": 2
-            }
-        },
-        {
             "category": "job",
             "description": "Develop API endpoints and server-side application logic.\nWrite tests and help improve performance and maintainability.",
             "location": "dehradun",
@@ -646,43 +167,6 @@
             "required_skills": {
                 "Flask": 5,
                 "Python": 6
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "Delhi",
-            "min_gpa": 7.0,
-            "name": "Frontend Development Intern - Cohort A",
-            "opportunity_id": "OPP050",
-            "required_skills": {
-                "Flask": 4,
-                "JS": 0
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Open Source Hack Day - Cohort A",
-            "opportunity_id": "OPP051",
-            "required_skills": {
-                "C": 9,
-                "Django": 5,
-                "JS": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Networking Essentials Lab - Cohort A",
-            "opportunity_id": "OPP052",
-            "required_skills": {
-                "C": 6,
-                "asure": 10
             }
         },
         {
@@ -700,48 +184,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "DevOps Intern - Cohort A",
-            "opportunity_id": "OPP054",
-            "required_skills": {
-                "asure": 9,
-                "aws": 9,
-                "docker": 6,
-                "networking": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Smart City Prototype Challenge - Cohort A",
-            "opportunity_id": "OPP055",
-            "required_skills": {
-                "Flask": 2,
-                "Java": 1,
-                "docker": 10,
-                "networking": 8,
-                "pandas": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Pandas and NumPy Workshop - Cohort A",
-            "opportunity_id": "OPP056",
-            "required_skills": {
-                "Python": 0,
-                "numpy": 2,
-                "pandas": 0
-            }
-        },
-        {
             "category": "job",
             "description": "Assist with network monitoring, connectivity checks, and issue resolution.\nMaintain clear records of configurations and troubleshooting steps.",
             "location": "mumbai",
@@ -751,49 +193,6 @@
             "required_skills": {
                 "C": 9,
                 "docker": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "Delhi",
-            "min_gpa": 7.0,
-            "name": "Data Pipeline Intern - Cohort A",
-            "opportunity_id": "OPP058",
-            "required_skills": {
-                "Python": 3,
-                "airflow": 1,
-                "aws": 6,
-                "numpy": 2,
-                "pandas": 8
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Campus Innovation Hackathon - Cohort B",
-            "opportunity_id": "OPP059",
-            "required_skills": {
-                "C": 7,
-                "asure": 2,
-                "networking": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Python Foundations Workshop - Cohort B",
-            "opportunity_id": "OPP060",
-            "required_skills": {
-                "C++": 10,
-                "Flask": 3,
-                "asure": 7,
-                "aws": 4,
-                "pandas": 4
             }
         },
         {
@@ -807,44 +206,6 @@
                 "Python": 4,
                 "airflow": 4,
                 "aws": 3
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Network Operations Intern - Cohort A",
-            "opportunity_id": "OPP062",
-            "required_skills": {
-                "C": 6,
-                "aws": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "AI for Good Buildathon - Cohort B",
-            "opportunity_id": "OPP063",
-            "required_skills": {
-                "C": 5,
-                "Django": 8,
-                "asure": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Web Development Bootcamp - Cohort B",
-            "opportunity_id": "OPP064",
-            "required_skills": {
-                "Django": 6,
-                "Flask": 0,
-                "Java": 9
             }
         },
         {
@@ -862,47 +223,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "mumbai",
-            "min_gpa": 7.5,
-            "name": "Python Development Intern - Cohort B",
-            "opportunity_id": "OPP066",
-            "required_skills": {
-                "Django": 8,
-                "Flask": 9,
-                "Python": 0,
-                "numpy": 2,
-                "pandas": 6
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Cloud-Native Challenge - Cohort B",
-            "opportunity_id": "OPP067",
-            "required_skills": {
-                "docker": 2,
-                "networking": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Cloud Fundamentals Workshop - Cohort B",
-            "opportunity_id": "OPP068",
-            "required_skills": {
-                "asure": 5,
-                "aws": 4,
-                "docker": 6,
-                "networking": 5
-            }
-        },
-        {
             "category": "job",
             "description": "Contribute to software modules and fix bugs across the development cycle.\nCollaborate with developers during code reviews and testing.",
             "location": "Delhi",
@@ -912,45 +232,6 @@
             "required_skills": {
                 "Flask": 8,
                 "Python": 0
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "mumbai",
-            "min_gpa": 5.5,
-            "name": "Data Analytics Intern - Cohort B",
-            "opportunity_id": "OPP070",
-            "required_skills": {
-                "Python": 3,
-                "aws": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Data Sprint Hackathon - Cohort B",
-            "opportunity_id": "OPP071",
-            "required_skills": {
-                "airflow": 9,
-                "aws": 1,
-                "pandas": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Docker Hands-on Lab - Cohort B",
-            "opportunity_id": "OPP072",
-            "required_skills": {
-                "Python": 1,
-                "asure": 2,
-                "aws": 4,
-                "docker": 9
             }
         },
         {
@@ -969,49 +250,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "mumbai",
-            "min_gpa": 7.0,
-            "name": "Cloud Engineering Intern - Cohort B",
-            "opportunity_id": "OPP074",
-            "required_skills": {
-                "Python": 1,
-                "asure": 6,
-                "aws": 6,
-                "docker": 7,
-                "networking": 5
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Web App Weekend - Cohort B",
-            "opportunity_id": "OPP075",
-            "required_skills": {
-                "Django": 4,
-                "Flask": 8,
-                "JS": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Data Engineering Starter Workshop - Cohort B",
-            "opportunity_id": "OPP076",
-            "required_skills": {
-                "Python": 7,
-                "airflow": 9,
-                "aws": 4,
-                "numpy": 7,
-                "pandas": 3
-            }
-        },
-        {
             "category": "job",
             "description": "Prepare datasets and validate data quality for analytics workflows.\nAssist with scheduled jobs, reports, and operational documentation.",
             "location": "mumbai",
@@ -1027,49 +265,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Backend Engineering Intern - Cohort B",
-            "opportunity_id": "OPP078",
-            "required_skills": {
-                "Flask": 3,
-                "Java": 7,
-                "Python": 6,
-                "docker": 8
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Open Source Hack Day - Cohort B",
-            "opportunity_id": "OPP079",
-            "required_skills": {
-                "Flask": 3,
-                "Python": 3,
-                "airflow": 4,
-                "aws": 6,
-                "docker": 1
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Networking Essentials Lab - Cohort B",
-            "opportunity_id": "OPP080",
-            "required_skills": {
-                "C": 4,
-                "asure": 7,
-                "aws": 4,
-                "docker": 5
-            }
-        },
-        {
             "category": "job",
             "description": "Develop API endpoints and server-side application logic.\nWrite tests and help improve performance and maintainability.",
             "location": "mumbai",
@@ -1082,46 +277,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "mumbai",
-            "min_gpa": 7.5,
-            "name": "Frontend Development Intern - Cohort B",
-            "opportunity_id": "OPP082",
-            "required_skills": {
-                "Django": 9,
-                "JS": 7,
-                "Java": 4
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Smart City Prototype Challenge - Cohort B",
-            "opportunity_id": "OPP083",
-            "required_skills": {
-                "C": 3,
-                "HTML": 4,
-                "Java": 2,
-                "asure": 5
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Pandas and NumPy Workshop - Cohort B",
-            "opportunity_id": "OPP084",
-            "required_skills": {
-                "Python": 4,
-                "airflow": 2,
-                "numpy": 8
-            }
-        },
-        {
             "category": "job",
             "description": "Create responsive web pages and connect them to application services.\nWork with designers and developers to refine user experiences.",
             "location": "dehradun",
@@ -1131,43 +286,6 @@
             "required_skills": {
                 "Django": 7,
                 "HTML": 7
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "Delhi",
-            "min_gpa": 7.0,
-            "name": "DevOps Intern - Cohort B",
-            "opportunity_id": "OPP086",
-            "required_skills": {
-                "asure": 1,
-                "aws": 6,
-                "docker": 1
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Campus Innovation Hackathon - Advanced Track",
-            "opportunity_id": "OPP087",
-            "required_skills": {
-                "C++": 9,
-                "networking": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Python Foundations Workshop - Advanced Track",
-            "opportunity_id": "OPP088",
-            "required_skills": {
-                "aws": 9,
-                "pandas": 6
             }
         },
         {
@@ -1184,42 +302,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Data Pipeline Intern - Cohort B",
-            "opportunity_id": "OPP090",
-            "required_skills": {
-                "Python": 10,
-                "aws": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "AI for Good Buildathon - Advanced Track",
-            "opportunity_id": "OPP091",
-            "required_skills": {
-                "C++": 2,
-                "Java": 8
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Web Development Bootcamp - Advanced Track",
-            "opportunity_id": "OPP092",
-            "required_skills": {
-                "Flask": 9,
-                "Java": 7
-            }
-        },
-        {
             "category": "job",
             "description": "Create scripts to reduce repetitive engineering tasks.\nTest automation workflows and document how they are used.",
             "location": "dehradun",
@@ -1230,43 +312,6 @@
                 "C++": 1,
                 "airflow": 7,
                 "aws": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "Network Operations Intern - Cohort B",
-            "opportunity_id": "OPP094",
-            "required_skills": {
-                "asure": 2,
-                "docker": 3,
-                "networking": 10
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Cloud-Native Challenge - Advanced Track",
-            "opportunity_id": "OPP095",
-            "required_skills": {
-                "aws": 9,
-                "docker": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Cloud Fundamentals Workshop - Advanced Track",
-            "opportunity_id": "OPP096",
-            "required_skills": {
-                "asure": 4,
-                "networking": 6
             }
         },
         {
@@ -1285,45 +330,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "mumbai",
-            "min_gpa": 7.5,
-            "name": "Python Development Intern - Advanced Track",
-            "opportunity_id": "OPP098",
-            "required_skills": {
-                "Python": 7,
-                "numpy": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Data Sprint Hackathon - Advanced Track",
-            "opportunity_id": "OPP099",
-            "required_skills": {
-                "Python": 5,
-                "airflow": 6,
-                "aws": 5,
-                "numpy": 1,
-                "pandas": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "mumbai",
-            "min_gpa": 5.0,
-            "name": "Docker Hands-on Lab - Advanced Track",
-            "opportunity_id": "OPP100",
-            "required_skills": {
-                "asure": 7,
-                "aws": 6
-            }
-        },
-        {
             "category": "job",
             "description": "Contribute to software modules and fix bugs across the development cycle.\nCollaborate with developers during code reviews and testing.",
             "location": "mumbai",
@@ -1339,47 +345,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "Delhi",
-            "min_gpa": 7.5,
-            "name": "Data Analytics Intern - Advanced Track",
-            "opportunity_id": "OPP102",
-            "required_skills": {
-                "Python": 7,
-                "airflow": 10,
-                "aws": 0,
-                "numpy": 4,
-                "pandas": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Web App Weekend - Advanced Track",
-            "opportunity_id": "OPP103",
-            "required_skills": {
-                "Django": 2,
-                "Flask": 10,
-                "HTML": 3,
-                "Java": 9
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Data Engineering Starter Workshop - Advanced Track",
-            "opportunity_id": "OPP104",
-            "required_skills": {
-                "airflow": 3,
-                "aws": 1
-            }
-        },
-        {
             "category": "job",
             "description": "Help monitor cloud resources and troubleshoot basic deployment issues.\nDocument incidents and support reliable application operations.",
             "location": "dehradun",
@@ -1389,50 +354,6 @@
             "required_skills": {
                 "aws": 4,
                 "networking": 8
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Cloud Engineering Intern - Advanced Track",
-            "opportunity_id": "OPP106",
-            "required_skills": {
-                "Python": 8,
-                "asure": 1,
-                "aws": 9,
-                "docker": 2,
-                "networking": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "Open Source Hack Day - Advanced Track",
-            "opportunity_id": "OPP107",
-            "required_skills": {
-                "HTML": 9,
-                "aws": 4,
-                "networking": 0,
-                "pandas": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Networking Essentials Lab - Advanced Track",
-            "opportunity_id": "OPP108",
-            "required_skills": {
-                "C": 7,
-                "asure": 3,
-                "aws": 3,
-                "docker": 5,
-                "networking": 9
             }
         },
         {
@@ -1451,50 +372,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Backend Engineering Intern - Advanced Track",
-            "opportunity_id": "OPP110",
-            "required_skills": {
-                "C++": 6,
-                "Django": 0,
-                "Python": 7,
-                "docker": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Smart City Prototype Challenge - Advanced Track",
-            "opportunity_id": "OPP111",
-            "required_skills": {
-                "Django": 8,
-                "HTML": 1,
-                "JS": 5,
-                "aws": 10,
-                "numpy": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Pandas and NumPy Workshop - Advanced Track",
-            "opportunity_id": "OPP112",
-            "required_skills": {
-                "Python": 10,
-                "airflow": 3,
-                "aws": 10,
-                "numpy": 4,
-                "pandas": 1
-            }
-        },
-        {
             "category": "job",
             "description": "Develop API endpoints and server-side application logic.\nWrite tests and help improve performance and maintainability.",
             "location": "dehradun",
@@ -1504,46 +381,6 @@
             "required_skills": {
                 "Django": 4,
                 "Java": 0
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Frontend Development Intern - Advanced Track",
-            "opportunity_id": "OPP114",
-            "required_skills": {
-                "Django": 5,
-                "Java": 6
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Campus Innovation Hackathon - Student Edition",
-            "opportunity_id": "OPP115",
-            "required_skills": {
-                "C++": 6,
-                "airflow": 9,
-                "aws": 9,
-                "docker": 1,
-                "numpy": 2
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Python Foundations Workshop - Student Edition",
-            "opportunity_id": "OPP116",
-            "required_skills": {
-                "Flask": 7,
-                "Java": 4,
-                "docker": 4
             }
         },
         {
@@ -1562,48 +399,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "DevOps Intern - Advanced Track",
-            "opportunity_id": "OPP118",
-            "required_skills": {
-                "Python": 6,
-                "docker": 9,
-                "networking": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "AI for Good Buildathon - Student Edition",
-            "opportunity_id": "OPP119",
-            "required_skills": {
-                "HTML": 4,
-                "Python": 0,
-                "airflow": 6,
-                "docker": 9
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Web Development Bootcamp - Student Edition",
-            "opportunity_id": "OPP120",
-            "required_skills": {
-                "Django": 10,
-                "Flask": 4,
-                "HTML": 10,
-                "JS": 3,
-                "Java": 9
-            }
-        },
-        {
             "category": "job",
             "description": "Assist with network monitoring, connectivity checks, and issue resolution.\nMaintain clear records of configurations and troubleshooting steps.",
             "location": "mumbai",
@@ -1617,46 +412,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Data Pipeline Intern - Advanced Track",
-            "opportunity_id": "OPP122",
-            "required_skills": {
-                "Python": 6,
-                "numpy": 2,
-                "pandas": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "Cloud-Native Challenge - Student Edition",
-            "opportunity_id": "OPP123",
-            "required_skills": {
-                "Python": 7,
-                "asure": 4,
-                "aws": 1,
-                "docker": 5
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Cloud Fundamentals Workshop - Student Edition",
-            "opportunity_id": "OPP124",
-            "required_skills": {
-                "asure": 6,
-                "aws": 5,
-                "networking": 1
-            }
-        },
-        {
             "category": "job",
             "description": "Create scripts to reduce repetitive engineering tasks.\nTest automation workflows and document how they are used.",
             "location": "mumbai",
@@ -1666,45 +421,6 @@
             "required_skills": {
                 "airflow": 10,
                 "aws": 10
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Network Operations Intern - Advanced Track",
-            "opportunity_id": "OPP126",
-            "required_skills": {
-                "C": 8,
-                "asure": 0,
-                "aws": 9,
-                "docker": 5,
-                "networking": 9
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Data Sprint Hackathon - Student Edition",
-            "opportunity_id": "OPP127",
-            "required_skills": {
-                "airflow": 10,
-                "numpy": 6
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Docker Hands-on Lab - Student Edition",
-            "opportunity_id": "OPP128",
-            "required_skills": {
-                "asure": 1,
-                "docker": 7
             }
         },
         {
@@ -1721,48 +437,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "mumbai",
-            "min_gpa": 5.5,
-            "name": "Python Development Intern - Student Edition",
-            "opportunity_id": "OPP130",
-            "required_skills": {
-                "Flask": 9,
-                "Python": 6,
-                "pandas": 4
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Web App Weekend - Student Edition",
-            "opportunity_id": "OPP131",
-            "required_skills": {
-                "Flask": 1,
-                "HTML": 5,
-                "JS": 5,
-                "Java": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Data Engineering Starter Workshop - Student Edition",
-            "opportunity_id": "OPP132",
-            "required_skills": {
-                "Python": 10,
-                "airflow": 10,
-                "aws": 9,
-                "numpy": 10,
-                "pandas": 3
-            }
-        },
-        {
             "category": "job",
             "description": "Contribute to software modules and fix bugs across the development cycle.\nCollaborate with developers during code reviews and testing.",
             "location": "Delhi",
@@ -1774,45 +448,6 @@
                 "Python": 9,
                 "numpy": 3,
                 "pandas": 1
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "mumbai",
-            "min_gpa": 5.5,
-            "name": "Data Analytics Intern - Student Edition",
-            "opportunity_id": "OPP134",
-            "required_skills": {
-                "Python": 8,
-                "airflow": 2,
-                "aws": 4,
-                "pandas": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Open Source Hack Day - Student Edition",
-            "opportunity_id": "OPP135",
-            "required_skills": {
-                "C++": 5,
-                "Python": 3
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Networking Essentials Lab - Student Edition",
-            "opportunity_id": "OPP136",
-            "required_skills": {
-                "asure": 6,
-                "docker": 1,
-                "networking": 8
             }
         },
         {
@@ -1831,48 +466,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "dehradun",
-            "min_gpa": 5.5,
-            "name": "Cloud Engineering Intern - Student Edition",
-            "opportunity_id": "OPP138",
-            "required_skills": {
-                "Python": 1,
-                "asure": 7,
-                "aws": 7,
-                "docker": 10,
-                "networking": 1
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Smart City Prototype Challenge - Student Edition",
-            "opportunity_id": "OPP139",
-            "required_skills": {
-                "C": 9,
-                "C++": 10,
-                "HTML": 9
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Pandas and NumPy Workshop - Student Edition",
-            "opportunity_id": "OPP140",
-            "required_skills": {
-                "Python": 8,
-                "airflow": 10,
-                "aws": 10,
-                "numpy": 3
-            }
-        },
-        {
             "category": "job",
             "description": "Prepare datasets and validate data quality for analytics workflows.\nAssist with scheduled jobs, reports, and operational documentation.",
             "location": "dehradun",
@@ -1883,47 +476,6 @@
                 "airflow": 6,
                 "numpy": 6,
                 "pandas": 1
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "Delhi",
-            "min_gpa": 5.5,
-            "name": "Backend Engineering Intern - Student Edition",
-            "opportunity_id": "OPP142",
-            "required_skills": {
-                "C++": 7,
-                "Flask": 1,
-                "Python": 1,
-                "docker": 10
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Campus Innovation Hackathon - Track 143",
-            "opportunity_id": "OPP143",
-            "required_skills": {
-                "C": 8,
-                "C++": 8,
-                "JS": 8,
-                "airflow": 0,
-                "asure": 9
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Python Foundations Workshop - Track 144",
-            "opportunity_id": "OPP144",
-            "required_skills": {
-                "Django": 10,
-                "JS": 6
             }
         },
         {
@@ -1938,46 +490,6 @@
                 "Flask": 9,
                 "Python": 2,
                 "docker": 3
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "Delhi",
-            "min_gpa": 7.5,
-            "name": "Frontend Development Intern - Student Edition",
-            "opportunity_id": "OPP146",
-            "required_skills": {
-                "Django": 1,
-                "Java": 4
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "AI for Good Buildathon - Track 147",
-            "opportunity_id": "OPP147",
-            "required_skills": {
-                "airflow": 9,
-                "asure": 10,
-                "aws": 8,
-                "numpy": 0,
-                "pandas": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Web Development Bootcamp - Track 148",
-            "opportunity_id": "OPP148",
-            "required_skills": {
-                "Django": 5,
-                "JS": 2,
-                "Java": 0
             }
         },
         {
@@ -1996,47 +508,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "mumbai",
-            "min_gpa": 5.5,
-            "name": "DevOps Intern - Student Edition",
-            "opportunity_id": "OPP150",
-            "required_skills": {
-                "Python": 2,
-                "asure": 0,
-                "docker": 9,
-                "networking": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "Cloud-Native Challenge - Track 151",
-            "opportunity_id": "OPP151",
-            "required_skills": {
-                "asure": 10,
-                "networking": 6
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Cloud Fundamentals Workshop - Track 152",
-            "opportunity_id": "OPP152",
-            "required_skills": {
-                "Python": 10,
-                "asure": 1,
-                "aws": 10,
-                "docker": 4,
-                "networking": 6
-            }
-        },
-        {
             "category": "job",
             "description": "Assist with network monitoring, connectivity checks, and issue resolution.\nMaintain clear records of configurations and troubleshooting steps.",
             "location": "dehradun",
@@ -2048,45 +519,6 @@
                 "aws": 3,
                 "docker": 4,
                 "networking": 0
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "mumbai",
-            "min_gpa": 7.5,
-            "name": "Data Pipeline Intern - Student Edition",
-            "opportunity_id": "OPP154",
-            "required_skills": {
-                "Python": 2,
-                "airflow": 2,
-                "numpy": 6,
-                "pandas": 6
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Data Sprint Hackathon - Track 155",
-            "opportunity_id": "OPP155",
-            "required_skills": {
-                "Python": 6,
-                "aws": 6,
-                "numpy": 0
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Docker Hands-on Lab - Track 156",
-            "opportunity_id": "OPP156",
-            "required_skills": {
-                "asure": 9,
-                "networking": 6
             }
         },
         {
@@ -2105,46 +537,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "Delhi",
-            "min_gpa": 6.5,
-            "name": "Network Operations Intern - Student Edition",
-            "opportunity_id": "OPP158",
-            "required_skills": {
-                "C": 6,
-                "asure": 4,
-                "docker": 1
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Web App Weekend - Track 159",
-            "opportunity_id": "OPP159",
-            "required_skills": {
-                "Django": 3,
-                "Flask": 5,
-                "HTML": 8,
-                "JS": 8
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Data Engineering Starter Workshop - Track 160",
-            "opportunity_id": "OPP160",
-            "required_skills": {
-                "Python": 3,
-                "airflow": 2,
-                "pandas": 4
-            }
-        },
-        {
             "category": "job",
             "description": "Build and maintain Python features for internal applications.\nWork with a small engineering team to test, document, and improve code.",
             "location": "dehradun",
@@ -2154,44 +546,6 @@
             "required_skills": {
                 "Flask": 9,
                 "pandas": 7
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "Python Development Intern - Track 162",
-            "opportunity_id": "OPP162",
-            "required_skills": {
-                "Flask": 10,
-                "Python": 4,
-                "numpy": 7,
-                "pandas": 7
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Open Source Hack Day - Track 163",
-            "opportunity_id": "OPP163",
-            "required_skills": {
-                "JS": 1,
-                "pandas": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Networking Essentials Lab - Track 164",
-            "opportunity_id": "OPP164",
-            "required_skills": {
-                "asure": 1,
-                "networking": 4
             }
         },
         {
@@ -2210,48 +564,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "Delhi",
-            "min_gpa": 7.5,
-            "name": "Data Analytics Intern - Track 166",
-            "opportunity_id": "OPP166",
-            "required_skills": {
-                "Python": 7,
-                "aws": 8,
-                "numpy": 8,
-                "pandas": 7
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Smart City Prototype Challenge - Track 167",
-            "opportunity_id": "OPP167",
-            "required_skills": {
-                "Django": 9,
-                "HTML": 10,
-                "JS": 5,
-                "aws": 0
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Pandas and NumPy Workshop - Track 168",
-            "opportunity_id": "OPP168",
-            "required_skills": {
-                "Python": 10,
-                "airflow": 9,
-                "numpy": 5,
-                "pandas": 2
-            }
-        },
-        {
             "category": "job",
             "description": "Help monitor cloud resources and troubleshoot basic deployment issues.\nDocument incidents and support reliable application operations.",
             "location": "mumbai",
@@ -2262,44 +574,6 @@
                 "Python": 6,
                 "asure": 10,
                 "networking": 2
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Assist with cloud deployments and resource monitoring.\nLearn infrastructure basics, access control, and operational practices.",
-            "location": "mumbai",
-            "min_gpa": 6.0,
-            "name": "Cloud Engineering Intern - Track 170",
-            "opportunity_id": "OPP170",
-            "required_skills": {
-                "asure": 10,
-                "networking": 5
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "Delhi",
-            "min_gpa": 6.0,
-            "name": "Campus Innovation Hackathon - Track 171",
-            "opportunity_id": "OPP171",
-            "required_skills": {
-                "docker": 6,
-                "networking": 8
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Python Foundations Workshop - Track 172",
-            "opportunity_id": "OPP172",
-            "required_skills": {
-                "C++": 3,
-                "HTML": 7,
-                "JS": 2,
-                "Java": 3
             }
         },
         {
@@ -2317,47 +591,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Implement and test small backend features under mentorship.\nHelp document APIs and investigate reported bugs.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "Backend Engineering Intern - Track 174",
-            "opportunity_id": "OPP174",
-            "required_skills": {
-                "Flask": 0,
-                "Java": 6,
-                "docker": 7
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a technology prototype focused on a social or environmental challenge.\nJudges evaluate usefulness, implementation, and clarity of the demo.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "AI for Good Buildathon - Track 175",
-            "opportunity_id": "OPP175",
-            "required_skills": {
-                "Flask": 7,
-                "HTML": 8,
-                "numpy": 3
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn the basics of building and styling web interfaces.\nCreate a small page and connect it to a simple interactive feature.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Web Development Bootcamp - Track 176",
-            "opportunity_id": "OPP176",
-            "required_skills": {
-                "Django": 6,
-                "Flask": 8,
-                "HTML": 6,
-                "JS": 4,
-                "Java": 8
-            }
-        },
-        {
             "category": "job",
             "description": "Develop API endpoints and server-side application logic.\nWrite tests and help improve performance and maintainability.",
             "location": "Delhi",
@@ -2368,47 +601,6 @@
                 "C++": 5,
                 "Django": 1,
                 "Python": 8
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Build and refine web interfaces using common web technologies.\nTest layouts and collaborate with backend teammates.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Frontend Development Intern - Track 178",
-            "opportunity_id": "OPP178",
-            "required_skills": {
-                "Django": 1,
-                "Flask": 6,
-                "HTML": 8,
-                "JS": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Design and prototype a small service with a reliable deployment workflow.\nTeams demonstrate their solution and explain key technical decisions.",
-            "location": "dehradun",
-            "min_gpa": 0.0,
-            "name": "Cloud-Native Challenge - Track 179",
-            "opportunity_id": "OPP179",
-            "required_skills": {
-                "Python": 3,
-                "aws": 6,
-                "docker": 8,
-                "networking": 5
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore cloud concepts, deployment options, and basic operations.\nComplete guided exercises and discuss common cloud use cases.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Cloud Fundamentals Workshop - Track 180",
-            "opportunity_id": "OPP180",
-            "required_skills": {
-                "Python": 2,
-                "asure": 5,
-                "docker": 10
             }
         },
         {
@@ -2423,45 +615,6 @@
                 "Flask": 7,
                 "JS": 9,
                 "Java": 1
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help maintain development environments and containerized services.\nPractice deployment automation and basic monitoring.",
-            "location": "Delhi",
-            "min_gpa": 5.5,
-            "name": "DevOps Intern - Track 182",
-            "opportunity_id": "OPP182",
-            "required_skills": {
-                "aws": 4,
-                "docker": 4,
-                "networking": 3
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Explore a provided dataset and build a useful data-driven prototype.\nParticipants present insights, a working demo, and limitations.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Data Sprint Hackathon - Track 183",
-            "opportunity_id": "OPP183",
-            "required_skills": {
-                "Python": 9,
-                "airflow": 1,
-                "aws": 7
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn how containers package applications and their dependencies.\nBuild and run a sample containerized service.",
-            "location": "mumbai",
-            "min_gpa": 0.0,
-            "name": "Docker Hands-on Lab - Track 184",
-            "opportunity_id": "OPP184",
-            "required_skills": {
-                "Python": 5,
-                "asure": 9,
-                "aws": 0
             }
         },
         {
@@ -2480,48 +633,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Assist with scheduled data ingestion and transformation tasks.\nValidate outputs and document pipeline behavior.",
-            "location": "mumbai",
-            "min_gpa": 5.5,
-            "name": "Data Pipeline Intern - Track 186",
-            "opportunity_id": "OPP186",
-            "required_skills": {
-                "Python": 5,
-                "airflow": 1,
-                "aws": 10,
-                "numpy": 3,
-                "pandas": 5
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Create a functional web application in a short team-based event.\nFocus on usability, collaboration, and a clear demonstration.",
-            "location": "mumbai",
-            "min_gpa": 6.5,
-            "name": "Web App Weekend - Track 187",
-            "opportunity_id": "OPP187",
-            "required_skills": {
-                "Django": 7,
-                "HTML": 2,
-                "JS": 10,
-                "Java": 10
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Explore data ingestion, transformation, and scheduled workflows.\nBuild a small pipeline and discuss validation and reliability.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Data Engineering Starter Workshop - Track 188",
-            "opportunity_id": "OPP188",
-            "required_skills": {
-                "Python": 0,
-                "numpy": 4,
-                "pandas": 7
-            }
-        },
-        {
             "category": "job",
             "description": "Create scripts to reduce repetitive engineering tasks.\nTest automation workflows and document how they are used.",
             "location": "dehradun",
@@ -2531,44 +642,6 @@
             "required_skills": {
                 "Python": 8,
                 "airflow": 6,
-                "docker": 8
-            }
-        },
-        {
-            "category": "internship",
-            "description": "Help investigate connectivity issues and monitor network status.\nMaintain troubleshooting notes and simple operational reports.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Network Operations Intern - Track 190",
-            "opportunity_id": "OPP190",
-            "required_skills": {
-                "asure": 0,
-                "aws": 5
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Collaborate on a small open-source tool or improvement.\nParticipants share their contributions and explain how others can use them.",
-            "location": "dehradun",
-            "min_gpa": 6.5,
-            "name": "Open Source Hack Day - Track 191",
-            "opportunity_id": "OPP191",
-            "required_skills": {
-                "JS": 6,
-                "aws": 6
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice basic networking concepts and troubleshooting methods.\nUse guided scenarios to understand connectivity and common failures.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Networking Essentials Lab - Track 192",
-            "opportunity_id": "OPP192",
-            "required_skills": {
-                "C": 1,
-                "asure": 4,
-                "aws": 5,
                 "docker": 8
             }
         },
@@ -2585,48 +658,6 @@
             }
         },
         {
-            "category": "internship",
-            "description": "Support development of small Python tools and application features.\nLearn code reviews, debugging, testing, and version-control practices.",
-            "location": "mumbai",
-            "min_gpa": 7.5,
-            "name": "Python Development Intern - Track 194",
-            "opportunity_id": "OPP194",
-            "required_skills": {
-                "Django": 7,
-                "numpy": 4
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Develop a prototype addressing mobility, services, or urban operations.\nTeams explain the problem, proposed solution, and implementation.",
-            "location": "Delhi",
-            "min_gpa": 0.0,
-            "name": "Smart City Prototype Challenge - Track 195",
-            "opportunity_id": "OPP195",
-            "required_skills": {
-                "C++": 0,
-                "Flask": 9,
-                "JS": 6,
-                "airflow": 5,
-                "aws": 4
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Learn array and tabular data operations with practical examples.\nClean, transform, and summarize a small dataset.",
-            "location": "dehradun",
-            "min_gpa": 5.0,
-            "name": "Pandas and NumPy Workshop - Track 196",
-            "opportunity_id": "OPP196",
-            "required_skills": {
-                "Python": 1,
-                "airflow": 10,
-                "aws": 3,
-                "numpy": 0,
-                "pandas": 2
-            }
-        },
-        {
             "category": "job",
             "description": "Contribute to software modules and fix bugs across the development cycle.\nCollaborate with developers during code reviews and testing.",
             "location": "mumbai",
@@ -2640,55 +671,13 @@
                 "numpy": 7,
                 "pandas": 9
             }
-        },
-        {
-            "category": "internship",
-            "description": "Clean datasets and prepare basic analysis for project teams.\nHelp create repeatable data preparation scripts and reports.",
-            "location": "mumbai",
-            "min_gpa": 7.0,
-            "name": "Data Analytics Intern - Track 198",
-            "opportunity_id": "OPP198",
-            "required_skills": {
-                "airflow": 3,
-                "aws": 0,
-                "numpy": 1,
-                "pandas": 2
-            }
-        },
-        {
-            "category": "hackathon",
-            "description": "Build a prototype that solves a practical campus or community problem.\nTeams present a demo, explain their design, and share lessons learned.",
-            "location": "Delhi",
-            "min_gpa": 5.0,
-            "name": "Campus Innovation Hackathon - Track 199",
-            "opportunity_id": "OPP199",
-            "required_skills": {
-                "C": 9,
-                "HTML": 4,
-                "airflow": 7,
-                "networking": 7,
-                "pandas": 3
-            }
-        },
-        {
-            "category": "workshop",
-            "description": "Practice core Python concepts through short guided exercises.\nComplete a mini task and learn habits for writing readable code.",
-            "location": "dehradun",
-            "min_gpa": 6.0,
-            "name": "Python Foundations Workshop - Track 200",
-            "opportunity_id": "OPP200",
-            "required_skills": {
-                "C": 7,
-                "Flask": 1,
-                "asure": 2
-            }
         }
     ],
     "student": {
-        "cgpa": 9.3,
-        "email": "aditi123@gmail.com",
-        "name": "Aditi",
-        "preferredCategory": "Any",
+        "cgpa": 8.0,
+        "email": "kanupriyasd@gmail.com",
+        "name": "kanupriya",
+        "preferredCategory": "job",
         "userId": "U1"
     }
 }
