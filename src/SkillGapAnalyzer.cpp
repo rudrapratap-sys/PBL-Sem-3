@@ -1,253 +1,358 @@
-#include <algorithm>
+#include <iostream>
 #include <fstream>
+#include <iomanip>
+#include <vector>
 #include <string>
 #include <unordered_map>
-#include <vector>
 
-#include "../include/nlohmann/json.hpp"
+#include "nlohmann/json.hpp"
 
 using namespace std;
 using json = nlohmann::json;
 
-struct SkillEvaluation {
+struct SkillAnalysis
+{
     string skillName;
-    int studentLevel;
+    int currentLevel;
     int requiredLevel;
-    double achievement;
     string status;
 };
 
-struct OpportunityResult {
-    string id;
-    string name;
-
-    vector<SkillEvaluation> skills;
+struct OpportunityResult
+{
+    string opportunityName;
+    string location;
+    string category;
 
     double readinessScore;
-    double gpaScore;
     double opportunityScore;
 
-    bool gpaEligible;
+    vector<SkillAnalysis> skillAnalysis;
+    vector<string> skillsToImprove;
 };
 
-class SkillGapAnalyzer {
+class SkillGapAnalyzer
+{
 private:
+
     int getStudentLevel(
-        const unordered_map<string, int>& studentSkills,
-        const string& requiredSkill
-    ) const {
-        for (const auto& skill : studentSkills) {
-            if (Utils::compare(skill.first, requiredSkill)) {
+        unordered_map<string, int>& studentSkills,
+        const string& skillName)
+    {
+        for (auto& skill : studentSkills)
+        {
+            if (Utils::compare(skill.first, skillName))
+            {
                 return skill.second;
             }
         }
 
         return 0;
     }
-    double calculateAchievement(
-        int studentLevel,
-        int requiredLevel
-    ) const {
-        if (requiredLevel <= 0) {
-            return 0.0;
+
+    string getStatus(
+        int current,
+        int required)
+    {
+        if (current >= required)
+        {
+            return "MATCHED";
         }
 
-        double ratio =
-            static_cast<double>(studentLevel) /
-            requiredLevel;
-
-        if (ratio > 1.0) {
-            ratio = 1.0;
+        if (current >= required * 0.7)
+        {
+            return "NEEDS IMPROVEMENT";
         }
 
-        return ratio * 100.0;
+        return "NOT MATCHED";
     }
 
-    double calculateGpaScore(
-        double studentCgpa,
-        double minimumGpa
-    ) const {
-      
-        if (minimumGpa <= 0.0) {
-            return 100.0;
-        }
+    double calculateReadinessScore(
+        unordered_map<string, int>& studentSkills,
+        json requiredSkills)
+    {
+        int matchedPoints = 0;
+        int totalRequiredPoints = 0;
 
-        double ratio = studentCgpa / minimumGpa;
+        for (auto it = requiredSkills.begin();
+             it != requiredSkills.end();
+             ++it)
+        {
+            string skillName = it.key();
+            int requiredLevel = it.value();
 
-        if (ratio > 1.0) {
-            ratio = 1.0;
-        }
-
-        if (ratio < 0.0) {
-            ratio = 0.0;
-        }
-
-        return ratio * 100.0;
-    }
-
-public:
-   
-    OpportunityResult analyzeOpportunity(
-        Student& student,
-        const json& opportunity
-    ) const {
-        OpportunityResult result;
-
-        result.id =
-            opportunity.value("opportunity_id", "");
-
-        result.name =
-            opportunity.value("name", "Unknown");
-
-        double minimumGpa =
-            opportunity.value("min_gpa", 0.0);
-
-        result.readinessScore = 0.0;
-        result.gpaScore = 0.0;
-        result.opportunityScore = 0.0;
-
-        unordered_map<string, int> studentSkills =
-            student.getSkills();
-
-        const json& requiredSkills =
-            opportunity["required_skills"];
-
-        double totalAchievement = 0.0;
-        int requiredSkillCount = 0;
-
-        for (
-            auto item = requiredSkills.begin();
-            item != requiredSkills.end();
-            ++item
-        ) {
-            string skillName = item.key();
-            int requiredLevel = item.value().get<int>();
-
-           
-            if (requiredLevel <= 0) {
-                continue;
-            }
-
-            int studentLevel =
+            int currentLevel =
                 getStudentLevel(
                     studentSkills,
                     skillName
                 );
 
-            double achievement =
-                calculateAchievement(
-                    studentLevel,
-                    requiredLevel
-                );
-
-            SkillEvaluation evaluation;
-
-            evaluation.skillName = skillName;
-            evaluation.studentLevel = studentLevel;
-            evaluation.requiredLevel = requiredLevel;
-            evaluation.achievement = achievement;
-
-            if (studentLevel == 0) {
-                evaluation.status = "Missing";
+            if (currentLevel < requiredLevel)
+            {
+                matchedPoints += currentLevel;
             }
-            else if (studentLevel < requiredLevel) {
-                evaluation.status = "Needs Improvement";
-            }
-            else {
-                evaluation.status = "Matched";
+            else
+            {
+                matchedPoints += requiredLevel;
             }
 
-            result.skills.push_back(evaluation);
-
-            totalAchievement += achievement;
-            requiredSkillCount++;
+            totalRequiredPoints += requiredLevel;
         }
 
-       
-        if (requiredSkillCount > 0) {
-            result.readinessScore =
-                totalAchievement /
-                requiredSkillCount;
+        if (totalRequiredPoints == 0)
+        {
+            return 0.0;
         }
 
-        result.gpaEligible =
-            minimumGpa <= 0.0 ||
-            student.getCgpa() >= minimumGpa;
+        return (matchedPoints * 100.0)
+               / totalRequiredPoints;
+    }
 
-        result.gpaScore =
-            calculateGpaScore(
-                student.getCgpa(),
-                minimumGpa
+    double calculateOpportunityScore(
+        double readiness,
+        double cgpa)
+    {
+        double cgpaScore =
+            (cgpa / 10.0) * 100.0;
+
+        return
+            (0.7 * readiness) +
+            (0.3 * cgpaScore);
+    }
+
+    OpportunityResult analyzeOpportunity(
+        Student& student,
+        json opportunity)
+    {
+        OpportunityResult result;
+
+        result.opportunityName =
+            opportunity.value("name", "Unknown");
+
+        result.location =
+            opportunity.value("location", "Unknown");
+
+        result.category =
+            opportunity.value("category", "Unknown");
+
+        unordered_map<string, int> studentSkills =
+            student.getSkills();
+
+        json requiredSkills =
+            opportunity["required_skills"];
+
+        result.readinessScore =
+            calculateReadinessScore(
+                studentSkills,
+                requiredSkills
             );
 
-        
         result.opportunityScore =
-            (0.70 * result.readinessScore) +
-            (0.30 * result.gpaScore);
+            calculateOpportunityScore(
+                result.readinessScore,
+                student.getCgpa()
+            );
+
+        for (auto it = requiredSkills.begin();
+             it != requiredSkills.end();
+             ++it)
+        {
+            SkillAnalysis skill;
+
+            skill.skillName = it.key();
+
+            skill.requiredLevel = it.value();
+
+            skill.currentLevel =
+                getStudentLevel(
+                    studentSkills,
+                    skill.skillName
+                );
+
+            skill.status =
+                getStatus(
+                    skill.currentLevel,
+                    skill.requiredLevel
+                );
+
+            result.skillAnalysis.push_back(skill);
+
+            if (skill.status != "MATCHED")
+            {
+                result.skillsToImprove.push_back(
+                    skill.skillName
+                );
+            }
+        }
 
         return result;
     }
 
-   
+    void sortResults(
+        vector<OpportunityResult>& results)
+    {
+        for (int i = 0;
+             i < results.size() - 1;
+             i++)
+        {
+            for (int j = i + 1;
+                 j < results.size();
+                 j++)
+            {
+                if (results[j].opportunityScore >
+                    results[i].opportunityScore)
+                {
+                    OpportunityResult temp =
+                        results[i];
+
+                    results[i] = results[j];
+                    results[j] = temp;
+                }
+            }
+        }
+    }
+
+public:
+
     vector<OpportunityResult> analyze(
-        Student& student,
-        const string& filePath = "filtered.json"
-    ) const {
+        Student& student)
+    {
         vector<OpportunityResult> results;
 
-        ifstream file(filePath);
+        ifstream file("filtered.json");
 
-        if (!file) {
+        if (!file)
+        {
             return results;
         }
 
         json data;
 
-        try {
+        try
+        {
             file >> data;
         }
-        catch (...) {
+        catch (...)
+        {
             return results;
         }
 
-        if (
-            !data.contains("opportunities") ||
-            !data["opportunities"].is_array()
-        ) {
-            return results;
-        }
+        json opportunities =
+            data["opportunities"];
 
-        for (const json& opportunity :
-             data["opportunities"]) {
-
-            if (
-                !opportunity.contains("required_skills") ||
-                !opportunity["required_skills"].is_object()
-            ) {
-                continue;
-            }
-
-            OpportunityResult result =
+        for (int i = 0;
+             i < opportunities.size();
+             i++)
+        {
+            results.push_back(
                 analyzeOpportunity(
                     student,
-                    opportunity
-                );
-
-            
-            if (!result.skills.empty()) {
-                results.push_back(result);
-            }
+                    opportunities[i]
+                )
+            );
         }
 
-        sort(
-            results.begin(),
-            results.end(),
-            [](const OpportunityResult& first,
-               const OpportunityResult& second) {
-                return first.opportunityScore >
-                       second.opportunityScore;
-            }
-        );
+        sortResults(results);
+
         return results;
+    }
+
+    void displayDashboard(
+        Student& student)
+    {
+        vector<OpportunityResult> results =
+            analyze(student);
+
+        if (results.empty())
+        {
+            cout << "No opportunities could be analyzed.\n";
+            return;
+        }
+
+        cout << "\n****************************************************************************************************\n";
+        cout << "                                          TOP 5 OPPORTUNITIES MATCHES                                          \n";
+        cout << "****************************************************************************************************\n";
+
+        int count = 5;
+
+        if (results.size() < 5)
+        {
+            count = results.size();
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            OpportunityResult& result =
+                results[i];
+            cout << "\n~~~~~~~~RANK " << (i + 1) << "~~~~~~~~\n";
+            cout << "\nOpportunity : "
+                 << result.opportunityName
+                 << "\n";
+
+            cout << "\nLocation : "
+                 << result.location
+                 << "\n";
+
+            cout << "\nCategory : "
+                 << result.category
+                 << "\n";
+
+            cout << fixed
+                 << setprecision(2);
+             cout << "\nOpportunity Match Score : "
+                  << result.opportunityScore
+                  << " %\n";
+
+            cout<<"Our analysis suggests that there are "<<result.opportunityScore<<"% chances of you being selected for this opportunity.\n";
+            cout << "\nReadiness Score          :"
+                 << result.readinessScore<<"%\n";
+
+            cout<<"You are "<<result.readinessScore<<"% prepared for this opportunity.\n";
+           
+            cout << "\n---------------------------------------------------------\n";
+            cout << "SKILL ANALYSIS\n";
+            cout << left
+                 << setw(20) << "Skill"
+                 << setw(12) << "Current"
+                 << setw(12) << "Required"
+                 << setw(20) << "Status"
+                 << "\n";
+
+            for (int j = 0;
+                 j < result.skillAnalysis.size();
+                 j++)
+            {
+                SkillAnalysis& skill =
+                    result.skillAnalysis[j];
+
+                cout << left
+                     << setw(20) << skill.skillName
+                     << setw(12) << skill.currentLevel
+                     << setw(12) << skill.requiredLevel
+                     << setw(20) << skill.status
+                     << "\n";
+            }
+
+            cout << "\n---------------------------------------------------------\n";
+            cout << "SKILLS TO IMPROVE\n";
+
+            if (result.skillsToImprove.empty())
+            {
+                cout << "All required skills are matched.\n";
+            }
+            else
+            {
+                for (int j = 0;
+                     j < result.skillsToImprove.size();
+                     j++)
+                {
+                    cout << "- "
+                         << result.skillsToImprove[j]
+                         << "\n";
+                }
+            }
+
+            cout<<"==================================================================================================\n";
+        }
     }
 };
