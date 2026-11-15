@@ -257,7 +257,7 @@ public:
         return results;
     }
 
-    void displayDashboard(
+    void displayOpportunities(
         Student& student)
     {
         vector<OpportunityResult> results =
@@ -285,6 +285,8 @@ public:
             OpportunityResult& result =
                 results[i];
             cout << "\n~~~~~~~~RANK " << (i + 1) << "~~~~~~~~\n";
+
+            // cout << "\nOpportunity ID : " << result.
             cout << "\nOpportunity : "
                  << result.opportunityName
                  << "\n";
