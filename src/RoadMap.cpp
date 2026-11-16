@@ -207,40 +207,59 @@ public:
     {
         int choice;
         int total = jobs.size();
-
-        while (true)
+        cout << "\n===== CAREER ROADMAP =====\n";
+        cout << "--- Available Job Roles ---\n";
+        for (int i = 0; i < total ; i++)
         {
-            cout << "\n===== CAREER ROADMAP =====\n";
-            cout << "--- Available Job Roles--- \n";
-            for (int i = 0; i < total; i++)
-            {
-                cout << i + 1 << ". " << jobs[i].getName() << "\n";
-            }
-            cout << "0. Back to Dashboard\n";
-            cout << "Choose a job role to see what to learn next, based on your skills: ";
-            cin >> choice;
+            cout << i + 1 << ". " << jobs[i].getName() << "\n";
+        }
+        cout << "0. Back to Dashboard\n";
+        cout << "\nChoose a job role to see what to learn next, based on your skills:";
+        cin >> choice;
+        cin.ignore(1000, '\n');
 
-            if (cin.fail())
-            {
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Invalid input! Enter a number.\n";
-                continue;
-            }
-
-            cin.ignore(1000, '\n');
-            if (choice == 0)
-            {
-                return;
-            }
-
-            if (choice < 1 || choice > total)
-            {
-                cout << "Invalid choice! Enter a number from 1 to " << total << ".\n";
-                continue;
-            }
-            jobs[choice - 1].showRoadmap(student);
-            return;
+        switch (choice)
+        {
+        case 0:
+            break;
+        case 1:
+            jobs[0].showRoadmap(student);
+            break;
+        case 2:
+            jobs[1].showRoadmap(student);
+            break;
+        case 3:
+            jobs[2].showRoadmap(student);
+            break;
+        case 4:
+            jobs[3].showRoadmap(student);
+            break;
+        case 5:
+            jobs[4].showRoadmap(student);
+            break;
+        case 6:
+            jobs[5].showRoadmap(student);
+            break;
+        case 7:
+            jobs[6].showRoadmap(student);
+            break;
+        case 8:
+            jobs[7].showRoadmap(student);
+            break;
+        case 9:
+            jobs[8].showRoadmap(student);
+            break;
+        case 10:
+            jobs[9].showRoadmap(student);
+            break;
+        case 11:
+            jobs[10].showRoadmap(student);
+            break;
+        case 12:
+            jobs[11].showRoadmap(student);
+            break;
+        default:
+            cout << "Invalid choice! Enter a number from 1 to " << total << ".\n";
         }
     }
 };
