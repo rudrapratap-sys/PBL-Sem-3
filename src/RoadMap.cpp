@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <queue>
-
 using namespace std;
 
 class Job
@@ -12,10 +11,9 @@ private:
     vector<string> skills;
     vector<vector<int>> adj;
 
-    int getStudentLevel(Student& student, const string& skillName)
+    int getStudentLevel(Student& student,string& skillName)
     {
-        
-        for (const auto& item : student.getSkills())
+        for (auto& item : student.getSkills())
         {
                      if (Utils::compare(item.first, skillName))
             {
@@ -26,15 +24,13 @@ private:
     }
 
 public:
-    Job(const string& jobName, const vector<string>& jobSkills)
+    Job(string jobName,vector<string> jobSkills)
     {
         name = jobName;
         skills = jobSkills;
 
         int n = skills.size();
         adj.resize(n);
-
-        //connect each skills to next
         for (int i = 0; i < n - 1; i++)
         {
             adj[i].push_back(i + 1);
@@ -46,7 +42,7 @@ public:
         return name;
     }
 
-    void printList(const vector<int>& list, const vector<int>& levels)
+    void printList(vector<int>& list,vector<int>& levels)
     {
         for (int i = 0; i < (int)list.size(); i++)
         {
@@ -59,12 +55,10 @@ public:
         cout << "\n";
     }
 
-
     void showRoadmap(Student& student)
     {
         const int STRONG_LEVEL = 8;
         int n = skills.size();
-
         cout << "\n===== Roadmap: " << name << " =====\n";
 
         if (n == 0)
@@ -77,7 +71,6 @@ public:
         vector<int> learnFirst;
         vector<int> reviseLater;
         int mastered = 0;
-
         vector<bool> visited(n, false);
         queue<int> q;
         q.push(0);
@@ -89,7 +82,6 @@ public:
             q.pop();
 
             levels[current] = getStudentLevel(student, skills[current]);
-
             if (levels[current] == 10)
             {
                 mastered++;
@@ -102,7 +94,6 @@ public:
             {
                 learnFirst.push_back(current);
             }
-
             for (int next : adj[current])
             {
                 if (!visited[next])
@@ -118,7 +109,6 @@ public:
             cout << "All skills mastered! You are ready for this job.\n";
             return;
         }
-
         if (!learnFirst.empty())
         {
             cout << "\nLearn first (in this order):\n";
@@ -128,13 +118,11 @@ public:
         {
             cout << "\nNothing new to learn. Just revise your strong skills.\n";
         }
-
         if (!reviseLater.empty())
         {
             cout << "\nRevise later (you are already strong):\n";
             printList(reviseLater, levels);
         }
-
         if (mastered > 0)
         {
             cout << "\nSkills already mastered (10/10) and skipped: " << mastered << "(";
@@ -241,7 +229,6 @@ public:
             }
 
             cin.ignore(1000, '\n');
-
             if (choice == 0)
             {
                 return;
@@ -252,7 +239,6 @@ public:
                 cout << "Invalid choice! Enter a number from 1 to " << total << ".\n";
                 continue;
             }
-
             jobs[choice - 1].showRoadmap(student);
             return;
         }
