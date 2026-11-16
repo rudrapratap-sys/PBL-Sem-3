@@ -8,21 +8,20 @@ private:
     string name;
     string email;
     string passwordHash;
-
-    // Member initializer list: directly stores parameter values into class variables.
-    // Example: userId(userId) means the class variable userId gets the parameter userId.
+    
 public:
     User() {
     }
 
-    User(const string& userId,
-         const string& name,
-         const string& email,
-         const string& passwordHash)
-        : userId(userId),
-          name(name),
-          email(email),
-          passwordHash(passwordHash) {
+    User( const string& userId,
+      const string& name,
+      const string& email,
+      const string& passwordHash) {
+
+        this->userId = userId;
+        this->name = name;
+        this->email = email;
+        this->passwordHash = passwordHash;
     }
 
     string getUserId() {
@@ -41,15 +40,15 @@ public:
         return passwordHash;
     }
 
-    void setName(const string& name) {
+    void setName( string& name) {
         this->name = name;
     }
 
-    void setEmail(const string& email) {
+    void setEmail( string& email) {
         this->email = email;
     }
 
-    void setPasswordHash(const string& passwordHash) {
+    void setPasswordHash( string& passwordHash) {
         this->passwordHash = passwordHash;
     }
 };

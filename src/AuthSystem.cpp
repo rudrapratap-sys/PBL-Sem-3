@@ -19,21 +19,17 @@ public:
         loadUsers();
     }
 
-    string makePasswordHash(const string& password) {
-        // Academic demo only: for now we are only adding a fixed salt.
-        // Future improvement: use a proper password hasher like bcrypt or Argon2.
-        return password + "_some_salt_by_piyush";
+    string makePasswordHash( string& password) {
+
+        return password + "SALT_ADDED";
     }
 
-    bool isValidEmail(const string& email) {
+    bool isValidEmail( string& email) {
+
         size_t at = email.find('@');
         size_t dot = email.rfind('.');
 
-        if (at == string::npos) {
-            return false;
-        }
-
-        if (dot == string::npos) {
+        if (at == string::npos || dot == string::npos) {
             return false;
         }
 
@@ -52,9 +48,9 @@ public:
         return true;
     }
 
-    bool emailExists(const string& email) {
+    bool emailExists( string& email) {
         for (User& user : users) {
-            if (Utils::compare(user.getEmail(), email)) {
+            if (Helper::compare(user.getEmail(), email)) {
                 return true;
             }
         }
@@ -63,8 +59,7 @@ public:
     }
 
     string generateUserId() {
-        // Simple ID generation for this project.
-        // If 3 users are already saved, the next user ID will be U4.
+        
         int nextNumber = users.size() + 1;
         return "U" + to_string(nextNumber);
     }
@@ -81,7 +76,7 @@ public:
         string line;
 
         while (getline(file, line)) {
-            vector<string> parts = Utils::split(line, '|');
+            vector<string> parts = Helper::split(line, '|');
 
             if (parts.size() == 4) {
                 users.push_back(
@@ -110,14 +105,14 @@ public:
         return true;
     }
 
-    bool registerUser(const string& name,
-                      const string& email,
-                      const string& password,
+    bool registerUser( string& name,
+                       string& email,
+                       string& password,
                       User& createdUser,
                       string& message) {
 
-        string cleanedName = Utils::trim(name);
-        string cleanedEmail = Utils::trim(email);
+        string cleanedName = Helper::trim(name);
+        string cleanedEmail = Helper::trim(email);
 
         if (cleanedName.empty()) {
             message = "Name cannot be empty.";
@@ -157,16 +152,16 @@ public:
         return true;
     }
 
-    bool loginUser(const string& email,
-                   const string& password,
+    bool loginUser( string& email,
+                    string& password,
                    User& loggedInUser,
                    string& message) {
 
-        string cleanedEmail = Utils::trim(email);
+        string cleanedEmail = Helper::trim(email);
         string enteredPasswordValue = makePasswordHash(password);
 
         for (User& user : users) {
-            if (Utils::compare(user.getEmail(), cleanedEmail)) {
+            if (Helper::compare(user.getEmail(), cleanedEmail)) {
 
                 if (user.getPasswordHash() == enteredPasswordValue) {
                     loggedInUser = user;

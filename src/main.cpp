@@ -72,7 +72,7 @@ string readText(const string& message) {
     string input;
     getline(cin, input);
 
-    return Utils::trim(input);
+    return Helper::trim(input);
 }
 
 void waitForEnter() {
@@ -161,7 +161,7 @@ void editBasicDetails(Student& student,
         "Interests separated by comma (example: AI,Web): "
     );
 
-    student.setInterests(Utils::splitAndTrim(interests, ','));
+    student.setInterests(Helper::splitAndTrim(interests, ','));
 
     studentManager.saveProfile(student);
 

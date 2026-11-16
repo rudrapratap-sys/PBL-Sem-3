@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-namespace Utils {
+namespace Helper {
     string trim(const string& text) {
         int start = 0;
         int end = text.length() - 1;
