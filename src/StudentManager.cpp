@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -14,7 +13,6 @@ private:
 
 public:
 
-    // Constructor with default file path
     StudentManager(const string& filePath = "students.txt") {
         this->filePath = filePath;
     }
@@ -26,7 +24,7 @@ public:
         string line;
 
         while (getline(file, line)) {
-            vector<string> parts = Utils::split(line, '|');
+            vector<string> parts = Helper::split(line, '|');
 
             if (parts.size() < 8)
                 continue;
@@ -38,12 +36,10 @@ public:
                 student.setTargetRole(parts[4]);
                 student.setPreferredCategory(parts[5]);
 
-                // Skills are stored as "Python:5, C++:8"
                 student.setSkills(parts[6]);
 
-                // Load interests
                 student.setInterests(
-                    Utils::splitAndTrim(parts[7], ',')
+                    Helper::splitAndTrim(parts[7], ',')
                 );
 
                 return student;
@@ -58,11 +54,10 @@ public:
         string line;
         bool found = false;
 
-        // Read existing profiles
         ifstream file(filePath);
 
         while (getline(file, line)) {
-            vector<string> parts = Utils::split(line, '|');
+            vector<string> parts = Helper::split(line, '|');
 
             if (!parts.empty() && parts[0] == student.getUserId()) {
                 found = true;
@@ -74,7 +69,6 @@ public:
 
         file.close();
 
-        // Create the profile line
         stringstream data;
 
         data << student.getUserId() << "|"
@@ -84,7 +78,6 @@ public:
              << student.getTargetRole() << "|"
              << student.getPreferredCategory() << "|";
 
-        // Save skills with their proficiency scores
         auto skills = student.getSkills();
 
         for (auto it = skills.begin(); it != skills.end(); ++it) {
@@ -99,13 +92,10 @@ public:
 
         data << "|";
 
-        // Save interests
-        data << Utils::join(student.getInterests(), ',');
+        data << Helper::join(student.getInterests(), ',');
 
-        // Add the updated profile
         lines.push_back(data.str());
 
-        // Write all profiles back to the file
         ofstream output(filePath);
 
         if (!output)

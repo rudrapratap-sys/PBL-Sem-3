@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -29,7 +28,6 @@ public:
         this->cgpa = 0.0;
         this->preferredCategory = "Any";
     }
-
 
     string getBranch() {
         return branch;

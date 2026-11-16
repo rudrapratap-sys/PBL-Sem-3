@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -16,11 +15,7 @@ private:
     string outputFile = "filtered.json";
 
 public:
-
-    // Filter opportunities
     bool filter(Student& student) {
-
-        // 1. Open the CSV file
         ifstream file(csvFile);
 
         if (!file) {
@@ -28,7 +23,6 @@ public:
             return false;
         }
 
-        // 2. Read all CSV records
         vector<vector<string>> rows = readCSV(file);
         file.close();
 
@@ -37,7 +31,6 @@ public:
             return false;
         }
 
-        // 3. Find column positions using the header
         unordered_map<string, int> columns;
 
         for (int i = 0; i < rows[0].size(); i++) {
@@ -53,16 +46,14 @@ public:
         double cgpa = student.getCgpa();
 
         string preferredCategory =
-            Utils::toLower(student.getPreferredCategory());
+            Helper::toLower(student.getPreferredCategory());
 
         json filteredOpportunities = json::array();
 
-        // 4. Process each opportunity
         for (int i = 1; i < rows.size(); i++) {
 
             const vector<string>& row = rows[i];
 
-            // Skip incomplete records
             if (row.size() != rows[0].size()) {
                 continue;
             }
@@ -72,20 +63,17 @@ public:
                     stod(row[columns["min_gpa"]]);
 
                 string category =
-                    Utils::toLower(row[columns["category"]]);
+                    Helper::toLower(row[columns["category"]]);
 
-                // Check CGPA
                 if (minimumGPA > cgpa) {
                     continue;
                 }
 
-                // Check preferred category
                 if (preferredCategory != "any" &&
                     category != preferredCategory) {
                     continue;
                 }
 
-                // 5. Convert the matching CSV row to JSON
                 json opportunity;
 
                 for (const auto& column : columns) {
@@ -96,7 +84,6 @@ public:
                         opportunity[key] = stod(value);
                     }
                     else if (key == "required_skills") {
-                        // Convert skills from JSON text into a JSON object
                         json skills = json::parse(
                             value, nullptr, false
                         );
@@ -116,12 +103,10 @@ public:
                 filteredOpportunities.push_back(opportunity);
             }
             catch (const exception&) {
-                // Skip records with invalid numeric values
                 continue;
             }
         }
 
-        // 6. Store student details and matching opportunities
         json result;
 
         result["student"] = {
@@ -134,7 +119,6 @@ public:
 
         result["opportunities"] = filteredOpportunities;
 
-        // 7. Save the result to the JSON file
         ofstream output(outputFile);
 
         if (!output) {
@@ -158,8 +142,6 @@ public:
     }
 
 private:
-
-    // Read CSV correctly, including quoted commas and newlines
     static vector<vector<string>> readCSV(istream& file) {
         vector<vector<string>> rows;
         vector<string> row;
@@ -197,7 +179,6 @@ private:
             }
         }
 
-        // Handle the last row if the file has no final newline
         if (!field.empty() || !row.empty()) {
             row.push_back(field);
             rows.push_back(row);

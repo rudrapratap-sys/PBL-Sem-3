@@ -8,7 +8,7 @@ private:
     string name;
     string email;
     string passwordHash;
-    
+
 public:
     User() {
     }

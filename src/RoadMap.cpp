@@ -15,7 +15,7 @@ private:
     {
         for (auto& item : student.getSkills())
         {
-                     if (Utils::compare(item.first, skillName))
+            if (Helper::compare(item.first, skillName))
             {
                 return item.second;
             }

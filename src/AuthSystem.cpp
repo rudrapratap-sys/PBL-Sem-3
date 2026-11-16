@@ -1,10 +1,8 @@
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
-
 
 using namespace std;
 
@@ -19,13 +17,11 @@ public:
         loadUsers();
     }
 
-    string makePasswordHash( string& password) {
-
+    string makePasswordHash(string& password) {
         return password + "SALT_ADDED";
     }
 
-    bool isValidEmail( string& email) {
-
+    bool isValidEmail(string& email) {
         size_t at = email.find('@');
         size_t dot = email.rfind('.');
 
@@ -48,7 +44,7 @@ public:
         return true;
     }
 
-    bool emailExists( string& email) {
+    bool emailExists(string& email) {
         for (User& user : users) {
             if (Helper::compare(user.getEmail(), email)) {
                 return true;
@@ -59,7 +55,6 @@ public:
     }
 
     string generateUserId() {
-        
         int nextNumber = users.size() + 1;
         return "U" + to_string(nextNumber);
     }
@@ -105,11 +100,11 @@ public:
         return true;
     }
 
-    bool registerUser( string& name,
+    bool registerUser(string& name,
                        string& email,
                        string& password,
-                      User& createdUser,
-                      string& message) {
+                       User& createdUser,
+                       string& message) {
 
         string cleanedName = Helper::trim(name);
         string cleanedEmail = Helper::trim(email);
@@ -152,8 +147,8 @@ public:
         return true;
     }
 
-    bool loginUser( string& email,
-                    string& password,
+    bool loginUser(string& email,
+                   string& password,
                    User& loggedInUser,
                    string& message) {
 

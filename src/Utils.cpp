@@ -6,12 +6,10 @@ namespace Helper {
         int start = 0;
         int end = text.length() - 1;
 
-        // Skip spaces from the beginning
         while (start < text.length() && text[start] == ' ') {
             start++;
         }
 
-        // Skip spaces from the end
         while (end >= start && text[end] == ' ') {
             end--;
         }   

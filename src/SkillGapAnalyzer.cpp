@@ -39,7 +39,7 @@ private:
     {
         for (auto& skill : studentSkills)
         {
-            if (Utils::compare(skill.first, skillName))
+            if (Helper::compare(skill.first, skillName))
             {
                 return skill.second;
             }
@@ -222,10 +222,10 @@ public:
 
             cout << "\nOpportunity Match Score : "<< result.opportunityScore<< " %\n";
             cout<<"Our analysis suggests that there are "<<result.opportunityScore<<"% chances of you being selected for this opportunity.\n";
-            
+
             cout << "\nReadiness Score          :"<< result.readinessScore<<"%\n";
             cout<<"You are "<<result.readinessScore<<"% prepared for this opportunity.\n";
-           
+
             cout << "\n---------------------------------------------------------\n";
             cout << "SKILL ANALYSIS\n";
             cout << left
@@ -248,21 +248,21 @@ public:
             }
 
             cout << "\n---------------------------------------------------------\n";
-            cout << "SKILLS TO IMPROVE\n";
+            cout << "Skills you should improve:\n";
 
             if (result.skillsToImprove.empty())
             {
-                cout << "All required skills are matched.\n";
+                cout << "None\n";
             }
             else
             {
-                for (int j = 0; j < result.skillsToImprove.size(); j++)
+                for (const auto& skill : result.skillsToImprove)
                 {
-                    cout << "- "<< result.skillsToImprove[j] << "\n";
+                    cout << "- " << skill << "\n";
                 }
             }
 
-            cout<<"==================================================================================================\n";
+            cout << "\n*********************************************************\n";
         }
     }
 };

@@ -276,19 +276,18 @@ void studentDashboard(Student& student,
                 }
                 else{
                     cout<<"Some error occured while filtering data" ;
-                }                
-            
+                }
+
                 waitForEnter();
                 break;
             }
-            
+
             case 6: {
                 Roadmap roadmap;
                 roadmap.showMenu(student);
                 waitForEnter();
                 break;
             }
-            
 
             case 7:
                 studentManager.saveProfile(student);
